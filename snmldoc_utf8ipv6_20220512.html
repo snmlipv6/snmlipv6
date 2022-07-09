@@ -1,0 +1,3020 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Network Management Language  (SNML),Email Support:snml_ladybird@protonmail.com</title>
+ <meta http-equiv="Content-Language" content="utf8">
+ <meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<style>
+ /* Body style, for the entire document */
+    body {
+        vertical-align: top;
+        padding: 3px 6px 5px 5px;
+        margin: 0px;
+        border: 1px solid #E7E7E8;
+        background: #F7F7F8;
+        font-size: 10pt;
+        font-family: monospace;
+        background: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAFsAAAAeCAIAAADMwfURAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAAFiUAABYlAUlSJPAAABPzSURBVGhDNZmJcuO6kkT1//81MXHfm+m2JUvcCW4gSBAEd2qx7+05oN44GGq5RQKorKysLPn0uO+NkiJJiyzXTbtv+7//9W87mLbtMlH8+fNHloVptCrrqmq0sUmc1Eqncapb3Zt+HMYsy8qyrI8f03VVUbVK56LM0qLIq0zk8zxLKZdlCcPw+/tbyooP8jxLkjiNxGBsVVX8Pg5D4Adt08zT6HuerOp13qq6alRdZoWUdZEVeZpMtje6C/1oW5aqyJVskijZ1z1LM610WbK0aNtW1brIKllWHOl6uZVllRdFVcmuM1EUj+PEq1Iqy8Q8T5zHvReiN+b0/XxlqSjzguu+70VRXC6X7+8fzt113b7vcZp3tTaqa7XJctk2dZpVSRRxLBDsO0MwhDoMA4vmQnCIknDTLBdZXdaDmWw3N03DbbyCDvETXnr8aNWkidDgKCtW4xFeiVvVsqmbrjG215pnRT7aiU/Z1PaWo0RByJ3W9CQyDkMla87Pp2BLhozhMF0cJkZbWao0FiIrhmHS2kip4jg1xhaF5Gag4wpDP0kS0/eEfNrX7fJ5Jox92bZ1JTZ+7vc7d6zreqBYqEqNZmQtkVW1LOO0SOOE01RFaTsDiFCAOOFIVdTzOLFab9re9gX86q1qNEkwxkzTxJ3cBqcAiC26RsdR3ACzUnEYjXbwrp5S7FJ9nb+UbO/7ssxgQdhpq2Bz/djvSRSTxbpy1OYNQPAsvw69lbU6tlC1aryrf98eRQY9JCgcB2yIgkspuPifU4EghxFCkNQ4jk8E8K4XgM9E5vs+dzhqxDGhcoayUnUhbWubVtcwRdV+mPbkyvSkhSOSdm4GEVavSz0PCwHOk3GB1XKaRjIDmSEIu3IWTqy1jpNE1mRWklN3rDwnJJjtyK/JakwtBF70/brv2xoFUdf23ADWHJVMgE7oBwAJceApIZAkGDfYpayAVwkBavk0LDn5i6ij7vPzAgptCxUGoLGWei+6rgedOBbvwif80zSMdVXngqMIkaZlUSyUfcWaTeD7iIUdJmpVllRgX6t2HIe61cDHxZk4DRkGO0ogiqKx39iPkKxtKghTS4CHiiLNufoeGE1VVpCRxU1n2rrxb96+bWVRulqIosHaYej5lPTkGUL2j7XW9wLKqK1V4PmgwJnjKJGIAuyIYvjZaZ3E8WAH208oV2+6MLhpsty0rCzSDETCME4d3EjBncIlQH6NooS4kiQLgoCcQdsTD4FlGhcwEOw5FtzLcx6p2WweCc8QPkzjTdO1677xCkegLhnjEShHzNQaqX69/m6aFrkaBpMkYIxuzYDVNj054Sie74PC2A88Tp5hGbklQtahZKI4esswPHUMVerx+Pb98Hz+IvNNXXNIHtnmJYpSFvS8gJxDTw7ghMCYsSd/SlKVWQITWQT+8qnWfRBEZUmGLJHzSN+bNKVyYQe3S85PZZCSEyTWDXUISZxuQT/STh0SDPK4zDQCBYrIqlKa5fjhxG/SAp/TQqd9bg8Unh/eAAGdBYXm18fjEcfRMMzjOPZ9//n5m10AHSDINhFCmzc0jVREBXsBgth4z6F9P/r4OJPMPC85GCUDlOu8gBgZAhH0kvOQFX54yugeSW6dThBn+V6HYwArrQbFpX45Icw9qjj/f44I+gH/w/0nVN2awb8lVOm7LDkfQQaB16hq38YWQBqjVSfLeuytbjS3QeB3kl1JI9bHDzuVVTZN0Kojdb9+fez7g0MQFcoLmtx4852K/7y+eZA65aJxsg5vXLTQN8tYinywLJS5Xn2KnPrndbT2raZ0A2SSpwkSWScBbO1kswVZaCsNbVDJIAzJwcfHB1lEJwn7fn++CQgTkQywAGsuFimzfFtWznZyla07kYgsEZxSg21VkmEhos5IRMPogRucCOb1SFSkoG4aBZKSBo5ku9IpinmaeLxWFWhSolGEKhUgcuhWkhc5IHFOljFdP08LgcFHfMhz3zE/Am1mA1kncYacNaqZxtGJy1GPpJscrAtygwXJ3V5ljV4gNFUpYd8758uKQ6lxJPS8tlEpGKQpFgNLYjo7z+vRgOnQkpZvjaUhRSH70jsUiFC2EP+0TAtHiCMfUOiFiDzaYccVvE1H4KJrh063tKcwwMBoWWUNddYgSynJJJOxSBFDS7+gFzqzJkkpV57JNM75FX1NMyHzcjSWO0AGrXEthh6RxKwIzGno0x0gYJaiAQUFQpeljqbJBsENOo2IVz9itPh5c+F97Ssuaucw27Y51xdmtMcRNW9bwqMrU6HosTXjNC1Ij+kHjOb//Ot///z8uX1dYfoyTu9iLEQm4gQdUUkcZSLZd7yi5TTzOKsWoi0k0xGiUgjK+fwBwASOmcCFQRG4R3LIQ14WwzgWaGQUU+0U5zhiyXSaFGmCK9PEoGjaWJ55Ebmoa2DU0IHq8643MkP80JUzQUa0ifcQ+K0acACOoPHkUHd9UZQUAhAnkVgmSI7BaOdlRhF/fn6otdBLCAv5Q/ChIYsjWOzy2J+c5PF4IYiItHfzkQIQodMBvXE1BZELXk+0fdJL8pfZbCuaX+Vp1XQaZ0V7Y78sobDJdLauG+nFEhSZgiOQgR+Qy2A7loVipPISwbUiDS19Mfd9nDIGwNDs6lzqWlOz+MU8L+jrVNnvX5+P+0vRz+mOfoxBBzmaEXpBOTM4YFzhHZACgZNLRoe+hwsl7llpsiWLet83yhYdoT68a5gmgW6rwPew46yDMp4/Pp/3F7b89frJS1nQWYIYR8sBYNDr8QRuVnAuQYgTRQXt4Fir5N8/33ghRHTZpmWdySRnpQfBi7ZFz3njFLQs+Actcd0bKxFiDZxJxGdKId6zQ4fVFmEaesEyL8s4EhpHN5joSgIWQkNtB97tcrlCPTiVQS4/wU+gU1VeOQvfdhglO010cQiIGOFK5mkWuNWjPzY1fsPwSvWxrHN++OkwSaIQytOqn/cHgg3joMkybUksXs8fcguRuZyU9MMyr8Ac+CF+mtA+Pz9P8zrTrCk5R57DZcBV4Nn3laIlwrJwbVjVlW45iYuWKuAVREAU5x8GlEaLrYId/Ce5GkebpCE9oCEt247u4ccRLBKC1mDh3HDhzh1/fXkAtG13mEyFuJ4pHTGduasU7pu0YygoChwUokA+8zTDILU1Pb/Dl/JKx6X2datEGjGCUiwEQt3BMljg9N4Z/An4bEfVc0YNItTi29FzYVVQZzZynhVPi97S/xbgT1JcuSvjbcHUuPGokIg8/0NVY8qRtDciiAhHR8+s7akOZo9jxBLMSiCNnp/Pl9VaxzHVcmffWbSdkJil0HzP8xEWuvvl8oUY8UMtsDWiT9nyhsJmR4J/Gw12hI8IP06EaCkEuimCRR1BMSaXoR/wqYF/I34eJJw3Qd6IkCXmPTRYJFlnEAmLkcHUO5/VdrAGUBjEySXvTiXDBBpph7e5AE5mjWWZCI9ujzhTrkh6U5ODzg1QFMzxJKBw1ufzUeRStUwkCT05inxeGRH++uvjPo80Ke5s24a5HqGBI+s8o203z2dcSZPI92+v16Pv6U01cZfHpIOzQaugC5AxygAHHR1EKLyR0G1HLmESiCBYTm5FOQ0TRQtH8BDk9W0deSWogwaY3Zz64oKhPPj79ye8IDdO7xJxYHSjW7HXKWfCryS6XVIggkmrOKiFzMAu1mvgMP95kNBgEGjI1O3RawSdHI/Afb1tg+iLqqlkBJuZQc4fAXM8ZX88Qjs4VLmoXANOULHc9A4+kvH9euJNeYOlZj/HRIXpSDEv2IDjmxOB46Jq0Mt5wqTVkR8nKRM9VsOSYcYuCEeG8J2MzmgQfOR1omniJOOET0lbFIS2twgOVXO7+XAEjZNuLKxhQIwxKWBietKqnQae1FkodNWi4fO40ndoYE7kkJGMtl/et9UVaiJAna5JHec4JIHPuzO+4cJTFyijcc10jI+4fH5Rt64XlPU8Ll0/5JirrGQ0unzAI4lRitOAUuVYLmgYl0XkE8fJLFWVAt83z0stM7oPdhB1pOJo9oRKFkkDEKD9TrMdHMUwLVD8er5BhJ/X34MZ+X+noIJWiO1sU4GRL9AsuA8iQAn9qcHR9tAaEn38PkO9E9PiPE6EGlyv2zihRtQqzMQGH3MH7k2sMwTp6ND/+R6IFmA7vBwawfb8UKZMfLLSWeKcApqfJn4UJJQb7Bv6kRLEbjJSM4Z+/Dpv6/Z43MPQuz8ergaJnvG0qY6vbyBEbbr2drsdtqXgJNQC2tnWA/NXb2j8EQC6rucMWx1FIWW17RtbBreQTOA+IM7bHMFN5/dzBNJNNMviJgDozFjk30Jy1jGaipTXlHYQhifsHdvTYvyv62PdVmeNeuhgaaAGe0P8ijaRRBG8IFHIFfVJ3mgWdFPv6i/r3Q98vFVZtOffN90YUIjDMPBCsHCNANKmIMbo0QhnNMUy7r2ZgWJYZ91pjExbSqSR7VqFqNS0P2azZd7xwggqOTgarSE9920RaXDYAPX1dUUlIAsQw90wQbmRcB4aVNXEsfPQxtBEsNdd3yMilDKzck3jAhT/Ft++Ag6GCmIvEYHr7XpCxPDwJDwX6WPbZmsHY5AoZ6IVTpyxOisxX2kKmwLfH+xwkNYlFsLjJrdtv12vz8freglo8iPW1o7nzwsGhHp08q77Is2Bz9l2l6ccyFBRMtzZ3vc9hiODtZU5HYGJhHpkKuHcy3znI2glSzwjc1MFNDU+tXbfj1KnwI7Or+tCtUFVYxmjMX5ytBO70ytRZtwgWw7Dsu2IQ4tzwitEUfzr1+88q+IId6NwJTAa0N3sKwuJmUUvmFmphee+joiqLqaJhlpjBZI4YJKbhpFzoPxvQaYHH75j9DyvN6hPBo+ul9vx3dRAD77dLnXV9N2ADGEZaGHIC72GXo49xOliMaA6joZUu9ZLqSNNGeUmB2hrOiKhsyIQTIxt09cSC6tYLRflvj7C4EY906yBDlViumPYw2VFAQJJG2dry+KUHqd132BULaUZBCm6BXbsfj5/QkPKiucAk/a5TivD0wmTSrvaaRlt/XjsCAPSCDTH96HK878svAeAw3QP48AcfUSSom24eCyNI3aLp3JzFxsszNTu2/YsjUBd0/mAA9fHLvCOonvPqYjcu3+vpHhZ+FUzdzPpiYrc0Iz4EIajBYBCbqA9qzF2cbnvloKQ0Rl9QfVS3yvSlL7mvJUfonQYqMFYGjaO6VjZjeO4Xmd/8b8HUQHlcrkAFryATeuCIULI7Mm/etfL14aqa/e9HaK4zAOHdOlKhWqYUNtlnjgHoxoEocKxGGnqRjhnL3mokTQn+hGIcHqmqcOylG5mLbJ5GvDUnB57hoQjYECAgHEs+AWm398vcOEBGM6vxMDbsnR/jrADkl8kTCphtMyjMW2RC+RsHJwoeteAnhKFaR1GY9uNw1gg3cwAWcKF/BAqkLARP4z7cZxhfdmF/2fHMESeE+jMzA3L6HqQi7ZwwtIzCG7LxmyHO8WAk6KDrph/txDt89B8tQxEtLiOIdDwjAsh4MIMTJObffE1pPQQIkMG0KrA836+H1hJpyB5QfvaN6TBqTqth/bNyuM4Af3xtQVF6rxKmsTgnmGxtOF4CRqXMS5MHJruiwmBS//9X38xvHFY2vzY6u/tDlst7FNO+EjA6/mgTEgNqsdG5A59jZMQB4qOxElM8yP9QeAj8Mu66NYkcYoynmjLdGycnDEjtoB6oV1BK6T43cytWToz1o0eGubhIcQFYC5LN6TDQuhA/JCQ4kTq3l2NK0mySuQam0TqinyaVgZCdmE7zB61g+tD/JZ1P0B039eDCI9jzN+iwz09DdK/Qhlj9P2+4ptvX/4dEfEjNOufnz8oy/njQgLf34lBq8Eq12hkOw+DU8ActZYYg35i6xK3JvO6c39gS/M0gZT4aRRz35+4eLjPOqfjbzkoOI5X4+PdYCKdiLy/2uQjVpfO5qmpM2WZhXnUuTFdksyjAzLFuAkdaYCKFBHhMS8Al5aY657Iu858fd3YiOQx0Q2mz2FqGHN0UICPzL4IEHuVjtIWOHADCBCXs6oITNs+n0/cOh2dSgEOhGlbFjh4u1yXdcKr44DrMv/nnyfD3jQsaC1TAm6CA+BxMf+oz+XzvI0rvhndwfMDNAMqxztS6OYasnvilM3xHURv9Tg7694o/GVJuviocMaOz9tpHVdLjHVSlXZhunc0oebBFUPBWu/GQYS0G/J880JVJrM1HAiVYLKCIHyEfUAgUVn8LogwsE3TAit5kMJ/G1x0kRsY2ALPfzwewMHKiDuIQAqaCJUC0eIg8m8evilXedspMtm4vwuELMJb3IFzMm4iqG4Xb7/vZZYH19trf8ERGhgfFCXtuUR0b15Agnn49XqdKGnYgVkcp4F5FzU2ZuJjaMKtXG3XUYSP5y4x4TyOstbKDSbGUCUufQ1NAk3G4zasz+AE5HinPAuQVablTNQsiO6QDRbsdYdOM3p0x9eL/CdwwB3KFV+A4pADLmoHpvz984OOYHMwPlgY249U+/XL/YknDEIkA3znbVZKYivD2xXPi/rgpPBNyAaruT9xJhmNH107GkHH+ck2qaOhsQKChajFUUSSH/fHCc8DHJMdYQITGsUCh9EDOgK6ABfwj1AOTrtEWdSXldy3/s5ThBEHIm/a/a2PRsvEUV+vPjPl5+enyEL3/XvTgwhWihPgXwCQR+A8FED/3r4GojHxl0x3x1cNFAuI8Cmv3EzXZ5ig41C6rAxzOSR3IhzoNx7kn+8f4Ps6X1hzWfYoYgonbY093NB7dmdNFrTwLogYaghWiIKhBrXiWS5YyT1/fv75P3bsugQd4rIoAAAAAElFTkSuQmCC);
+        background-position: bottom;
+        background-repeat: repeat;
+        background-attachment: fixed; 
+    }
+ /* Header1 style, used for the main title */
+ h1
+ {
+ padding: 10px 0px 10px 10px;
+ font-size: 21pt;
+ background-color: #E2E2E2;
+ border-bottom: 1px #C1C1C2 solid; 
+ color: #201F20;
+ margin: 0;
+ font-weight: normal;
+ text-align:center;
+ }
+ /* Header2 style, used for "Overview" and other sections */
+ h2 {
+ font-size: 18pt;
+ font-weight: normal;
+ padding: 15px 0 5px 0;
+ margin: 0;
+ text-align: center;
+ color:red;
+ }
+ /* Header3 style, used for sub-sections, such as project name */
+ h3
+ {
+ font-weight: normal;
+ font-size: 15pt;
+ margin: 0;
+ padding: 15px 0 5px 0;
+ background-color: transparent;
+ color:blue;
+ }
+ /* Color all hyperlinks one color */
+ a
+ {
+ color: #1382CE;
+ }
+ /* Table styles */ 
+ table
+ {
+ border-spacing: 0 0;
+ border-collapse: collapse;
+ font-size: 10pt;
+ }
+ table th
+ {
+ background: #E7E7E8;
+ text-align: left;
+ text-decoration: none;
+ font-weight: normal;
+ padding: 3px 6px 3px 6px;
+ }
+ table td
+ {
+ vertical-align: top;
+ padding: 3px 6px 5px 5px;
+ margin: 0px;
+ border: 1px solid #E7E7E8;
+ background: #F7F7F8;
+ }
+    .snml_png {
+       
+        background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAN0SURBVFhHxZfPSxRhGMdfEzIIpOhgsSSriAkdZGU7lIdtF0E0JAjSRQ8VeU0QAkkpKEg8hP9AhB0UE0zBRDwkWEQgtAgqLGwZbm3RRqiHAonq7fu+87w7887Muzt26QOffZ95fzzvszszO7tlHLD/yAFqi7K0tMRaW1vpyMzMzAzr7Oyko4CITyAIuVyO7+zs8Gw2y3t6eng4HOahUIjH43E+Ozsr50xPT8t2PwQuQBCJRMTpMvovBL4GotEoi8ViLJ/Ps7W1Nba+vk4jjA0PD7NUKsVWV1fZ5uYm9QZEllGCubk5+Q63trb42NgYTyaT2jtX/W1tbTyRSNCqYAQqoKamRm7U0NDAu7u7tc39+vdDoNnOzYI4v7hIK0sT6Bp4VFfHDtO5FfftEdgHP8MH8AT8AQV7FRXsfCbDwtXV1FMCWYaJ7W1RnUcUgMZ2D6qxgpOTlKQ4mGlgedmbFM5D5+bCLijGPPb2UjIzmOVDOu1NRr6C7gKuQzHma38/JfUHM3zwS+TwDHQWoPqNLixQYi8YddHUJBcloNrgj0jiEhchD7n6lL5rDegjmYyc/JwWK69CmcThHXjc1Sc0rh0cpE109KfhwIBsquSrzTFqnWThFyvUQFEahbX4uvaFCrFQ1cK7UAzH6XgBXoNv6RgPZzkuYuENeJ/ie9C5tqC4uF2gl8jn9ckOn0GRUCn6Io74IMXCi9Tn6+gobWZjn4KNDQq8PKFW8QJ+tUL2C/60Qgm+J8yk0xTY2AXs7lLg5Ra1ihj8ZIXsO2yyQslNan3x2cMu4NAhCrycht/gY4iPUuMNTMGn8DUcgUbwnHBjF4AHTjHE1XzFCtlvagU5ai/Bs1ZoxmcPu4D6egpK85FagSogEM3NFNjYBQgaGylg7CE8CpPySEedf4FfAca1LS0UOKC7wWJqSt4u76xTXfA2FP1K3BWFsQvUpzSubW+nTXT0T4B+02fkq817ahXOT8AZC4xrJyYocEGF2KysyIpPQTEsxK2mvct+qMZwcWpjQs/aIr8LMOrD0JBM5PtLB16GagOh6ndaWIs/L8XADAMdHVpCp+dgqQKk5eWUzAxmFWFkxJsUnoTOAvC94J0XjVKS4mBmCfCng1dVacnLoLOAD1CNScfHaXFpMDsg4sdKXx/ntbWFjZUvKys57+rifB//Byw4/wvEcknVkrgkDwAAAABJRU5ErkJggg==);
+	
+		min-width:32px;
+
+	 	min-height:32px; 
+
+	 	background-repeat:no-repeat;
+
+		background-position:center;
+       } 
+    .snml_nms {
+        background: rgb(100, 149, 237) ;
+        color : white;
+    }
+    /* Local link is a style for hyperlinks that link to file:/// content, there are lots so color them as 'normal' text until the user mouse overs */
+    .localLink {
+        color: #1E1E1F;
+        background: #EEEEED;
+        text-decoration: none;
+    }
+ .localLink:hover
+ {
+ color: #1382CE;
+ background: #FFFF99;
+ text-decoration: none;
+ }
+ /* Center text, used in the over views cells that contain message level counts */ 
+ .textCentered
+ {
+ text-align: center;
+ }
+ /* The message cells in message tables should take up all avaliable space */
+ .messageCell
+ {
+ width: 100%;
+ }
+ /* Padding around the content after the h1 */ 
+ #content 
+ {
+	 padding: 0px 12px 12px 12px; 
+ }
+ /* The overview table expands to width, with a max width of 97% */ 
+ #overview table
+ {
+ width: auto;
+ max-width: 75%; 
+ }
+ /* The messages tables are always 97% width */
+ #messages table
+ {
+ width: 97%;
+ }
+ /* All Icons */
+ .IconSuccessEncoded, .IconInfoEncoded, .IconWarningEncoded, .IconErrorEncoded
+ {
+ min-width:18px;
+ min-height:18px; 
+ background-repeat:no-repeat;
+ background-position:center;
+ }
+
+ .IconSuccessEncoded
+ {
+
+ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABcElEQVR4Xq2TsUsCURzHv15g8ZJcBWlyiYYgCIWcb9DFRRwMW5TA2c0/QEFwFkxxUQdxVlBwCYWOi6IhWgQhBLHJUCkhLr/BW8S7gvrAg+N+v8/v+x68Z8MGy+XSCyABQAXgBgHGALoASkIIDWSLeLBetdHryMjd5IxQPWT4rn1c/P7+xxp72Cs9m5SZ0Bq2vPnbPFafK2zDvmNHypdC0BPkLlQhxJsCAhQoZwdZU5mwxh720qGo8MzTxTTKZDPCx2HoVzp6lz0Q9tKhyx0kGs8Ny+TkWRKk8lCROwEduhyg9l/6lunOPSfmH3NUH6uQ0KHLAe7JYvJjevm+DAMGJHToKtigE+vwvIidxLamb8IBY9e+C5LiXREkfho3TSd06HJA13/oh6T51MTsfQbHrsMynQ5dDihFjiK8JJAU9AKIWTp76dCVN7HWHrajmUEGvyF9nkbAE6gLIS7kTUyuf2gscLoJrElZo/Mvj+nPz/kLTmfnEwP3tB0AAAAASUVORK5CYII=);
+ }
+ 
+ .IconInfoEncoded
+ {
+
+ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHElEQVR4Xs2TsUoDQRRF7wwoziokjZUKadInhdhukR9YP8DMX1hYW+QvdsXa/QHBbcXC7W0CamWTQnclFutceIQJwwaWNLlwm5k5d94M76mmaeCrrmsLYOocY12FcxZFUeozCqKqqgYA8uevv1H6VuPxcwlfk5N92KHBxfFeCSAxxswlYAW/Xr989x/mv9gkhtyMDhcAxgzRsp7flj8B/HF1RsMXq+NZMkopaHe7lbKxQUEIGbKsYNoGn969060hZBkQex/W8oRQwsQaW2o3Ago2SVcJUzAgY3N0lTCZZm+zPS8HB51gMmS1DEYyOz9acKO1D8JWTlafKIMxdhvlfdyT94Vv5h7P8Ky7nQzACmhvKq3zk3PjW9asz9D/1oigecsioooAAAAASUVORK5CYII=);
+ }
+ 
+ .IconWarningEncoded
+ {
+background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAx0lEQVR4XpWSMQ7CMAxFf4xAyBMLCxMrO8dhaBcuwdCJS3RJBw7SA/QGTCxdWJgiQYWKXJWKIXHIlyw5lqr34tQgEOdcBsCOx5yZK3hCCKdYXneQkh4pEfqzLfu+wVDSyyzFoJjfz9NB+pAF+eizx2Vruts0k15mPgvS6GYvpVtQhB61IB/dk6AF6fS4Ben0uIX5odtFe8Q/eW1KvFeH4e8khT6+gm5B+t3juyDt7n0jpe+CANTd+oTUjN/U3yVaABnSUjFz/gFq44JaVSCXeQAAAABJRU5ErkJggg==);
+ }
+ /* Error icon encoded */
+ .IconErrorEncoded
+ {
+ background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABQElEQVR4XqWTvUoEQRCE6wYPZUA80AfwAQz23uCMjA7MDRQEIzPBVEyNTQUFIw00vcQTTMzuAh/AxEQQT8HF/3G/oGGnEUGuoNnd6qoZuqltyKEsyzVJq5I6rnUp6SjGeGhESikzzlc1eL7opfuVbrqbU1Zw9NCgtQMaZpY0eNnaaL2fHusvTK5vKu7sjSS1Y4y3QUA6K3e3Mau5UFDyMP7tYF9o8cAHZv68vipoIJg971PZIZ5HiwdvYGGvFVFHmGmZ2MxwmQYPXubPl9Up0tfoMQGetXd6mRbvhBw+boZ6WF7Mbv1+GsHRk0fQmPAH1GfmZirbCfDJ61tw3Px8/8pZsPAG4jlVhcPgZ7adwNWBB68lkRQWFiTgFlbnLY3DGGM7izIJIyT/jjIvEJw6fdJTc6krDzh6aMwMP9bvDH4ADSsa9uSWVJkAAAAASUVORK5CYII=);
+ }
+ </style>
+</head>
+<body>
+    <h1>Simple Network Management Language<br>简单网络管理语言</h1>
+<a href="http://snml2019.eu5.org/index.htm">About</a> |
+<a href="http://snml2019.eu5.org/download.php">Download</a> |
+<a href="http://snml2019.eu5.org/document.php">Document</a> |
+<a href="http://snml2019.eu5.org/support.php">Support</a> |
+<a href="http://snml2019.eu5.org/q_and_a.php">Q&A</a> |
+<a href="http://snml2019.eu5.org/related.php">Related Info/SW</a> |
+<br>
+<br>
+   <h2>简 介 </h2><hr />
+    <br>
+    &nbsp;&nbsp;简单网络管理语言(Simple Network Management Language)是一种类自然语言的脚本语言，它采用snmp、telnet、ping、dns、arp、ssh、tcp、udp、web等协议访问网络设备，内置smtp协议用于告警等邮件的发送，支持excel、sqlite、snmlWeb服务器等3种方式进行网管数据的存取。<br>
+    &nbsp;&nbsp;最新版本：	 snml9.13(ladybird20220513) utf8&ipv6<br />
+
+    &nbsp;&nbsp;项目托管地址：<a href="https://github.com/ladybirdSnml/snmlipv6utf8snmptelnetsshweb">https://github.com/ladybirdSnml/snmlipv6utf8snmptelnetsshweb</a><br>
+    &nbsp;&nbsp;打包下载：<a href="https://ladybirdsnml.github.io/snmlipv6utf8snmptelnetsshweb/snml_utf8ipv6_913.zip">https://ladybirdsnml.github.io/snmlipv6utf8snmptelnetsshweb/snml_utf8ipv6_913.zip</a><br>
+
+    &nbsp;&nbsp;本手册编辑日期：20220513 <br>
+    &nbsp;&nbsp;技术支持邮箱1：ladybird_snml@protonmail.com<br>
+    &nbsp;&nbsp;技术支持邮箱2：ladybird_snml@hotmail.com<br>
+
+    &nbsp;&nbsp;简单网络管理语言（snml）支持CLI（命令行接口）和SNMP（简单网络管理协议）两种方式自动化的进行网络设备配置和管理。CLI 是基于telnet、ssh的人机交互界面，用于设备的参数配置和状态的查看。SNMP 是基于通讯协议的管理工具,实现网络设备参数的自动化监控和远程配置。<br>
+    &nbsp;&nbsp;网络设备的配置和管理的新技术是SDN（Software Defined Netrork）。软件定义网络是2006年斯坦福大学提出的网络设备分层编程控制系统，全新的网络设备自动化配置和管理体系。<br>
+
+    &nbsp;&nbsp;手册最新版：<a href="https://ladybirdsnml.github.io/snmlipv6utf8snmptelnetsshweb/snmldoc_utf8ipv6.html">https://ladybirdsnml.github.io/snmlipv6utf8snmptelnetsshweb/snmldoc_utf8ipv6_913.html</a><br>
+    &nbsp;&nbsp;<img src="images/screen.png" /><br>
+    &nbsp;&nbsp;手机扫描二维码打开最新手册<br><br>
+  
+    <h2><a name="C0"></a>目 录</h2><hr>
+    <br>
+    <a href="#C1">第1章、变量（var）</a><br>
+    1、直接赋值语句<br>
+    2、变量复制语句<br>
+    3、变量编辑语句<br>
+    4、示例脚本[C:\snmlipv6\var\var_nms1.txt]<br>
+    <a href="#C2">第2章、屏幕（screen）文本、绘图、声音</a><br>
+    1、文本显示<br>
+    2、绘图<br>
+    3、声音<br>
+    4、示例脚本[C:\snmlipv6\screen\screen_nms1.txt]<br>
+    <a href="#C3">第3章、snmp工具、snml语言执行概述</a><br>
+    1、网络设备开启snmp功能<br>
+    2、示例脚本[C:\snmlipv6\snmp\snmp_ipv4.txt]<br>
+    3、解释器[C:\snmlipv6\snml.exe]逐行解析执行脚本<br>
+    4、示例脚本[C:\snmlipv6\snmp\snmp_ipv4.txt]语法解析<br>
+    5、示例脚本[C:\snmlipv6\snmp\snmp_ipv6.txt]<br>
+    <a href="#C4">第4章、telnet</a><br>
+    1、示例脚本[C:\snmlipv6\telnet\telnet_ipv4.txt]，查看文本区内容<br>
+    2、示例脚本分析<br>
+    3、脚本执行后查看变量区内容<br>
+    4、示例脚本[C:\snmlipv6\telnet\telnet_ipv6.txt]，查看文本区内容<br>
+    <a href="#C5">第5章、文本区（text）</a><br>
+    1、文本区增加内容<br>
+    2、使用文本区头指针、尾指针选定文本区内容<br>
+    3、文本区选定内容的编辑、存储、变量提取<br>
+    4、文本区删除部分内容<br>
+    5、示例脚本[C:\snmlipv6\text\text_nms1.txt]<br>
+    <a href="#C6">第6章、判断语句（if）</a><br>
+    1、判断变量的值(if.var)<br>
+    2、判断文本区选定内容(if.text)<br>
+    <a href="#C7">第7章、循环语句（loop）</a><br>
+    <a href="#C8">第8章、dns</a><br>
+    1、dns语句分析<br>
+    2、示例脚本[C:\snmlipv6\ping\ping_ipv4.txt]中的dns语句部分<br>
+    3、示例脚本[C:\snmlipv6\ping\ping_ipv6.txt]中的dns语句部分<br>
+    <a href="#C9">第9章、ping</a><br>
+    1、ping语句分析<br>
+    2、示例脚本[C:\snmlipv6\ping\ping_ipv4.txt<br>
+    3、示例脚本[C:\snmlipv6\ping\ping_ipv6.txt<br>
+    <a href="#C10">第10章、arp</a><br>
+    1、arp语句分析<br>
+    2、示例脚本[C:\snmlipv6\arp\arp_nms1.txt]<br>
+    <a href="#C11">第11章、excel</a><br>
+    1、excel语句分析<br>
+    2、示例脚本[C:\snmlipv6\excel\excel_nms1.txt]<br>
+    <a href="#C12">第12章、smtp（e-mail）</a><br>
+    1、smtp语句分析<br>
+    2、示例脚本[C:\snmlipv6\smtp\smtp_nms1.txt]<br>
+    <a href="#C13">第13章、tcp</a><br>
+    1、tcp语句分析<br>
+    2、示例脚本[C:\snmlipv6\tcp\tcp_client_ipv4.txt]<br>
+    3、示例脚本[C:\snmlipv6\tcp\tcp_client_ipv6.txt]<br>
+    <a href="#C14">第14章、udp</a><br>
+    1、udp语句分析<br>
+    2、示例脚本[C:\snmlipv6\udp\udp_ipv4.txt]<br>
+    3、示例脚本[C:\snmlipv6\udp\udp_ipv6.txt]<br>
+    <a href="#C15">第15章、ssh</a><br>
+    1、ssh语句分析<br>
+    2、示例脚本[C:\snmlipv6\ssh\ssh_ipv4.txt]<br>
+    3、ssh注册脚本[C:\snmlipv6\ssh\sshreg_nms.txt]<br>
+    4、示例脚本[C:\snmlipv6\ssh\ssh_ipv6.txt]<br>
+    <a href="#C16">第16章、web</a><br>
+    1、web语句分析<br>
+    2、示例脚本[C:\snmlipv6\web\web_nms1.txt]<br>
+    <a href="#C17">第17章、object数据库</a><br>
+    1、object存储语句分析<br>
+    2、object创建、属性定义语句分析<br>
+    <a href="#C18">第18章、sqlite数据库</a><br>
+    1、sqlite语句分析	<br>
+    2、示例脚本[C:\snmlipv6\sqlite\sqlite_nms1.txt]<br>
+    <a href="#C19">第19章、	Run（脚本执行控制）</a><br>
+    1、run语句分析<br>
+    2、示例脚本[C:\snmlipv6\run\run_nms1.txt]<br>
+    <a href="#C20">第20章、	sys（执行本机命令）</a><br>
+    1、sys语句分析<br>
+    2、示例脚本[C:\snmlipv6\sys\sys_nms1.txt]<br>
+    <a href="#C21">第21章、	macro</a><br>
+    1、macro语句分析<br>
+    2、示例脚本[C:\snmlipv6\macro\macro_nms1.txt]<br>
+    <a href="#C22">第22章、class类定义</a><br>
+    1、classt创建、属性定义语句分析<br>
+
+    <a href="#A1">附录1、全部语句句法格式</a><br>
+    <br>
+    <br>
+    <h2><a name="C1"></a>第1章、变量（var）</h2><hr />
+    <h3>1、直接赋值语句</h3>
+    <br>
+    var {myvar1} value {test1}<br>
+    定义变量myvar1的值为字符串“test1”<br>
+    <br>
+    var {myvar2} value number {(1+2)*3/4-5}<br>
+    定义变量myvar2的值为整形数字，计算表达式的值为-3<br>
+    <br>
+    var {myvar3} value datetime<br>
+    定义变量myvar3的值当前日期时间，示例值“2019-06-01 21:16:37”<br>
+    <br>
+    <h3>2、变量复制语句</h3>
+    var {myvar4} copy var {myvar1}<br>
+    定义变量myvar4,复制变量myvar1的值，值为字符串“test1”<br>
+    <br>
+    var {myvar5} copy var {myvar2}<br>
+    定义变量myvar5,复制变量myvar2的值，值为字符串“-3”<br>
+    <br>
+    var {myvar6} copy var {myvar3} after {5} bytes length {5}<br>
+    定义变量myvar6,复制变量myvar3的部分值，从第5字节后面拷贝5个字节的长度，值为字符串“06-01”<br>
+    <br>
+    var {myvar7} copy var {myvar5}<br>
+    定义变量myvar5,复制变量myvar5的值，值为字符串“-3”<br>
+    <br>
+    <h3>3、变量编辑语句</h3><br>
+    var {myvar4} add {2}<br>
+    变量myvar4的值追加字符串“2”，值为字符串“test12”<br>
+    <br>
+    var {myvar5} add number {1}<br>
+    变量myvar5的值整数加1，值为-2<br>
+    <br>
+    var {myvar6} replace {-} with {.}<br>
+    变量myvar6的值进行字符串值的替换，把“-”替换为“.”，值为“06.01”<br>
+    <br>
+    var {myvar7} adjust length {10} align {right}<br>
+    变量myvar7的值进行长度调整，调整为10个字节，右对齐，值为“&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-3”<br>
+    <br>
+    <h3>4、示例脚本[C:\snmlipv6\var\var_nms1.txt],脚本为纯文本文件，支持UTF8的文件编码格式。</h3><br>
+    1)脚本内容如下：<br>
+
+    <table>
+        <tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\var\var_nms1.txt</th></tr>
+        <tr><td class="line_no">001</td><td class="line_src">var {myvar1} value {test1} </td></tr>
+        <tr><td class="line_no">002</td><td class="line_src">var {myvar2} value number {(1+2)*3/4-5} </td></tr>
+        <tr><td class="line_no">003</td><td class="line_src">var {myvar3} value datetime </td></tr>
+        <tr><td class="line_no">004</td><td class="line_src"></td></tr>
+        <tr><td class="line_no">005</td><td class="line_src">var {myvar4} copy var {myvar1} </td></tr>
+        <tr><td class="line_no">006</td><td class="line_src">var {myvar5} copy var {myvar2} </td></tr>
+        <tr><td class="line_no">007</td><td class="line_src">var {myvar6} copy var {myvar3} after {5} bytes length {5} </td></tr>
+        <tr><td class="line_no">008</td><td class="line_src"></td></tr>
+        <tr><td class="line_no">009</td><td class="line_src">var {myvar4} add {2} </td></tr>
+        <tr><td class="line_no">010</td><td class="line_src">var {myvar5} add number {1} </td></tr>
+        <tr><td class="line_no">011</td><td class="line_src">var {myvar6} replace {-} with {.} </td></tr>
+        <tr><td class="line_no">012</td><td class="line_src"></td></tr>
+        <tr><td class="line_no">013</td><td class="line_src">var {myvar7} copy var {myvar5} </td></tr>
+        <tr><td class="line_no">014</td><td class="line_src">var {myvar7} adjust length {10} align {right} </td></tr>
+        <tr><td class="line_no">015</td><td class="line_src"></td></tr>
+        <tr><td class="line_no">016</td><td class="line_src">screen.text at point {10} {30} string {myvar1 = [~myvar1~]} </td></tr>
+        <tr><td class="line_no">017</td><td class="line_src">screen.text at point {10} {50} string {myvar2 = [~myvar2~]} </td></tr>
+        <tr><td class="line_no">018</td><td class="line_src">screen.text at point {10} {70} string {myvar3 = [~myvar3~]} </td></tr>
+        <tr><td class="line_no">019</td><td class="line_src">screen.text at point {10} {90} string {myvar4 = [~myvar4~]} </td></tr>
+        <tr><td class="line_no">020</td><td class="line_src">screen.text at point {10} {110} string {myvar5 = [~myvar5~]} </td></tr>
+        <tr><td class="line_no">021</td><td class="line_src">screen.text at point {10} {130} string {myvar6 = [~myvar6~]} </td></tr>
+        <tr><td class="line_no">022</td><td class="line_src">screen.text at point {10} {150} string {myvar7 = [~myvar7~]} </td></tr>
+        <tr><td class="line_no">023</td><td class="line_src"></td></tr>
+        <tr><td class="line_no">024</td><td class="line_src">run.end </td></tr>
+    </table>
+    脚本文件保存为UTF8编码，如下图所示：<br>
+    <img src="images/var_nms1_saveasutf8.png" /><br>
+
+    #screen.text语句见第二章屏幕部分。<br>
+    <br>
+    2)通过C:\snmlipv6\var_nms1.bat执行，批处理文件内容如下：<br>
+    <img src="images/var_bat.png" /><br>
+    C:\snmlipv6\snml.exe nolog C:\snmlipv6\var\var_nms1.txt<hr>
+    &nbsp;&nbsp;参数1:“C:\snmlipv6\snml.exe” 为解释器程序<br />
+    &nbsp;&nbsp;参数2:“nolog”指定运行模式和日志的级别，nolog为显示图形界面但不记录日志<br />
+    &nbsp;&nbsp;参数3:“C:\snmlipv6\var\var_nms1.txt”为脚本文件的全路径文件名<br>
+    <br>
+    3) 点击“Go”或“run”执行脚本。<br>
+    <img src="images/var.png" /><br>
+
+    <br>
+    <br><a href="#C0">目录:</a>    <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+
+
+    <h2><a name="C2"></a>第2章、屏幕（screen）文本、绘图、声音</h2><hr />
+
+    <h3>1、文本显示</h3>
+    screen.text at point {10} {30} string {myvar1 = [~myvar1~]} <br>
+    在屏幕的坐标点(10，30)处显示字符串“myvar1 = [~myvar1~]”，在语句解释执行时，会进行变量值的替换，“~myvar1~”表示需替换变量myvar1的值，最终显示的内容为“myvar1 = [test1]”<br>
+    <br>
+    screen.set font {仿宋} size {16}<br>
+    设置文本显示的字体和大小<br>
+    <br>
+    screen.set color red {255} green {128} blue {127}<br>
+    设置屏幕绘图、文本的颜色，RGB三色,每个颜色值的范围为0-255<br>
+    <br>
+    <h3>2、绘图</h3><br>
+
+    screen.line from point {10} {30} to point {110} {90}<br>
+    屏幕绘制直线，从坐标点(10，30)到从坐标点(110，90)<br>
+    <br>
+    screen.set mode {fill}<br>
+    设置屏幕为填充模式<br>
+    screen.rect from point {10} {30} to point {110} {90}<br>
+    屏幕绘制实心矩形，从坐标点(10，30)到从坐标点(110，90)<br>
+    screen.arc at point {10} {30} radius {10} from {90} to {270}<br>
+    屏幕绘制实心扇形，圆心为坐标点(10，30)，半径10，角度从90度到270度<br>
+    <br>
+    screen.set mode {stroke}<br>
+    设置屏幕为划线模式<br>
+    screen.rect from point {10} {30} to point {110} {90}<br>
+    屏幕绘制矩形框，从坐标点(10，30)到从坐标点(110，90)<br>
+    screen.arc at point {10} {30} radius {10} from {90} to {270}<br>
+    屏幕绘制圆弧，圆心为坐标点(10，30)，半径10，角度从90度到270度<br>
+    <br>
+    screen.image url {C:\snmlipv6\tmp\snml_1.png} from point {0} {0} to point {213} {358}<br>
+    在屏幕的矩形区域内显示图片，矩形区域为从坐标点（0,0）到（213，358）<br>
+    <br>
+    screen.save to file {C:\snmlipv6\tmp\snml_1.png} from point {0} {0} to point {640} {480}<br>
+    保存屏幕的矩形区域到图片（png格式），矩形区域为从坐标点（0,0）到（640，480）<br>
+    <br>
+    <h3>3、声音</h3><br>
+    screen.play midi {1234567cdefgabCDEFGAB}<br>
+    播放midi音乐“1234567cdefgabCDEFGAB”<br>
+    <br>
+    screen.speak {tts语言播放演示，myvar1 = ~myvar1~}<br>
+    播放语音“tts语言播放演示，myvar1 = test1”<br>
+    <br>
+    <h3>4、投屏到snmlWeb服务器</h3><br>
+    screen.open ip {127.0.0.1} port {7999} original point {641} {481}
+    snmlWeb服务器在udp 7999端口侦听，接受snml.exe发出的屏幕指令，在服务器上绘屏幕，通过web浏览器可以访问在snmlWeb服务器绘制的屏幕内容。<br>
+    服务器上的屏幕分辨率较大，可以容纳多个snml.exe同时投屏，通过指定坐标起始点坐标（本例x=641,y=481），选取在服务器屏幕上的起始位置。
+    <br>
+    <br>
+    <h3>5、示例脚本[C:\snmlipv6\screen\screen_nms1.txt],脚本为纯文本文件，支持UTF8的文件编码格式。</h3>
+
+ <table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\screen\screen_nms1.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.open ip {127.0.0.1} port {7999} original point {0} {0}</td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">screen.set font {Arial} size {16} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">screen.text at point {140} {60} string {Simple Network Management Language  (SNML)} </td></tr> 
+
+<tr><td class="line_no">004</td><td class="line_src">screen.set font {华文行楷} size {24} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.text at point {180} {100} string {简单网络管理语言} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.line from point {10} {120} to point {630} {120} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">screen.set font {Arial} size {12} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">screen.play midi {cdefgab 1234567} </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">var {x} value { 10} </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src">var {y} value { 300} </td></tr> 
+<tr><td class="line_no">012</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">macro.call {draw_ladybird} </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">015</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">screen.text at point {10} {180} string {术语1：简单网络管理协议S N M P（ Simple Network Management Protocol ）} </td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">screen.text at point {10} {230} string {术语2：简单网络管理语言 S N M L ( Simple Network Management Language )} </td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">screen.text at point {200} {350} string {版本：snml8.13(ladybird-ipv6-20200205)} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">screen.text at point {200} {375} string {技术支持邮箱1：snml_ladybird@protonmail.com} </td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">screen.text at point {200} {400} string {技术支持邮箱2：snml_ladybird@hotmail.com} </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src">screen.text at point {10} {440} string {Now remember, Pinocchio, be a good boy. And always let your conscience be your guide.} </td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">screen.text at point {10} {455} string {Love is the flame of life, without it, everything becomes dark. -- Romain Rolland. } </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">screen.speak {Now remember, Pinocchio, be a good boy. And always let your conscience be your guide.} </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">screen.speak {Love is the flame of life, without it, everything becomes dark. -- Romain Rolland. } </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">screen.line from point {50} {220} to point {630} {220} </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">screen.line from point {50} {265} to point {630} {265} </td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">screen.line from point {30} {290} to point {630} {290} </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">screen.line from point {130} {315} to point {630} {315} </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">run.set loglevel {info} </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">screen.speak {1、什么是简单网络管理协议S N M P（ Simple Network Management Protocol ）？} </td></tr> 
+<tr><td class="line_no">033</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">034</td><td class="line_src">screen.text at point {50} {205} string {简单网络管理协议是可以管理不同厂家网络设备的简单通讯协议。} </td></tr> 
+<tr><td class="line_no">035</td><td class="line_src">screen.speak {简单网络管理协议是可以管理不同厂家网络设备的简单通讯协议。} </td></tr> 
+<tr><td class="line_no">036</td><td class="line_src">screen.text at point {50} {250} string {简单网络管理语言是一种类自然语言的脚本语言，它采用snmp、telnet、ping、dns、arp、ssh、} </td></tr> 
+<tr><td class="line_no">037</td><td class="line_src">screen.speak {简单网络管理语言是一种类自然语言的脚本语言，它采用snmp、telnet、ping、dns、arp、ssh、} </td></tr> 
+<tr><td class="line_no">038</td><td class="line_src">screen.text at point {30} {275} string {tcp、udp、web等协议与网络设备的互动，内置了smtp协议用于告警等邮件的发送，} </td></tr> 
+<tr><td class="line_no">039</td><td class="line_src">screen.speak {tcp、udp、web等协议与网络设备的互动，内置了smtp协议用于告警等邮件的发送，} </td></tr> 
+<tr><td class="line_no">040</td><td class="line_src">screen.text at point {130} {300} string {支持excel、mysql、sqlite等3种方式进行管理信息数据的存取。} </td></tr> 
+<tr><td class="line_no">041</td><td class="line_src">screen.speak {支持excel、mysql、sqlite等3种方式进行管理信息数据的存取。} </td></tr> 
+<tr><td class="line_no">042</td><td class="line_src">screen.save to file {C:\snmlipv6\tmp\snml_1.png} from point {0} {0} to point {640} {480} </td></tr> 
+<tr><td class="line_no">043</td><td class="line_src">run.end </td></tr> 
+<tr><td class="line_no">044</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">045</td><td class="line_src">macro.begin {draw_ladybird} </td></tr> 
+<tr><td class="line_no">046</td><td class="line_src">&nbsp;&nbsp;#var {x} value {0} </td></tr> 
+<tr><td class="line_no">047</td><td class="line_src">&nbsp;&nbsp;#var {y} value {0}	 </td></tr> 
+<tr><td class="line_no">048</td><td class="line_src">&nbsp;&nbsp;screen.set mode {stroke} </td></tr> 
+<tr><td class="line_no">049</td><td class="line_src">&nbsp;&nbsp;screen.set color red {0} green {0} blue {0} </td></tr> 
+<tr><td class="line_no">050</td><td class="line_src">&nbsp;&nbsp;#screen.rect from point {0}   {0}  to point {127}   {127}  </td></tr> 
+<tr><td class="line_no">051</td><td class="line_src">&nbsp;&nbsp;screen.set color red {255} green {0} blue {0} </td></tr> 
+<tr><td class="line_no">052</td><td class="line_src">&nbsp;&nbsp;screen.set mode {fill} </td></tr> 
+<tr><td class="line_no">053</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">054</td><td class="line_src">&nbsp;&nbsp;var {x1} value number {~x~+60} </td></tr> 
+<tr><td class="line_no">055</td><td class="line_src">&nbsp;&nbsp;var {y1} value number {~y~+78} </td></tr> 
+<tr><td class="line_no">056</td><td class="line_src">&nbsp;&nbsp;screen.arc at point {~x1~} {~y1~} radius {50} from {0} to {360} </td></tr> 
+<tr><td class="line_no">057</td><td class="line_src">&nbsp;&nbsp;screen.set color red {0} green {0} blue {0} </td></tr> 
+<tr><td class="line_no">058</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">059</td><td class="line_src">&nbsp;&nbsp;var {x1} value number {~x~+60} </td></tr> 
+<tr><td class="line_no">060</td><td class="line_src">&nbsp;&nbsp;var {y1} value number {~y~+33} </td></tr> 
+<tr><td class="line_no">061</td><td class="line_src">&nbsp;&nbsp;screen.arc at point {~x1~} {~y1~} radius {25} from {180} to {360} </td></tr> 
+<tr><td class="line_no">062</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">063</td><td class="line_src">&nbsp;&nbsp;var {x1} value number {~x~+60} </td></tr> 
+<tr><td class="line_no">064</td><td class="line_src">&nbsp;&nbsp;var {y1} value number {~y~+28} </td></tr> 
+<tr><td class="line_no">065</td><td class="line_src">&nbsp;&nbsp;screen.set color red {0} green {0} blue {0} </td></tr> 
+<tr><td class="line_no">066</td><td class="line_src">&nbsp;&nbsp;screen.arc at point {~x1~} {~y1~} radius {100} from {85} to {95} </td></tr> 
+<tr><td class="line_no">067</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">068</td><td class="line_src">&nbsp;&nbsp;var {x1} value number {~x~+60} </td></tr> 
+<tr><td class="line_no">069</td><td class="line_src">&nbsp;&nbsp;var {y1} value number {~y~+33} </td></tr> 
+<tr><td class="line_no">070</td><td class="line_src">&nbsp;&nbsp;var {x2} value number {~x~+80} </td></tr> 
+<tr><td class="line_no">071</td><td class="line_src">&nbsp;&nbsp;var {y2} value number {~y~+5} </td></tr> 
+<tr><td class="line_no">072</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">073</td><td class="line_src">&nbsp;&nbsp;screen.line from point {~x1~} {~y1~} to point {~x2~} {~y2~} </td></tr> 
+<tr><td class="line_no">074</td><td class="line_src">&nbsp;&nbsp;var {x2} value number {~x~+40} </td></tr> 
+<tr><td class="line_no">075</td><td class="line_src">&nbsp;&nbsp;screen.line from point {~x1~} {~y1~} to point {~x2~} {~y2~} </td></tr> 
+<tr><td class="line_no">076</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">077</td><td class="line_src">&nbsp;&nbsp;var {x1} value number {~x~+80} </td></tr> 
+<tr><td class="line_no">078</td><td class="line_src">&nbsp;&nbsp;var {y1} value number {~y~+5} </td></tr> 
+<tr><td class="line_no">079</td><td class="line_src">&nbsp;&nbsp;screen.arc at point {~x1~} {~y1~} radius {2} from {0} to {360} </td></tr> 
+<tr><td class="line_no">080</td><td class="line_src">&nbsp;&nbsp;var {x1} value number {~x~+40} </td></tr> 
+<tr><td class="line_no">081</td><td class="line_src">&nbsp;&nbsp;screen.arc at point {~x1~} {~y1~} radius {2} from {0} to {360} </td></tr> 
+<tr><td class="line_no">082</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">083</td><td class="line_src">&nbsp;&nbsp;screen.set color red {255} green {255} blue {255} </td></tr> 
+<tr><td class="line_no">084</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">085</td><td class="line_src">&nbsp;&nbsp;var {x1} value number {~x~+48} </td></tr> 
+<tr><td class="line_no">086</td><td class="line_src">&nbsp;&nbsp;var {y1} value number {~y~+20} </td></tr> 
+<tr><td class="line_no">087</td><td class="line_src">&nbsp;&nbsp;screen.arc at point {~x1~} {~y1~} radius {5} from {0} to {360} </td></tr> 
+<tr><td class="line_no">088</td><td class="line_src">&nbsp;&nbsp;var {x1} value number {~x~+72} </td></tr> 
+<tr><td class="line_no">089</td><td class="line_src">&nbsp;&nbsp;screen.arc at point {~x1~} {~y1~} radius {5} from {0} to {360} </td></tr> 
+<tr><td class="line_no">090</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">091</td><td class="line_src">&nbsp;&nbsp;screen.set color red {0} green {0} blue {0} </td></tr> 
+<tr><td class="line_no">092</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">093</td><td class="line_src">&nbsp;&nbsp;var {x1} value number {~x~+48} </td></tr> 
+<tr><td class="line_no">094</td><td class="line_src">&nbsp;&nbsp;var {y1} value number {~y~+19} </td></tr> 
+<tr><td class="line_no">095</td><td class="line_src">&nbsp;&nbsp;screen.arc at point {~x1~} {~y1~} radius {3} from {0} to {360} </td></tr> 
+<tr><td class="line_no">096</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">097</td><td class="line_src">&nbsp;&nbsp;var {x1} value number {~x~+72} </td></tr> 
+<tr><td class="line_no">098</td><td class="line_src">&nbsp;&nbsp;screen.arc at point {~x1~} {~y1~} radius {3} from {0} to {360} </td></tr> 
+<tr><td class="line_no">099</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">100</td><td class="line_src">&nbsp;&nbsp;var {x1} value number {~x~+60} </td></tr> 
+<tr><td class="line_no">101</td><td class="line_src">&nbsp;&nbsp;var {y1} value number {~y~+43} </td></tr> 
+<tr><td class="line_no">102</td><td class="line_src">&nbsp;&nbsp;screen.arc at point {~x1~} {~y1~} radius {10} from {0} to {360} </td></tr> 
+<tr><td class="line_no">103</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">104</td><td class="line_src">&nbsp;&nbsp;var {x1} value number {~x~+90} </td></tr> 
+<tr><td class="line_no">105</td><td class="line_src">&nbsp;&nbsp;var {y1} value number {~y~+59} </td></tr> 
+<tr><td class="line_no">106</td><td class="line_src">&nbsp;&nbsp;screen.arc at point {~x1~} {~y1~} radius {8} from {0} to {360} </td></tr> 
+<tr><td class="line_no">107</td><td class="line_src">&nbsp;&nbsp;var {x1} value number {~x~+30} </td></tr> 
+<tr><td class="line_no">108</td><td class="line_src">&nbsp;&nbsp;screen.arc at point {~x1~} {~y1~} radius {8} from {0} to {360} </td></tr> 
+<tr><td class="line_no">109</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">110</td><td class="line_src">&nbsp;&nbsp;var {x1} value number {~x~+75} </td></tr> 
+<tr><td class="line_no">111</td><td class="line_src">&nbsp;&nbsp;var {y1} value number {~y~+73} </td></tr> 
+<tr><td class="line_no">112</td><td class="line_src">&nbsp;&nbsp;screen.arc at point {~x1~} {~y1~} radius {8} from {0} to {360} </td></tr> 
+<tr><td class="line_no">113</td><td class="line_src">&nbsp;&nbsp;var {x1} value number {~x~+45} </td></tr> 
+<tr><td class="line_no">114</td><td class="line_src">&nbsp;&nbsp;screen.arc at point {~x1~} {~y1~} radius {8} from {0} to {360} </td></tr> 
+<tr><td class="line_no">115</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">116</td><td class="line_src">&nbsp;&nbsp;var {x1} value number {~x~+90} </td></tr> 
+<tr><td class="line_no">117</td><td class="line_src">&nbsp;&nbsp;var {y1} value number {~y~+100} </td></tr> 
+<tr><td class="line_no">118</td><td class="line_src">&nbsp;&nbsp;screen.arc at point {~x1~} {~y1~} radius {8} from {0} to {360} </td></tr> 
+<tr><td class="line_no">119</td><td class="line_src">&nbsp;&nbsp;var {x1} value number {~x~+30} </td></tr> 
+<tr><td class="line_no">120</td><td class="line_src">&nbsp;&nbsp;screen.arc at point {~x1~} {~y1~} radius {8} from {0} to {360} </td></tr> 
+<tr><td class="line_no">121</td><td class="line_src">macro.end </td></tr> 
+</table> 
+
+    执行C:\snmlipv6\screen_nms1.bat,点击“Go”或“run”执行脚本,脚本执行结果如下：<br>
+    <img src="images/screen.png" /><br>
+snmlWeb服务器，浏览器显示结果如下：<br>
+<img src="images/screen_web.png" /><br>
+    <br>
+    <br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+
+
+    <h2><a name="C3"></a>第3章、snmp工具、snml语言执行概述</h2><hr />
+    &nbsp;&nbsp;snmp（ Simple Network Management Protocol ）简单网络管理协议是可以管理不同厂家网络设备的简单通讯协议。<br>
+    <h3>1、网络设备开启snmp功能</h3>
+    Cisco设备配置snmp<br>
+    参考文档：<a href="https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/snmp/configuration/12-4t/snmp-12-4t-book/nm-snmp-cfg-snmp-support.html#GUID-048B997C-AB98-4602-B07B-3130577154F1">
+        https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/snmp/configuration/12-4t/snmp-12-4t-book/nm-snmp-cfg-snmp-support.html#GUID-048B997C-AB98-4602-B07B-3130577154F1
+    </a><br>
+    举例 ：<br>
+    Router>enable<br>
+    Router# configure terminal <br>
+    Router(config)# snmp-server community MyPassword RO<br>
+    <br>
+    HUAWEI设备配置snmp<br>
+    参考文档：<a href="https://support.huawei.com/enterprise/zh/doc/DOC1000088739?section=j005">
+        https://support.huawei.com/enterprise/zh/doc/DOC1000088739?section=j005
+    </a><br>
+    H3C设备配置snmp<br>
+    参考文档：<a href="http://www.h3c.com/cn/d_201108/723419_30005_0.htm">
+        http://www.h3c.com/cn/d_201108/723419_30005_0.htm
+    </a>
+    <br>
+    举例 ：<br>
+    &lt;Sysname&gt;system-view<br>
+    [Sysname] snmp-agent<br>
+    [Sysname] snmp-agent sys-info version v1 v2c<br>
+    [Sysname] snmp-agent community read MyPassword<br>
+    <br>
+    <h3> 2、查看示例脚本[C:\snmlipv6\snmp\snmp_ipv4.txt]</h3>
+
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\snmp\snmp_ipv4.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">snmp.open version {2c} ip {192.168.186.132} port {161} password {cisco} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">snmp.get var {cisco7200} oid {1.3.6.1.2.1.1.5.0} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">screen.text at point {5} {20} string {snmp.get (oid:1.3.6.1.2.1.1.5.0) return value: [~cisco7200~]} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">snmp.getnext oid {1.3.6.1.2.1.1.3} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.text at point {5} {40} string {snmp.getnext (oid:1.3.6.1.2.1.1.5.0)   } </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.text at point {55} {60} string {return oid: [~snmp.oid~] return value: [~snmp.value~]} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">run.end </td></tr> 
+</table> 
+
+    <br>
+    <h3> 3、由解释器 [C:\snmlipv6\snml.exe] 逐行解析执行脚本</h3>
+    &nbsp;&nbsp;批处理文件C:\snmlipv6\snmp_ipv4.bat，双击执行，开始调用解释器程序。
+    <br>
+    <img src="images/snmp_bat.png" /><br>
+    C:\snmlipv6\snml.exe nolog C:\snmlipv6\snmp\snmp_ipv4.txt<hr>
+    &nbsp;&nbsp;批处理文件中执行C:\snmlipv6\snml.exe，snml.exe是简单网络管理语言的解释器。后面两个命令行参数，第一个参数nolog参数的含义是不记录日志，第二个参数C:\snmlipv6\snmp\snmp_ipv4.txt为网管脚本文件的文件名。<br>
+    &nbsp;&nbsp;点击“Go”或“run”执行脚本,脚本执行结果如下：<br>
+    <img src="images/snmp.png" /><br>
+    <h3>4、示例脚本[C:\snmlipv6\snmp\snmp_ipv4.txt]语法解析</h3>
+    <img src="images/snmp_nms.png" /><br>
+    1）snmp.open version {2c} ip {192.168.186.132} port {161} password {MyPassword} <br>
+    snmp.open语句用来打开snmp管理协议，有4个参数，所有参数用左右大括弧{}括起来。<br>
+    第一个参数{2c}为snmp协议的版本号，支持1、2、2c；<br>
+    第二个参数{192.168.186.132}为网络设备的IP地址；<br>
+    第三个参数{161}为网络设备snmp服务的端口号，默认值为UDP的161端口；<br>
+    第四个参数{MyPassword}为网络设备snmp服务的密码<br>
+    <br>
+    2）snmp.get var {cisco7200_SysName} oid {1.3.6.1.2.1.1.5.0} <br>
+    snmp.get语句向snmp.open指定的网络设备发送snmp.get请求报文，并接收应答。<br>
+    第二个参数{1.3.6.1.2.1.1.5.0}为请求网络设备参数的oid值；<br>
+    第一个参数{cisco7200_SysName}为变量名字，该变量用来保存网络设备返回值；<br>
+    在本例子中网络设备返回oid {1.3.6.1.2.1.1.5.0} 对应的值“R2_7206.test.cisco”，<br>
+    变量区生成或更新变量：cisco7200_SysName=[R2_7206.test.cisco]；<br>
+    <br>
+    3）screen.text at point {20} {20} string {snmp.get 返回值： ~cisco7200_SysName~} <br>
+    screen.text语句在解释器的屏幕上显示文本。<br>
+    第一、二个参数{20}和 {20}为屏幕的坐标点(20,20),在该位置开始显示文本；<br>
+    第三个参数{snmp.get 返回值： ~cisco7200_SysName~}为要显示的文本内容，用两个~线连接一个变量，<br>
+    在本语句中，显示“snmp.get 返回值：”+ 变量cisco7200_SysName的值，变量cisco7200_SysName=[R2_7206.test.cisco]，最后显示内容为：“snmp.get 返回值：R2_7206.test.cisco”<br>
+    <br>
+    4）snmp.getnext oid {1.3.6.1.2.1.1.3} 	<br>
+    snmp.getnext语句向snmp.open指定的网络设备发送snmp.getnext请求报文，并接收应答。<br>
+    第一个参数{1.3.6.1.2.1.1.3}为请求网络设备参数的oid值；<br>
+    网络设备接收到snmp.getnext指令后，返回与指定oid紧邻的下一个oid值和及对应参数值，在本例中网络设备返回oid {1.3.6.1.2.1.1.3}的紧邻的下一个oid值为”1.3.6.1.2.1.1.3.0”，参数值为” 0 Days 1 Hours 1 Minutes 34 Seconds”；<br>
+    由于本语句执行后产生的变量值有两个，语句用规定的两个变量名来保存网络设备返回的两个值，变量名和值如下：<br>
+    snmp.oid=[1.3.6.1.2.1.1.3.0]<br>
+    snmp.value=[0 Days 1 Hours 1 Minutes 34 Seconds]<br>
+    <br>
+    5）screen.text at point {20} {100} string {snmp.getnext 返回oid值：~snmp.oid~ 返回值：~snmp.value~} <br>
+    screen.text语句在解释器的屏幕上显示文本。<br>
+    第一、二个参数{20}和 {100}为屏幕的坐标点(20,100),在该位置开始显示文本；<br>
+    第三个参数{snmp.getnext 返回oid值：~snmp.oid~ 返回值：~snmp.value~}为要显示的文本内容，用两个~线连接一个变量，在本语句中，显示“snmp.getnext 返回oid值：”+ 变量snmp.oid的值+“返回值：”+变量snmp.value 的值，最后显示内容为：“snmp.getnext 返回oid值：1.3.6.1.2.1.1.3.0返回值：0 Days 1 Hours 1 Minutes 34 Seconds”<br>
+    6）run.end<br>
+    run.end语句表示脚本执行结束。<br>
+ <h3> 5、查看示例脚本[C:\snmlipv6\snmp\snmp_ipv6.txt]</h3>
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\snmp\snmp_ipv6.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.set color red {0} green {0} blue {0} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">screen.text at point {150} {30} string {10.snmp test (ipv6): snmp.open snmp.get snmp.getnext} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">run.set loglevel {debug} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">snmp.open version {2c} ip {fe80::2} port {161} password {cisco} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">snmp.get var {v_snmp} oid {1.3.6.1.2.1.1.1.0} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.text at point {10} {60} string {Cisco3725 ipv6:[fe80::2], snmp.get(1.3.6.1.2.1.1.1.0)=[~v_snmp~]} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">var {v_y} value {140} </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src">screen.text at point {10} {~v_y~} string {No.} </td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">screen.text at point {50} {~v_y~} string {Test Method} </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src">screen.line from point {10} {155} to point {230} {155} </td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">screen.text at point {270} {~v_y~} string {snmp.oid} </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">screen.line from point {250} {155} to point {350} {155} </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">screen.text at point {390} {~v_y~} string {snmp.value} </td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">screen.line from point {370} {155} to point {630} {155} </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">var {v_i} value {0} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">020</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">021</td><td class="line_src">var {snmp.oid} value {1.3.6.1.2.1.1.1.0} </td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">loop.begin </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">&nbsp;&nbsp;var {v_i} add number {1} </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">&nbsp;&nbsp;var {v_y} add number {18} </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">&nbsp;&nbsp;screen.text at point {10} {~v_y~} string {~v_i~} </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">&nbsp;&nbsp;screen.text at point {50} {~v_y~} string {snmp.getnext(~snmp.oid~)} </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">&nbsp;&nbsp;snmp.getnext oid {~snmp.oid~} </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">&nbsp;&nbsp;screen.text at point {250} {~v_y~} string {~snmp.oid~} </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">&nbsp;&nbsp;screen.text at point {370} {~v_y~} string {~snmp.value~} </td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">033</td><td class="line_src">&nbsp;&nbsp;var {v_y} add number {18} </td></tr> 
+<tr><td class="line_no">034</td><td class="line_src">&nbsp;&nbsp;snmp.get var {v_snmp} oid {~snmp.oid~} </td></tr> 
+<tr><td class="line_no">035</td><td class="line_src">&nbsp;&nbsp;screen.text at point {50} {~v_y~} string {snmp.get(~snmp.oid~)} </td></tr> 
+<tr><td class="line_no">036</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">037</td><td class="line_src">&nbsp;&nbsp;screen.text at point {370} {~v_y~} string {~v_snmp~} </td></tr> 
+<tr><td class="line_no">038</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">039</td><td class="line_src">&nbsp;&nbsp;if.var {v_y} > {400} </td></tr> 
+<tr><td class="line_no">040</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;loop.exit </td></tr> 
+<tr><td class="line_no">041</td><td class="line_src">&nbsp;&nbsp;if.end </td></tr> 
+<tr><td class="line_no">042</td><td class="line_src">loop.end </td></tr> 
+<tr><td class="line_no">043</td><td class="line_src">run.end </td></tr> 
+</table> 
+脚本执行结果如下：<br>
+<img src="images/snmp_ipv6.png" /><br>
+
+<br>
+
+    <br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+    <h2><a name="C4"></a>第4章、telnet </h2><hr />
+    &nbsp;&nbsp;telnet协议是远程登录服务的标准协议和主要方式。它为用户提供了在本地计算机上登录远程主机、网络设备开展工作的能力。<br>
+    <h3>1、示例脚本[C:\snmlipv6\telnet\telnet_ipv4.txt]，查看文本区内容</h3>
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\telnet\telnet_ipv4.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">screen.text at point {10} {30} string {2. telnet  ipv4 (192.168.186.132:23)  test , datetime: ~v_time~} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">telnet.connect ip {192.168.186.132} port {23} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">telnet.recv expect {Username:} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">telnet.send {cisco%0a} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">telnet.recv expect {Password} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">009</td><td class="line_src">telnet.send {cisco%0a} </td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">telnet.recv expect {>} </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src">telnet.send {enable%0a} </td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">telnet.set onrecv {More} send { } </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">telnet.set delay {200} ms after per byte send </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">telnet.send {show version%0a} </td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">telnet.recv for {5} seconds </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">telnet.send {show run%0a} </td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">telnet.recv for {5} seconds </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">telnet.send {exit%0a} </td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">telnet.close </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">screen.text at point {10} {60} string {telnet  tested end. datetime:~v_time~} </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">run.end </td></tr> 
+</table> 
+
+    <br>
+    <img src="images/telnet_text.png" /><br>
+    &nbsp;&nbsp;点击右下角的“文本区”单选按钮，显示脚本执行时的文本区的内容，如上图所示为telnet登录网络设备时显示的屏幕内容，将在下一章介绍文本区。<br>
+
+    <h3>2、示例脚本分析</h3>
+    var {v_time} value datetime <br>
+    screen.text at point {10} {30} string {2、telnet测试开始，当前时间：~v_time~} <br>
+    <br>
+    telnet.connect ip {192.168.186.132} port {23} <br>
+    登录远程设备，设备的IP地址为：192.168.186.132，服务端口号为：23<br>
+    <br>
+    telnet.recv expect {Username:} <br>
+    接收服务器发送的文本，一直接收到指定字符串“Username:”<br>
+    <br>
+    telnet.send {cisco%0a} <br>
+    发送用户名字符串“cisco”和换行键。<br>
+    <br>
+    &nbsp;&nbsp;要点1：snml参数中特殊字符的表示方法<br>
+    例如不可见字符、回车、换行、tab等，采用%+两位16进制ASCII码的方式表示，例如本例中%0a代表换行。<br>
+    由于%用于转义标识字符，当需要%字符时，应用%25标识，同样{用%7b标识，}用%7d标识。ASCII码表如下：<br>
+    <img src="images/ascii-en.png" />
+    <br>
+    telnet.recv expect {Password}<br>
+    接收服务器发送的文本，一直接收到指定字符串“Password”<br>
+    <br>
+    telnet.send {cisco%0a} <br>
+    发送密码字符串“cisco”和换行键。<br>
+    <br>
+    telnet.recv expect {>} <br>
+    接收服务器发送的文本，一直接收到指定字符串“>”<br>
+    <br>
+    telnet.send {enable%0a} <br>
+    发送字符串“enable”和换行键。<br>
+    <br>
+    telnet.set onrecv {More} send { }<br>
+    设置telnet自动输入选项，当接收到“More”时，自动发送一个空格<br>
+    <br>
+    telnet.set delay {200} ms after per byte send<br>
+    设置telnet输入选项，每发送一个字节后，暂停200毫秒，再发送下一个字符。模拟人工键盘输入，防止设备压力过大。<br>
+    <br>
+    telnet.send {show version%0a}<br>
+    发送字符串“show version”命令和换行键。<br>
+    <br>
+    telnet.recv for {5} seconds<br>
+    接收5秒钟内服务器发送的文本，当服务器发送的文本中含有“More”时，自动发送一个空格<br>
+    <br>
+    telnet.send text<br>
+    发送选中的文本区域<br>
+    <br>
+    telnet.close<br>
+    关闭telnet连接。<br>
+    <br>
+    var {v_time} value datetime <br>
+    screen.text at point {10} {60} string {telnet测试完成，当前时间：~v_time~} <br>
+    <br>
+    run.end<br>
+    <br>
+    <h3>3、脚本执行后查看变量区内容 </h3>
+    <br>
+    &nbsp;&nbsp;点击右下角的“变量区”单选按钮，显示脚本执行时的全部变量的值，注意telnet.status、telnet.onrecv、telnet.autosend 3个变量的值，参见下图：<br>
+    <img src="images/telnet_var.png" />
+    <br>
+
+ <h3>4、示例脚本[C:\snmlipv6\telnet\telnet_ipv6.txt]，查看文本区内容</h3>
+
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\telnet\telnet_ipv6.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">screen.text at point {10} {30} string {2. telnet  ipv6 ([FE80::1]:23)  test , datetime: ~v_time~} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">telnet.connect ip {FE80::1} port {23} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">telnet.recv expect {Username:} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">telnet.send {cisco%0a} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">telnet.recv expect {Password} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">009</td><td class="line_src">telnet.send {cisco%0a} </td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">telnet.recv expect {>} </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src">telnet.send {enable%0a} </td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">telnet.set onrecv {More} send { } </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">telnet.set delay {200} ms after per byte send </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">telnet.send {show version%0a} </td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">telnet.recv for {5} seconds </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">telnet.send {show run%0a} </td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">telnet.recv for {5} seconds </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">telnet.send {exit%0a} </td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">telnet.close </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">screen.text at point {10} {60} string {telnet  tested end. datetime:~v_time~} </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">run.end </td></tr> 
+</table> 
+
+    <br>
+脚本执行结果如下：<br>
+    <img src="images/telnet_ipv6.png" />
+
+    <br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+    <h2><a name="C5"></a>第5章、文本区（text）</h2><hr />
+    &nbsp;&nbsp;Snml解释器包含脚本区、变量区和文本区3个区的内容。文本区用来存储远程登录（telnet、ssh）、访问（tcp、udp）网络设备、服务时，网络设备、服务端返回的文本内容，例如show run、show version等命令的返回内容。<br>
+    &nbsp;&nbsp;telnet.recv、ssh_recv 等语句接收网络设备返回的文本，存储到文本取，变量text.bytes为文本区的字节长度。对文本区本身的操作语句如下：<br>
+    <h3>1、文本区增加内容</h3>
+    text.add {当前文本区字节数：~text.bytes~通过脚本增加文本区的内容，添加到文本区的末尾%0a}<br>
+    文本区增加内容，例句参数引用了变量text.bytes，并在行尾增加换行字符（%0a）<br>
+    <br>
+    text.add from file {C:\snmlipv6\tmp\text1.txt}<br>
+    文本区增加内容,从文件中读取内容，添加到文本区的末尾。<br>
+    <br>
+    <h3>2、使用文本区头指针、尾指针选定文本区内容 </h3>
+    text.headpointer move to head<br>
+    把头指针移动到文本区的开始处，即第一字节<br>
+    <br>
+    text.headpointer move to tail<br>
+    把头指针移动到文本区的结尾处，即最后一个字节<br>
+    <br>
+    text.headpointer move to {4} byte<br>
+    把头指针移动到文本区的指定字节位置，本示例语句移动到第4字节<br>
+    <br>
+    text.headpointer move forward {A4} bytes<br>
+    把头指针移动从当前位置开始向前移动字节位置，本示例语句向前移动4个字节<br>
+    <br>
+    text.headpointer move forward after {version}<br>
+    把头指针移动从当前位置开始向前移动到特定字符串的后面，本示例语句向前移动到“version”的后面1个字节位置<br>
+    <br>
+    text.tailpointer move to head<br>
+    把尾指针移动到文本区的开始处，即第一字节<br>
+    <br>
+    text.tailpointer move to tail<br>
+    把尾指针移动到文本区的结尾处，即最后一个字节<br>
+    <br>
+    text.tailpointer move to {4} byte<br>
+    把尾指针移动到文本区的指定字节位置，本示例语句移动到第4字节<br>
+    <br>
+    text.tailpointer move backward {4} bytes<br>
+    把尾指针移动从当前位置开始向后移动字节位置，本示例语句向后移动4个字节<br>
+    <br>
+    text.tailpointer move backward before {Software}<br>
+    把尾指针移动从当前位置开始向后移动到特定字符串的前面，本示例语句向后移动到“Software”的前面1个字节位置<br>
+    <br>
+    <h3>3、文本区选定内容的编辑、存储、变量提取</h3>
+    &nbsp;&nbsp;通过移动头指针和尾指针，从头指针（text.headpointer）和尾指针（text.tailpointer）之间的文本内容即为文本区的选定内容<br>
+    <br>
+    text.replace {version1} with {Version2}<br>
+    文本区选定内容进行查找替换，本示例语句把“version1”替换为“Version2”<br>
+    <br>
+    <br>
+    text.save to file { C:\snmlipv6\tmp\text1.txt}<br>
+    文本区选定内容保存到文件中,覆盖文件的原来内容<br>
+    <br>
+    text.save append to file { C:\snmlipv6\tmp\text1.txt}<br>
+    文本区选定内容追加方式保存到文件中,添加在文件原来内容的尾部<br>
+    <br>
+    text.get var {IOSversion} after {20} bytes length {8}<br>
+    文本区选定内容中提取变量“IOSversion”，定位在选定区域第20字节后面，长度为8<br>
+    <br>
+    text.get var { IOSversion } between { Version } and {,RELEASE}<br>
+    文本区选定内容中提取变量“IOSversion”，定位在字符串“Version”和字符串“,RELEASE”之间<br>
+    <br>
+    text.get var { IOSversion } after { Version } length {7}<br>
+    文本区选定内容中提取变量“IOSversion”，定位在字符串“Version”后面，长度为7<br>
+    <br>
+    text.get var { IOSversion } word number {6}<br>
+    文本区选定内容中提取变量“IOSversion”，选定区域第6个单词<br>
+    <br>
+    text.line get all words<br>
+    文本区选定内容提取当前行中的所有单词<br>
+    <br>
+    text.line get all words between {[} and {]} separated by {,}<br>
+    文本区选定内容提取所有单词,在“[”“]”之间，分隔符为“,”<br>
+    <br>
+    <h3>
+        4、文本区删除部分内容
+    </h3>
+    text.delete from headpointer<br>
+    删除文本区头指针后面的内容<br>
+    <br>
+    text.delete from {3} byte<br>
+    删除文本区头从指定字节后面的内容，本示例语句删除从第3字节开始的后面所有内容<br>
+    <br>
+    text.delete from tailpointer<br>
+    删除文本区尾指针后面的内容<br>
+    <br>
+    <h3>
+        5、示例脚本[C:\snmlipv6\text\text_nms1.txt]
+    </h3>
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\text\text_nms1.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">run.set loglevel {info} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">screen.set color red {0} green {0} blue {0} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">screen.text at point {150} {30} string {16、text test} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.text at point {10} {~v_y~} string {No.} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.text at point {100} {~v_y~} string {9x9 multiplication table} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">screen.line from point {10} {75} to point {630} {75} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">var {v_i} value {0} </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src">var {v_x} value {0} </td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">var {v_y} value {0} </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src">var {x} value {0} </td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">var {y} value {0} </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">var {v_xy} value {0} </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">loop.begin </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">&nbsp;&nbsp;var {v_y} add number {1} </td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">&nbsp;&nbsp;var {v_x} value {0} </td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">&nbsp;&nbsp;var {y} value number {70+28*~v_y~} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">&nbsp;&nbsp;screen.text at point {5} {~y~} string {Line:~v_y~} </td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">&nbsp;&nbsp;text.add {Line:~v_y~} </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src">&nbsp;&nbsp;loop.begin </td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;var {v_x} add number {1} </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;var {v_xy} value number {~v_x~*~v_y~} </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;var {v_xy} adjust length {3} align {left} </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;text.add {~v_x~*~v_y~=~v_xy~ } </td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;var {x} value number {~v_x~*50} </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;screen.text at point {~x~} {~y~} string {~v_x~*~v_y~=~v_xy~} </td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">033</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;if.var {v_x} >= {~v_y~} </td></tr> 
+<tr><td class="line_no">034</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">035</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text.add {%0d%0a} </td></tr> 
+<tr><td class="line_no">036</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;loop.exit </td></tr> 
+<tr><td class="line_no">037</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;if.end </td></tr> 
+<tr><td class="line_no">038</td><td class="line_src">&nbsp;&nbsp;loop.end </td></tr> 
+<tr><td class="line_no">039</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">040</td><td class="line_src">&nbsp;&nbsp;text.tailpointer move to tail </td></tr> 
+<tr><td class="line_no">041</td><td class="line_src">&nbsp;&nbsp;text.headpointer move forward after {Line:~v_y~} </td></tr> 
+<tr><td class="line_no">042</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">043</td><td class="line_src">&nbsp;&nbsp;text.line get all words </td></tr> 
+<tr><td class="line_no">044</td><td class="line_src">&nbsp;&nbsp;#text.line get all words between {1} and {%0d} separated by { }  </td></tr> 
+<tr><td class="line_no">045</td><td class="line_src">&nbsp;&nbsp;text.get var {word_no2} word number {2} </td></tr> 
+<tr><td class="line_no">046</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">047</td><td class="line_src">&nbsp;&nbsp;if.var {v_y} >= {9} </td></tr> 
+<tr><td class="line_no">048</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;loop.exit </td></tr> 
+<tr><td class="line_no">049</td><td class="line_src">&nbsp;&nbsp;if.end </td></tr> 
+<tr><td class="line_no">050</td><td class="line_src">loop.end </td></tr> 
+<tr><td class="line_no">051</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">052</td><td class="line_src">text.headpointer move to head </td></tr> 
+<tr><td class="line_no">053</td><td class="line_src">text.tailpointer move to tail </td></tr> 
+<tr><td class="line_no">054</td><td class="line_src">text.save to file {C:\snmlipv6\text\text99.txt} </td></tr> 
+<tr><td class="line_no">055</td><td class="line_src">text.replace {*} with {x} </td></tr> 
+<tr><td class="line_no">056</td><td class="line_src">text.headpointer move to head </td></tr> 
+<tr><td class="line_no">057</td><td class="line_src">text.tailpointer move to tail </td></tr> 
+<tr><td class="line_no">058</td><td class="line_src">text.save to file {C:\snmlipv6\text\text99x.txt} </td></tr> 
+<tr><td class="line_no">059</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">060</td><td class="line_src">text.replace {x} with {X} </td></tr> 
+<tr><td class="line_no">061</td><td class="line_src">text.headpointer move to head </td></tr> 
+<tr><td class="line_no">062</td><td class="line_src">text.tailpointer move to tail </td></tr> 
+<tr><td class="line_no">063</td><td class="line_src">text.save to file {C:\snmlipv6\text\text99X2.txt} </td></tr> 
+<tr><td class="line_no">064</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">065</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">066</td><td class="line_src">run.end </td></tr> 
+</table> 
+    <br>
+    &nbsp;&nbsp;脚本执行画面如下：<br>
+    <img src="images/text.png" />
+    <br><br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+    <h2><a name="C6"></a>第6章、判断语句（if）</h2><hr />
+    &nbsp;&nbsp;判断语句有if.var、if.text和if.end构成程序块，当if.var、if.text语句为真时，执行if块内的语句；当if.var、if.text语句为假时，不执行if块内的语句。格式如下：<br>
+    <br>
+    if.var 		<br>
+    &nbsp;&nbsp;if块内的语句1<br>
+    &nbsp;&nbsp;if块内的语句2<br>
+    &nbsp;&nbsp;……<br>
+    if.end<br>
+    <br>
+    if.text 		<br>
+    &nbsp;&nbsp;if块内的语句1<br>
+    &nbsp;&nbsp;if块内的语句2<br>
+    &nbsp;&nbsp;……<br>
+    if.end<br>
+    &nbsp;&nbsp;参见示例脚本[C:\snmlipv6\text\text_nms1.txt]中的if语句部分。<br>
+    <h3>
+        1、判断变量的值(if.var)
+    </h3>
+    if.var {x} > {4}<br>
+    判断变量“x”的整形值是否 > 4 <br>
+    <br>
+    if.var {x} >= {4}<br>
+    判断变量“x”的整形值是否 >= 4 <br>
+    <br>
+    if.var {x} < {4}<br>
+    判断变量“x”的整形值是否 < 4 <br>
+    <br>
+    if.var {x} <= {4}<br>
+    判断变量“x”的整形值是否 <= 4<br>
+    <br>
+    if.var {x} == {4}<br>
+    判断变量“x”的整形值是否 = 4<br>
+    <br>
+    if.var {x} <> {4}<br>
+    判断变量“x”的整形值是否不等于（<>） 4<br>
+    <br>
+    if.var {versionIOS} in {12.4,12.3,12.2}<br>
+    判断变量“versionIOS”的字符串的值是否在字符串“12.4,12.3,12.2”中<br>
+    <br>
+    if.var {versionIOS} not in {12.4,12.3,12.2}<br>
+    判断变量“versionIOS”的字符串的值是不否在字符串“12.4,12.3,12.2”中<br>
+    <br>
+    if.var {versionIOS} contain {12.3}<br>
+    判断变量“versionIOS”的字符串的值是否包含字符串“12.3”<br>
+    <br>
+    if.var {versionIOS} not contain {12.3}<br>
+    判断变量“versionIOS”的字符串的值是否不包含字符串“12.3”<br>
+    <br>
+    <h3>
+        2、判断文本区选定内容(if.text)
+    </h3>
+    if.text contain {Version}<br>
+    判断文本区的选定内容中是否包含字符串“Version”，如果包含就为真，执行if块内的语句。<br>
+    <br>
+    if.text not contain { Version }<br>
+    判断文本区的选定内容中是否不包含字符串“Version”，如果不包含就为真，执行if块内的语句。<br>
+    <br><br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+    <h2>
+        <a name="C7"></a>
+        第7章、循环语句（loop）
+    </h2><hr />
+    &nbsp;&nbsp;循环语句有loop.begin和loop.end构成程序块。loop.next和loop.exit结合if语句控制loop的执行。<br>
+    <br>
+    loop.begin 		<br>
+    &nbsp;&nbsp;loop块内的语句<br>
+    &nbsp;&nbsp;<br>
+    &nbsp;&nbsp;loop.next<br>
+    &nbsp;&nbsp;不执行loop.next后面的语句，继续下一次循环，跳转到loop.begin执行<br>
+    &nbsp;&nbsp;<br>
+    &nbsp;&nbsp;loop块内的语句<br>
+    &nbsp;&nbsp;……<br>
+    &nbsp;&nbsp;loop.exit<br>
+    &nbsp;&nbsp;不执行loop.exit后面的语句，跳出循环，跳转到loop.end执行<br>
+    &nbsp;&nbsp;<br>
+    loop.end<br>
+    参见示例脚本[C:\snmlipv6\text\text_nms1.txt]中的loop语句部分。<br>
+    <br><br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+    <h2>
+        <a name="C8"></a>
+        第8章、dns
+    </h2><hr />
+    &nbsp;&nbsp;域名系统（DNS）是一种用于TCP/I应用程序的分布式数据库，它提供主机名字和 IP地址之间的转换及有关电子邮件的选路信息。<br>
+    <h3>
+        1、dns语句分析
+    </h3>
+    <br>
+    dns.get var {ip_addr} host {mail.163.com}<br>
+    <br>
+    查询主机“mail.163.com”的IP地址，保存到变量“ip_addr”中。本示例中变量ip_addr=[220.181.12.207]<br>
+    <br>
+    dns.set ipmode {ipv6}<br>
+    设置DNS查询的模式为IPV6，来查询域名的IPV6地址。<br>
+    dns.get var {ip_addr} host {www.ipv6-test.com}<br>
+     查询主机“www.ipv6-test.com”的IPV6地址，保存到变量“ip_addr”中。<br>
+    <h3>
+        2、示例脚本[C:\snmlipv6\ping\ping_ipv4.txt]中的dns语句部分
+    </h3><br>
+    <h3>
+        3、示例脚本[C:\snmlipv6\ping\ping_ipv6.txt]中的dns语句部分
+    </h3>
+    <br>
+    <br><br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+    <h2><a name="C9"></a> 第9章、ping </h2><hr />
+    &nbsp;&nbsp;“ping”这个名字源于声纳定位操作。目的是为了测试另一台主机、网络设备是否可达。ping是一个通信协议，是TCP/IP协议的一部分;ping也是Windows、Unix和Linux系统下的一个命令, ping命令可检查网络是否连通，分析和判定网络故障。<br>
+    <h3>
+        1、ping语句分析
+    </h3>
+    ping.ip {220.181.12.207} ttl {64} size {32}<br>
+    <br>
+    ping测试，主机、设备ip为220.181.12.207，发送报文的ttl值为64，发送报文的长度为32字节<br>
+    ping语句执行后，系统创建、更新以下变量，示例值如下：<br>
+    ping.dest_ip=[220.181.12.207]，目的IP<br>
+    ping.received_responses=[1]，接收到响应报文的个数<br>
+    ping.roundtrip_time_milliseconds=[56]，响应时间（毫秒）<br>
+    ping.reply_ip=[220.181.12.207]，应答报文的IP，当ttl减小到0的时候，网络设备应答<br>
+    ping.reply_ttl=[54]，应答报文的ttl<br>
+    ping.reply_bytes=[32]，应答报文的长度<br>
+    ping.status=[IP_SUCCESS]<br>
+    ping语句执行后，通过检查变量“ping.status”是否为“IP_SUCCESS”来判断ping是否成功。<br>
+    <h3>
+        2、示例脚本[C:\snmlipv6\ping\ping_ipv4.txt]
+    </h3>
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\ping\ping_ipv4.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.text at point {150} {30} string {9.ping test (ipv4): ttl,size,roundtrip_time,ip} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">var {v_ttl} value {0} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.text at point {50} {~v_y~} string {send ping request} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.line from point {10} {75} to point {180} {75} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">screen.text at point {350} {~v_y~} string {ping response} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">screen.line from point {200} {75} to point {630} {75} </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">var {v_y} value {80} </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src">screen.text at point {10} {~v_y~} string {Dest IP Addr} </td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">screen.text at point {110} {~v_y~} string {TTL} </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">screen.text at point {150} {~v_y~} string {Bytes} </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">screen.text at point {200} {~v_y~} string {IP Addr} </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">screen.text at point {300} {~v_y~} string {TTL} </td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">screen.text at point {350} {~v_y~} string {Bytes} </td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">screen.text at point {400} {~v_y~} string {ms} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">screen.text at point {450} {~v_y~} string {ping.status} </td></tr> 
+<tr><td class="line_no">020</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">021</td><td class="line_src">run.set loglevel {debug} </td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">dns.get var {ip_addr} host {mail.163.com} </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">run.set loglevel {nolog} </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">var {v_ttl} value {0} </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">var {v_y} value {80} </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">var {v_sendbytes} value {1000} </td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">loop.begin </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">&nbsp;&nbsp;var {v_ttl} add number {1} </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">&nbsp;&nbsp;var {v_y} add number {20} </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">&nbsp;&nbsp;run.set loglevel {debug} </td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">&nbsp;&nbsp;ping.ip {~ip_addr~} ttl {~v_ttl~} size {~v_sendbytes~} </td></tr> 
+<tr><td class="line_no">033</td><td class="line_src">&nbsp;&nbsp;run.set loglevel {nolog} </td></tr> 
+<tr><td class="line_no">034</td><td class="line_src">&nbsp;&nbsp;screen.text at point {10} {~v_y~} string {~ping.dest_ip~} </td></tr> 
+<tr><td class="line_no">035</td><td class="line_src">&nbsp;&nbsp;screen.text at point {110} {~v_y~} string {~v_ttl~} </td></tr> 
+<tr><td class="line_no">036</td><td class="line_src">&nbsp;&nbsp;screen.text at point {150} {~v_y~} string {~v_sendbytes~} </td></tr> 
+<tr><td class="line_no">037</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">038</td><td class="line_src">&nbsp;&nbsp;screen.text at point {200} {~v_y~} string {~ping.reply_ip~} </td></tr> 
+<tr><td class="line_no">039</td><td class="line_src">&nbsp;&nbsp;screen.text at point {300} {~v_y~} string {~ping.reply_ttl~} </td></tr> 
+<tr><td class="line_no">040</td><td class="line_src">&nbsp;&nbsp;screen.text at point {350} {~v_y~} string {~ping.reply_bytes~} </td></tr> 
+<tr><td class="line_no">041</td><td class="line_src">&nbsp;&nbsp;screen.text at point {400} {~v_y~} string {~ping.roundtrip_time_milliseconds~} </td></tr> 
+<tr><td class="line_no">042</td><td class="line_src">&nbsp;&nbsp;screen.text at point {450} {~v_y~} string {~ping.status~} </td></tr> 
+<tr><td class="line_no">043</td><td class="line_src">&nbsp;&nbsp;if.var {v_ttl} > {16} </td></tr> 
+<tr><td class="line_no">044</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;loop.exit </td></tr> 
+<tr><td class="line_no">045</td><td class="line_src">&nbsp;&nbsp;if.end </td></tr> 
+<tr><td class="line_no">046</td><td class="line_src">loop.end </td></tr> 
+<tr><td class="line_no">047</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">048</td><td class="line_src">run.end	 </td></tr> 
+</table> 
+    
+
+    <br>
+    &nbsp;&nbsp;脚本执行画面如下：<br>
+    <img src="images/ping.png" />
+    <br>
+
+ <h3>
+        3、示例脚本[C:\snmlipv6\ping\ping_ipv6.txt]
+    </h3>
+<br>
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\ping\ping_ipv6.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.text at point {150} {30} string {9.ping test (ipv6): ttl,size,roundtrip_time,ip} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">var {v_ttl} value {0} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.text at point {50} {~v_y~} string {send ping request} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.line from point {10} {75} to point {180} {75} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">screen.text at point {350} {~v_y~} string {ping response} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">screen.line from point {200} {75} to point {630} {75} </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">var {v_y} value {80} </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src">screen.text at point {10} {~v_y~} string {Dest IP Addr} </td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">screen.text at point {110} {~v_y~} string {TTL} </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">screen.text at point {150} {~v_y~} string {Bytes} </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">screen.text at point {200} {~v_y~} string {IP Addr} </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">screen.text at point {400} {~v_y~} string {ms} </td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">screen.text at point {450} {~v_y~} string {ping.status} </td></tr> 
+<tr><td class="line_no">018</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">#run.set  loglevel {debug} </td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">dns.set ipmode {ipv6} </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src">#dns.get var {ip_addr} host {www.ipv6-test.com} </td></tr> 
+<tr><td class="line_no">022</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">var {ip_addr} value {FE80::1} </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">var {v_ttl} value {0} </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">var {v_y} value {80} </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">var {v_sendbytes} value {1000} </td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">loop.begin </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">&nbsp;&nbsp;var {v_ttl} add number {1} </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">&nbsp;&nbsp;var {v_y} add number {20} </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">&nbsp;&nbsp;ping.ip {~ip_addr~} ttl {~v_ttl~} size {~v_sendbytes~} </td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">033</td><td class="line_src">&nbsp;&nbsp;screen.text at point {10} {~v_y~} string {~ping.dest_ip~} </td></tr> 
+<tr><td class="line_no">034</td><td class="line_src">&nbsp;&nbsp;screen.text at point {110} {~v_y~} string {~v_ttl~} </td></tr> 
+<tr><td class="line_no">035</td><td class="line_src">&nbsp;&nbsp;screen.text at point {150} {~v_y~} string {~v_sendbytes~} </td></tr> 
+<tr><td class="line_no">036</td><td class="line_src">&nbsp;&nbsp;screen.text at point {200} {~v_y~} string {~ping.reply_ip~} </td></tr> 
+<tr><td class="line_no">037</td><td class="line_src">&nbsp;&nbsp;screen.text at point {400} {~v_y~} string {~ping.roundtrip_time_milliseconds~} </td></tr> 
+<tr><td class="line_no">038</td><td class="line_src">&nbsp;&nbsp;screen.text at point {450} {~v_y~} string {~ping.status~} </td></tr> 
+<tr><td class="line_no">039</td><td class="line_src">&nbsp;&nbsp;if.var {v_ttl} > {16} </td></tr> 
+<tr><td class="line_no">040</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;loop.exit </td></tr> 
+<tr><td class="line_no">041</td><td class="line_src">&nbsp;&nbsp;if.end </td></tr> 
+<tr><td class="line_no">042</td><td class="line_src">loop.end </td></tr> 
+<tr><td class="line_no">043</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">044</td><td class="line_src">run.end	 </td></tr> 
+</table> 
+<br>
+    &nbsp;&nbsp;脚本执行画面如下：<br>
+    <img src="images/ping_ipv6.png" />
+    <br>
+<br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+    <h2><a name="C10"></a> 第10章、arp</h2><hr />
+    &nbsp;&nbsp;当一台主机把以太网数据帧发送到位于同一局域网上的另一台主机时，是根据 48 bit的以太网地址（MAC地址）来确定目的接口的。ARP为IP地址到对应的硬件地址之间提供动态映射。<br>
+    <br>
+    <br>
+    <h3>
+        1、arp语句分析
+    </h3>
+    arp.get var { arp_ip_mac} ip {10.174.38.164}<br>
+    查询IP地址 “10.174.38.164”设备的MAC地址，保存到变量“arp_ip_mac”中。<br>
+    <br>
+    参见示例脚本[C:\snmlipv6\arp\arp_nms1.txt]中的arp语句部分。<br>
+    <br>
+    <h3>
+        2、示例脚本[C:\snmlipv6\arp\arp_nms1.txt]
+    </h3>
+    <br>
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\arp\arp_nms1.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.text at point {250} {30} string {1. Arp Test} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">var {v_ttl} value {0} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">screen.text at point {50} {~v_y~} string {IP Addr} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.line from point {10} {75} to point {180} {75} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.text at point {350} {~v_y~} string {MAC Addr} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">screen.line from point {200} {75} to point {630} {75} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">009</td><td class="line_src">var {v_ip1} value {192.168.186.128} </td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">var {v_ip2} value {192.168.186.131} </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src">var {v_ip3} value {192.168.186.132} </td></tr> 
+<tr><td class="line_no">012</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">var {v_i} value {0} </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">var {v_y} value {80} </td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">loop.begin </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">&nbsp;&nbsp;var {v_i} add number {1} </td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">&nbsp;&nbsp;var {v_y} add number {20} </td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">&nbsp;&nbsp;var {ip} copy var {v_ip~v_i~} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">&nbsp;&nbsp;var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">021</td><td class="line_src">&nbsp;&nbsp;screen.text at point {10} {~v_y~} string {~v_i~} </td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">&nbsp;&nbsp;screen.text at point {50} {~v_y~} string {~ip~} </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">&nbsp;&nbsp;screen.text at point {400} {~v_y~} string {~v_time~} </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">&nbsp;&nbsp;arp.get var {arp_ip} ip {~ip~} </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">&nbsp;&nbsp;screen.text at point {200} {~v_y~} string {~arp_ip~} </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">&nbsp;&nbsp;if.var {v_i} >= {3} </td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;loop.exit </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">&nbsp;&nbsp;if.end </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">loop.end </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">run.end </td></tr> 
+</table> 
+    <br>
+    &nbsp;&nbsp;脚本执行画面如下：<br>
+    <img src="images/arp.png" />
+
+    <br><br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+    <h2><a name="C11"></a>第11章、excel</h2><hr />
+    &nbsp;&nbsp;Microsoft Excel是Microsoft为使用Windows和Apple Macintosh操作系统的电脑编写的一款电子表格软件。Excel成为最流行的个人计算机数据处理软件。<br>
+    <br>
+    &nbsp;&nbsp;文件“C:\snmlipv6\excel\snml.xlsx”的sheet：“Sheet1”<br>
+    <img src="images/excelSheet1.png" />
+    <h3>
+        1、excel语句分析
+    </h3>
+    <br>
+    excel.open {C:\snmlipv6\excel\snml.xlsx} sheet {Sheet1} <br>
+    打开excel文件，本示例中打开文件“C:\snmlipv6\excel\snml.xlsx”的sheet：“Sheet1”<br>
+    excel.get var {excel.B} cell {B2}<br>
+    读取单元格“B2”的值，保存到变量“excel.B”中<br>
+    excel.cell {C2} value {00-1B-FC-9A-A4-00 }<br>
+    更新单元格“C2”的值为：“00-1B-FC-9A-A4-00”<br>
+    excel.close<br>
+    关闭excel文件<br>
+    <br>
+    <h3>
+        2、示例脚本[C:\snmlipv6\excel\excel_nms1.txt]
+    </h3>
+    <br>
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\excel\excel_nms1.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.text at point {250} {30} string {11. excel Test} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">screen.text at point {50} {~v_y~} string {Write Col: C,D} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">screen.line from point {10} {75} to point {180} {75} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.text at point {220} {~v_y~} string {Read Col: IP} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.line from point {200} {75} to point {340} {75} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">screen.text at point {350} {~v_y~} string {Read Col: MAC} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">screen.line from point {350} {75} to point {630} {75} </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src">excel.open {C:\snmlipv6\excel\snml.xlsx} sheet {Sheet1} </td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src">var {v_i} value {1} </td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">loop.begin </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">&nbsp;&nbsp;var {v_i} add number {1} </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">&nbsp;&nbsp;var {v_y} add number {18} </td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">&nbsp;&nbsp;if.var {v_y} > {400} </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;loop.exit </td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">&nbsp;&nbsp;if.end </td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">&nbsp;&nbsp;var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">&nbsp;&nbsp;screen.text at point {10} {~v_y~} string {~v_i~} </td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">&nbsp;&nbsp;screen.text at point {50} {~v_y~} string {~v_time~} </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src">&nbsp;&nbsp;excel.cell {D~v_i~} value {[~v_time~]} </td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">&nbsp;&nbsp;excel.get var {excel.B} cell {B~v_i~} </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">&nbsp;&nbsp;screen.text at point {200} {~v_y~} string {~excel.B~} </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">&nbsp;&nbsp;arp.get var {arp_ip_mac} ip {~excel.B~} </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">&nbsp;&nbsp;excel.cell {C~v_i~} value {~arp_ip_mac~} </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">&nbsp;&nbsp;excel.get var {excel.C} cell {C~v_i~} </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">&nbsp;&nbsp;screen.text at point {350} {~v_y~} string {~excel.C~} </td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">loop.end </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">excel.close </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">run.end </td></tr> 
+</table> 
+
+    <br>
+    &nbsp;&nbsp;脚本执行画面如下： <br>
+    <img src="images/excel.png" />
+    <br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+    <h2><a name="C12"></a>第12章、smtp（e-mail）</h2><hr />
+    &nbsp;&nbsp;电子邮件（e-mail）是最流行的应用,简单邮件传送协议 SMTP (Simple Mail Transfer Protocol)用于发送电子邮件。在snml语言中，可用email来自动发送告警邮件、设备配置参数等。<br>
+    <h3>
+        1、	smtp语句分析
+    </h3>
+    smtp.server {smtp.163.com} port {25} username {122@163.com} password {123456}<br>
+    设置smtp邮件服务器的参数，服务器域名“smtp.163.com”，端口号“25”，登录邮箱名“122@163.com”，邮箱密码“123456”<br>
+    <br>
+    smtp.subject {发送邮件测试} body {邮件正文} <br>
+    填写邮件的标题和正文的值，在本示例中标题为“发送邮件测试”，正文为“邮件正文”<br>
+    <br>
+    smtp.add attachment {C:\snmlipv6\excel\snml.xlsx}<br>
+    邮件添加附件“C:\snmlipv6\excel\snml.xlsx”<br>
+    <br>
+    smtp.send to {123@126.com}<br>
+    发送邮件到邮件接受者邮箱“123@126.com”<br>
+    <h3>
+        2、示例脚本[C:\snmlipv6\smtp\smtp_nms1.txt]
+    </h3>
+
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\smtp\smtp_nms1.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.text at point {250} {30} string {12. smtp Test: Send Mail} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">006</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">screen.text at point {10} {~v_y~} string {sina, Begin To Send A Mail: ~v_time~} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">009</td><td class="line_src">smtp.server {smtp.sina.com} port {25} username {xxxaaaaabbb@sina.com} password {myPassword} </td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">smtp.subject {Test Send A Mail:~v_time~} body {Email Body%0a, Send Time: ~v_time~} </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src">smtp.add attachment {C:\snmlipv6\excel\snml.xlsx} </td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">smtp.add attachment {C:\snmlipv6\text\text99.txt} </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">run.set loglevel {debug} </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">smtp.send to {myEmail@163.com} </td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">run.set loglevel {nolog} </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">screen.text at point {300} {~v_y~} string {Send Mail End.} </td></tr> 
+<tr><td class="line_no">017</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">018</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">var {v_y} add number {20} </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">screen.text at point {10} {~v_y~} string {126, Begin To Send A Mail: ~v_time~} </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">smtp.server {smtp.126.com} port {25} username {myEamil@126.com} password {myPassword} </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">smtp.subject {Test Send A Mail:~v_time~} body {Email Body%0a, Send Time: ~v_time~} </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">smtp.add attachment {C:\snmlipv6\excel\snml.xlsx} </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">smtp.add attachment {C:\snmlipv6\text\text99.txt} </td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">run.set loglevel {debug} </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">smtp.send to {ladybird_snml@protonmail.com} </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">run.set loglevel {nolog} </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">screen.text at point {300} {~v_y~} string {Send Mail End.} </td></tr> 
+<tr><td class="line_no">032</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">033</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">034</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">035</td><td class="line_src">var {v_y} add number {20} </td></tr> 
+<tr><td class="line_no">036</td><td class="line_src">screen.text at point {10} {~v_y~} string {163,Begin To Send A Mail: ~v_time~} </td></tr> 
+<tr><td class="line_no">037</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">038</td><td class="line_src">smtp.server {smtp.163.com} port {25} username {myEmail@163.com} password {myPassword} </td></tr> 
+<tr><td class="line_no">039</td><td class="line_src">smtp.subject {Test Send A Mail:~v_time~} body {Email Body%0a, Send Time: ~v_time~} </td></tr> 
+<tr><td class="line_no">040</td><td class="line_src">smtp.add attachment {C:\snmlipv6\excel\snml.xlsx} </td></tr> 
+<tr><td class="line_no">041</td><td class="line_src">smtp.add attachment {C:\snmlipv6\text\text99.txt} </td></tr> 
+<tr><td class="line_no">042</td><td class="line_src">run.set loglevel {debug} </td></tr> 
+<tr><td class="line_no">043</td><td class="line_src">smtp.send to {xxxaaaaabbb@126.com} </td></tr> 
+<tr><td class="line_no">044</td><td class="line_src">run.set loglevel {nolog} </td></tr> 
+<tr><td class="line_no">045</td><td class="line_src">screen.text at point {300} {~v_y~} string {Send Mail End.} </td></tr> 
+<tr><td class="line_no">046</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">047</td><td class="line_src">run.end </td></tr> 
+</table> 
+    <br>
+    &nbsp;&nbsp;脚本执行画面如下： <br>
+    <img src="images/smtp.png" />
+    <br><br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+    <h2><a name="C13"></a>第13章、tcp</h2><hr />
+    &nbsp;&nbsp;TCP/IP起源于60年代末美国政府资助的一个分组交换网络研究项目，它成为被称作“全球互联网”或“因特网 ( Internet )”的基础。很多不同的厂家生产各种型号的计算机、网络设备，它们运行完全不同的操作系统，但 TCP/IP协议族允许它们互相进行通信。<br>
+    <h3>
+        1、	tcp语句分析
+    </h3>
+    tcp.connect ip {192.168.1.2} port {65501}<br>
+    Tcp客户端连接到服务器“192.168.1.2”的端口“65501”，又称为socket连接<br>
+    变量tcp.status=[ESTABLISHED]，表示连接成功<br>
+    <br>
+    tcp.connect ip {FE80::1} port {65501}<br>
+    Tcp客户端连接到服务器ipv6地址“FE80::1”的端口“65501”，又称为socket连接<br>
+    变量tcp.status=[ESTABLISHED]，表示连接成功<br>
+    tcp.send {hello,string}<br>
+    tcp发送字符串“hello,string”<br>
+    <br>
+    tcp.send text<br>
+    tcp发送文本选中区域内容<br>
+    <br>
+    tcp.recv {server_begin:}<br>
+    tcp接收指定字符串“server_begin:”<br>
+    <br>
+    tcp.recv expect {server_end.}<br>
+    tcp接收数据，一直到接收到指定字符串“server_end.”<br>
+    <br>
+    tcp.recv for {20} bytes<br>
+    tcp接收指定长度数据，本示例长度为20字节<br>
+    <br>
+    tcp.recv for {5} seconds<br>
+    tcp接收数据，一直接收5秒钟<br>
+    <br>
+    tcp.close<br>
+    tcp断开连接<br>
+    变量tcp.status=[CLOSED]<br>
+    <h3>
+        2、示例脚本[C:\snmlipv6\tcp\tcp_client_ipv4.txt]
+    </h3>
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\tcp\tcp_client_ipv4.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.set color red {0} green {0} blue {0} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">screen.text at point {150} {30} string {13.1 tcp.client (ipv4) Test} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">screen.text at point {10} {~v_y~} string {No.    Time                       Server IP:Port} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.text at point {250} {~v_y~} string {tcp.recv    text.bytes} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.line from point {10} {75} to point {460} {75} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src">var {v_i} value {0} </td></tr> 
+<tr><td class="line_no">010</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">011</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">loop.begin </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">&nbsp;&nbsp;var {v_i} add number {1} </td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">&nbsp;&nbsp;var {v_y} add number {18} </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">&nbsp;&nbsp;var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">&nbsp;&nbsp;var {server_port} value number {50000+~v_i~} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">&nbsp;&nbsp;screen.text at point {10} {~v_y~} string {~v_i~, ~v_time~   127.0.0.1:~server_port~} </td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">&nbsp;&nbsp;run.nms {C:\snmlipv6\tcp\tcp_server_ipv4.nms ~server_port~} </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src">&nbsp;&nbsp;tcp.connect ip {127.0.0.1} port {~server_port~} </td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">&nbsp;&nbsp;tcp.send {tcp.client:~v_time~} </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">&nbsp;&nbsp;tcp.send {%0d%0a04} </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">&nbsp;&nbsp;tcp.send {client.end%0d%0a} </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">&nbsp;&nbsp;tcp.recv expect {server.end} </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">&nbsp;&nbsp;tcp.close </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">&nbsp;&nbsp;screen.text at point {250} {~v_y~} string {~text.bytes~} </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">&nbsp;&nbsp;if.var {v_y} > {400} </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;loop.exit </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">&nbsp;&nbsp;if.end </td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">033</td><td class="line_src">loop.end </td></tr> 
+<tr><td class="line_no">034</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">035</td><td class="line_src">run.end </td></tr> 
+</table> 
+
+
+
+    <br>
+    备注：run.nms {C:\snmlipv6\tcp\tcp_server_ipv4.nms ~server_port~} ，为无界面后台执行脚本语句，详见run章节。<br>
+
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\tcp\tcp_server_ipv4.nms</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">screen.text at point {150} {30} string {13.2 tcp.server Test} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">screen.text at point {10} {~v_y~} string {No.} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.text at point {50} {~v_y~} string {tcp.server} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.line from point {10} {75} to point {160} {75} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">screen.text at point {200} {~v_y~} string {tcp.send} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">screen.line from point {180} {75} to point {270} {75} </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src">screen.text at point {300} {~v_y~} string {tcp.recv} </td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">screen.line from point {300} {75} to point {630} {75} </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">var {v_i} value {0} </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">#run.set loglevel {debug} </td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">tcp.server listen port {~run.arg.4~} </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">var {v_i} add number {1} </td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">var {v_y} add number {18} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">text.headpointer move to tail </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">text.tailpointer move to tail </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">tcp.recv {tcp.client:} </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">tcp.recv for {3} bytes </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">tcp.recv expect {client.end} </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">tcp.recv for {3} seconds </td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">text.tailpointer move to tail </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">tcp.send {tcp.server:~run.arg.4~,~v_i~[~v_time~]%0d%0a} </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">tcp.send text </td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">tcp.send {%0d%0aserver.end%0d%0a} </td></tr> 
+<tr><td class="line_no">033</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">034</td><td class="line_src">screen.text at point {10} {~v_y~} string {~v_i~} </td></tr> 
+<tr><td class="line_no">035</td><td class="line_src">screen.text at point {50} {~v_y~} string { recv: ~tcp.client.ip~:~tcp.client.port~} </td></tr> 
+<tr><td class="line_no">036</td><td class="line_src">screen.text at point {280} {~v_y~} string { send: tcp.server:~run.arg.4~} </td></tr> 
+<tr><td class="line_no">037</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">038</td><td class="line_src">tcp.close </td></tr> 
+<tr><td class="line_no">039</td><td class="line_src">run.end </td></tr> 
+</table> 
+    <br>
+    &nbsp;&nbsp;脚本执行画面如下： <br>
+    <img src="images/tcp_v4.png" />
+
+    <h3>
+        3、示例脚本[C:\snmlipv6\tcp\tcp_client_ipv6.txt]
+    </h3>
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\tcp\tcp_client_ipv6.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.set color red {0} green {0} blue {0} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">screen.text at point {150} {30} string {13.3 tcp.client (ipv6) Test} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">screen.text at point {10} {~v_y~} string {No.    Time                       Server IP:Port} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.text at point {250} {~v_y~} string {tcp.recv    text.bytes} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.line from point {10} {75} to point {460} {75} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src">var {v_i} value {0} </td></tr> 
+<tr><td class="line_no">010</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">011</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">loop.begin </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">&nbsp;&nbsp;var {v_i} add number {1} </td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">&nbsp;&nbsp;var {v_y} add number {18} </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">&nbsp;&nbsp;var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">&nbsp;&nbsp;var {server_port} value number {50000+~v_i~} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">&nbsp;&nbsp;screen.text at point {10} {~v_y~} string {~v_i~, ~v_time~   [::1]:~server_port~} </td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">&nbsp;&nbsp;run.nms {C:\snmlipv6\tcp\tcp_server_ipv6.nms ~server_port~} </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src">&nbsp;&nbsp;tcp.connect ip {::1} port {~server_port~} </td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">&nbsp;&nbsp;tcp.send {tcp.client:~v_time~} </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">&nbsp;&nbsp;tcp.send {%0d%0a04} </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">&nbsp;&nbsp;tcp.send {client.end%0d%0a} </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">&nbsp;&nbsp;tcp.recv expect {server.end} </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">&nbsp;&nbsp;tcp.close </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">&nbsp;&nbsp;screen.text at point {250} {~v_y~} string {~text.bytes~} </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">&nbsp;&nbsp;if.var {v_y} > {400} </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;loop.exit </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">&nbsp;&nbsp;if.end </td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">033</td><td class="line_src">loop.end </td></tr> 
+<tr><td class="line_no">034</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">035</td><td class="line_src">run.end </td></tr> 
+</table> 
+
+   <br>
+    备注：run.nms {C:\snmlipv6\tcp\tcp_server_ipv6.nms ~server_port~} ，为无界面后台执行脚本语句，详见run章节。<br>
+ <br>
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\tcp\tcp_server_ipv6.nms</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">screen.text at point {150} {30} string {13.4 tcp.server (ipv4&ipv6)Test} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">screen.text at point {10} {~v_y~} string {No.} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.text at point {50} {~v_y~} string {tcp.server} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.line from point {10} {75} to point {160} {75} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">screen.text at point {200} {~v_y~} string {tcp.send} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">screen.line from point {180} {75} to point {270} {75} </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src">screen.text at point {300} {~v_y~} string {tcp.recv} </td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">screen.line from point {300} {75} to point {630} {75} </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">var {v_i} value {0} </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">#run.set loglevel {debug} </td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">tcp.server listen port {~run.arg.4~} </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">var {v_i} add number {1} </td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">var {v_y} add number {18} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">text.headpointer move to tail </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">text.tailpointer move to tail </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">tcp.recv {tcp.client:} </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">tcp.recv for {3} bytes </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">tcp.recv expect {client.end} </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">tcp.recv for {3} seconds </td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">text.tailpointer move to tail </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">tcp.send {tcp.server:~run.arg.4~,~v_i~[~v_time~]%0d%0a} </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">tcp.send text </td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">tcp.send {%0d%0aserver.end%0d%0a} </td></tr> 
+<tr><td class="line_no">033</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">034</td><td class="line_src">screen.text at point {10} {~v_y~} string {~v_i~} </td></tr> 
+<tr><td class="line_no">035</td><td class="line_src">screen.text at point {50} {~v_y~} string { recv: ~tcp.client.ip~:~tcp.client.port~} </td></tr> 
+<tr><td class="line_no">036</td><td class="line_src">screen.text at point {280} {~v_y~} string { send: tcp.server:~run.arg.4~} </td></tr> 
+<tr><td class="line_no">037</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">038</td><td class="line_src">tcp.close </td></tr> 
+<tr><td class="line_no">039</td><td class="line_src">run.end </td></tr> 
+</table> 
+    &nbsp;&nbsp;脚本执行画面如下： <br>
+    <img src="images/tcp_ipv6.png" />
+
+    <br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+    <h2><a name="C14"></a>第14章、udp</h2><hr />
+    &nbsp;&nbsp;UDP协议全称是用户数据报协议，在网络中它与TCP协议一样用于处理数据包，是一种无连接的协议。UDP提供了无连接通信，且不对传送数据包进行可靠性保证，适合于一次传输少量数据，UDP传输的可靠性由应用层负责。常用的UDP端口号有：53（DNS）、69（TFTP）、161（SNMP）。<br>
+    <h3>
+        1、	udp语句分析
+    </h3>
+    udp.server listen port {50002}<br>
+    udp服务端，侦听端口“50002”，又称socket服务<br>
+    <br>
+    udp.client connect ip {192.168.1.2} port {65501}<br>
+    <br>
+    udp客户端设置服务器参数,ipv4地址为“192.168.1.2”，端口“65501”，又称为socket连接<br>
+    变量udp.client.localport=[55513],表示本地端口号<br>
+    udp.server.ip=[192.168.1.2]<br>
+    udp.server.port=[65501]<br>
+<br>
+    udp.client connect ip {::1} port {65501}<br>
+    udp客户端设置服务器参数,ipv6地址为“::1”，端口“65501”，又称为socket连接<br>
+    <br>
+    udp.send {hello,string}<br>
+    udp发送字符串“hello,string”<br>
+    <br>
+    udp.send text<br>
+    udp发送文本选中区域内容<br>
+    <br>
+    udp.recv {2} packets<br>
+    udp接收两个数据包<br>
+    <br>
+    udp.recv {5} seconds<br>
+    udp接收数据5秒钟<br>
+    <br>
+    udp.close<br>
+    udp关闭socket<br>
+    <br>
+    <h3>
+        2、	示例脚本[C:\snmlipv6\udp\udp_ipv4.txt]
+    </h3>
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\tcp\tcp_client_ipv4.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.set color red {0} green {0} blue {0} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">screen.text at point {150} {30} string {13.1 tcp.client (ipv4) Test} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">screen.text at point {10} {~v_y~} string {No.    Time                       Server IP:Port} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.text at point {250} {~v_y~} string {tcp.recv    text.bytes} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.line from point {10} {75} to point {460} {75} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src">var {v_i} value {0} </td></tr> 
+<tr><td class="line_no">010</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">011</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">loop.begin </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">&nbsp;&nbsp;var {v_i} add number {1} </td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">&nbsp;&nbsp;var {v_y} add number {18} </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">&nbsp;&nbsp;var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">&nbsp;&nbsp;var {server_port} value number {50000+~v_i~} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">&nbsp;&nbsp;screen.text at point {10} {~v_y~} string {~v_i~, ~v_time~   127.0.0.1:~server_port~} </td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">&nbsp;&nbsp;run.nms {C:\snmlipv6\tcp\tcp_server_ipv4.nms ~server_port~} </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src">&nbsp;&nbsp;tcp.connect ip {127.0.0.1} port {~server_port~} </td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">&nbsp;&nbsp;tcp.send {tcp.client:~v_time~} </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">&nbsp;&nbsp;tcp.send {%0d%0a04} </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">&nbsp;&nbsp;tcp.send {client.end%0d%0a} </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">&nbsp;&nbsp;tcp.recv expect {server.end} </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">&nbsp;&nbsp;tcp.close </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">&nbsp;&nbsp;screen.text at point {250} {~v_y~} string {~text.bytes~} </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">&nbsp;&nbsp;if.var {v_y} > {400} </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;loop.exit </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">&nbsp;&nbsp;if.end </td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">033</td><td class="line_src">loop.end </td></tr> 
+<tr><td class="line_no">034</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">035</td><td class="line_src">run.end </td></tr> 
+</table> 
+    <br>
+    备注：run.nms {C:\snmlipv6\udp\udp_server_ipv4_ipv6.nms ~server_port~} ，为无界面后台执行脚本语句，详见run章节。<br>
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\udp\udp_server_ipv4_ipv6.nms</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">screen.text at point {150} {30} string {13.2 udp.server ( ipv4 & ipv6 ) Test} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">screen.text at point {10} {~v_y~} string {No.} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.text at point {50} {~v_y~} string {udp.server} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.line from point {10} {75} to point {160} {75} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">screen.text at point {200} {~v_y~} string {udp.send} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">screen.line from point {180} {75} to point {270} {75} </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src">screen.text at point {300} {~v_y~} string {udp.recv} </td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">screen.line from point {300} {75} to point {630} {75} </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">var {v_i} value {0} </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">#run.set loglevel {debug} </td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">udp.server listen port {~run.arg.4~} </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">var {v_i} add number {1} </td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">var {v_y} add number {18} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">text.headpointer move to tail </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">text.tailpointer move to tail </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">udp.recv {1} packets </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">udp.recv {1} seconds </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">text.tailpointer move to tail </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">udp.send {udp.server:~run.arg.4~,~v_i~[~v_time~]%0d%0a} </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">udp.send text </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">udp.send {%0d%0aserver.end%0d%0a} </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">screen.text at point {10} {~v_y~} string {~v_i~} </td></tr> 
+<tr><td class="line_no">033</td><td class="line_src">screen.text at point {50} {~v_y~} string { recv: ~udp.client.ip~:~udp.client.port~} </td></tr> 
+<tr><td class="line_no">034</td><td class="line_src">screen.text at point {280} {~v_y~} string { send: udp.server:~run.arg.4~} </td></tr> 
+<tr><td class="line_no">035</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">036</td><td class="line_src">udp.close </td></tr> 
+<tr><td class="line_no">037</td><td class="line_src">run.end </td></tr> 
+</table> 
+<br>
+ &nbsp;&nbsp;脚本执行画面如下： <br>
+    <img src="images/udp_ipv4.png" /><br>
+ <h3>
+        3、	示例脚本[C:\snmlipv6\udp\udp_ipv6.txt]
+    </h3>
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\udp\udp_ipv6.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.set color red {0} green {0} blue {0} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">screen.text at point {150} {30} string {14.3 udp.client (ipv6) Test} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">screen.text at point {10} {~v_y~} string {No.         Time                   Server IP:Port} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.text at point {250} {~v_y~} string {udp.recv text.bytes} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.line from point {10} {75} to point {460} {75} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src">var {v_i} value {0} </td></tr> 
+<tr><td class="line_no">010</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">011</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">loop.begin </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">&nbsp;&nbsp;var {v_i} add number {1} </td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">&nbsp;&nbsp;var {v_y} add number {18} </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">&nbsp;&nbsp;var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">&nbsp;&nbsp;var {server_port} value number {50000+~v_i~} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">&nbsp;&nbsp;screen.text at point {10} {~v_y~} string {~v_i~, ~v_time~  [::1]:~server_port~} </td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">&nbsp;&nbsp;run.nms {C:\snmlipv6\udp\udp_server_ipv4_ipv6.nms ~server_port~} </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src">&nbsp;&nbsp;run.set loglevel {debug} </td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">&nbsp;&nbsp;udp.client connect ip {::1} port {~server_port~} </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">&nbsp;&nbsp;udp.send {udp.client:~v_time~} </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">&nbsp;&nbsp;udp.send {%0d%0a04} </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">&nbsp;&nbsp;udp.send {client.end%0d%0a} </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">&nbsp;&nbsp;udp.recv {1} packets </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">&nbsp;&nbsp;udp.recv {2} seconds </td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">&nbsp;&nbsp;udp.close </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">&nbsp;&nbsp;screen.text at point {250} {~v_y~} string {~text.bytes~} </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">&nbsp;&nbsp;if.var {v_y} > {400} </td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;loop.exit </td></tr> 
+<tr><td class="line_no">033</td><td class="line_src">&nbsp;&nbsp;if.end </td></tr> 
+<tr><td class="line_no">034</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">035</td><td class="line_src">loop.end </td></tr> 
+<tr><td class="line_no">036</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">037</td><td class="line_src">run.end </td></tr> 
+</table> 
+ &nbsp;&nbsp;脚本执行画面如下： <br>
+    <img src="images/udp_ipv6.png" />
+
+    <br><br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+    <h2><a name="C15"></a> 第15章、ssh</h2><hr />
+    &nbsp;&nbsp;SSH 为 Secure Shell 的缩写，可以代替Telnet的安全协议。telnet是不安全的，在网络上用明文传送口令和数据，安全验证方式容易受到“中间人”（man-in-the-middle）的攻击。<br>
+    <h3>
+        1、ssh语句分析
+    </h3>
+    <br>
+    ssh.connect ip {192.168.186.132} port {22} username {cisco} password {cisco}<br>
+    登录远程设备，设备的IPV4地址为：192.168.186.132，服务端口号为：22，用户名“cisco”密码“cisco”<br>
+   ssh.connect ip {FE80::1} port {22} username {cisco} password {cisco}<br>
+    登录远程设备，设备的IPV6 地址为：[FE80::1]，服务端口号为：22，用户名“cisco”密码“cisco”<br>
+    <br>
+    ssh.set onrecv {-More-} send { %0a}<br>
+    设置ssh自动输入选项，当接收到“-More-”时，自动发送一个空格和换行符<br>
+    <br>
+    ssh.recv expect {Version}<br>
+    接收服务器发送的文本，一直接收到指定字符串“Version”<br>
+    <br>
+    ssh.recv for {3} seconds<br>
+    接收3秒钟内服务器发送的文本，当服务器发送的文本中含有“-More-”时，自动发送一个空格和换行符<br>
+    <br>
+    ssh.send {show version%0a}<br>
+    发送字符串“show version”命令和换行键。<br>
+    <br>
+    ssh.send text<br>
+    发送选中的文本区域<br>
+    <br>
+    ssh.close<br>
+    关闭ssh连接。<br>
+    <br>
+    <h3>
+        2、示例脚本[C:\snmlipv6\ssh\ssh_ipv4.txt]
+    </h3>
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\ssh\ssh_ipv4.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.text at point {150} {30} string {15. ssh (ipv4) Test, (use ssh you need to get ssh.key License File)} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">screen.text at point {10} {~v_y~} string {No.                  server ip:port        send command                       recv         } </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.line from point {10} {75} to point {30} {75} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.line from point {50} {75} to point {270} {75} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">screen.line from point {300} {75} to point {630} {75} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">009</td><td class="line_src">screen.text at point {10} {425} string {1. run ssh_req.bat  2. send email with file ssh_req.txt%0d%0a} </td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">screen.text at point {10} {450} string {email1: ladybird_snml@protonmail.com, email2:  ladybird_snml@hotmail.com%0d%0a} </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">var {v_i} value {0} </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">run.set loglevel {debug} </td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">loop.begin </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">&nbsp;&nbsp;var {v_i} add number {1} </td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">&nbsp;&nbsp;var {v_y} add number {18} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">&nbsp;&nbsp;ssh.connect ip {192.168.186.132} port {22} username {cisco} password {cisco} </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src">&nbsp;&nbsp;ssh.set onrecv {-More-} send { %0a} </td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">&nbsp;&nbsp;ssh.recv for {3} seconds </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">&nbsp;&nbsp;ssh.send {show version%0a} </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">&nbsp;&nbsp;ssh.recv expect {Version} </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">&nbsp;&nbsp;ssh.recv for {3} seconds </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">&nbsp;&nbsp;ssh.close </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">&nbsp;&nbsp;text.headpointer move to head </td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">&nbsp;&nbsp;text.tailpointer move to tail </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">&nbsp;&nbsp;text.save append to file {C:\snmlipv6\ssh\ssh_out_ipv4~v_i~.txt} </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">&nbsp;&nbsp;screen.text at point {10} {~v_y~} string {~v_i~} </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">&nbsp;&nbsp;screen.text at point {50} {~v_y~} string {192.168.186.132:22 send 'show version'} </td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">&nbsp;&nbsp;screen.text at point {300} {~v_y~} string {ssh.recv  : ~text.bytes~ Bytes } </td></tr> 
+<tr><td class="line_no">033</td><td class="line_src">&nbsp;&nbsp;text.delete from headpointer </td></tr> 
+<tr><td class="line_no">034</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">035</td><td class="line_src">&nbsp;&nbsp;if.var {v_y} > {100} </td></tr> 
+<tr><td class="line_no">036</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;loop.exit </td></tr> 
+<tr><td class="line_no">037</td><td class="line_src">&nbsp;&nbsp;if.end </td></tr> 
+<tr><td class="line_no">038</td><td class="line_src">loop.end </td></tr> 
+<tr><td class="line_no">039</td><td class="line_src">run.end </td></tr> 
+</table>     <br>
+ &nbsp;&nbsp;脚本执行画面如下： <br>
+    <img src="images/ssh_ipv4.png" />
+ <br>
+    <h3>
+        3、	示例脚本[C:\snmlipv6\ssh\sshreg_nms.txt]
+    </h3>
+   <table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\ssh\sshreg_nms.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.text at point {150} {30} string {15. ssh Test, Ssh needs a License. Please write email to get ssh.key  file.} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">screen.line from point {10} {75} to point {630} {75} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.line from point {10} {425} to point {630} {425} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">007</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">screen.text at point {10} {80} string {1. run ssh_req.bat  2. send email with file ssh_req.txt%0d%0a} </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src">screen.text at point {10} {100} string {email1: ladybird_snml@protonmail.com, email2:  ladybird_snml@hotmail.com%0d%0a} </td></tr> 
+<tr><td class="line_no">010</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">011</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">var {v_i} value {0} </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">text.add {run.version=[~run.version~]%0d%0a} </td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">text.add {run.arg.1=[~run.arg.1~]%0d%0a} </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">text.add {v_time=[~v_time~]%0d%0a} </td></tr> 
+<tr><td class="line_no">017</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">text.add {os.type=[~os.type~]%0d%0a} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">text.add {os.version=[~os.version~]%0d%0a} </td></tr> 
+<tr><td class="line_no">020</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">021</td><td class="line_src">text.add {nic.ip=[~nic.ip~]%0d%0a} </td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">text.add {nic.description=[~nic.description~]%0d%0a} </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">text.add {nic.mac=[~nic.mac~]%0d%0a} </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">text.add {1. run ssh_req.bat  2. send email with file ssh_req.txt%0d%0a} </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">text.add {email1: ladybird_snml@protonmail.com, email2:  ladybird_snml@hotmail.com%0d%0a} </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">text.headpointer move to head </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">text.tailpointer move to tail </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">text.save append to file {C:\snmlipv6\ssh\ssh_req.txt} </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">screen.text at point {120} {180} string { File C:\snmlipv6\ssh\ssh_req.txt created ok!, total ~text.bytes~ bytes.} </td></tr> 
+<tr><td class="line_no">033</td><td class="line_src">run.end </td></tr> 
+</table>  <br>
+ &nbsp;&nbsp;脚本执行画面如下： <br>
+    <img src="images/ssh_reg.png" />
+ <br> 
+  <h3>
+        4、示例脚本[C:\snmlipv6\ssh\ssh_ipv6.txt]
+    </h3>
+
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\ssh\ssh_ipv6.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.text at point {150} {30} string {15.3 ssh (ipv6) Test, (use ssh you need to get ssh.key License File)} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">screen.text at point {10} {~v_y~} string {No.                  server ip:port        send command                       recv         } </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.line from point {10} {75} to point {30} {75} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.line from point {50} {75} to point {270} {75} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">screen.line from point {300} {75} to point {630} {75} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">009</td><td class="line_src">screen.text at point {10} {425} string {1. run ssh_req.bat  2. send email with file ssh_req.txt%0d%0a} </td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">screen.text at point {10} {450} string {email1: ladybird_snml@protonmail.com, email2:  ladybird_snml@hotmail.com%0d%0a} </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">var {v_i} value {0} </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">run.set loglevel {debug} </td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">loop.begin </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">&nbsp;&nbsp;var {v_i} add number {1} </td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">&nbsp;&nbsp;var {v_y} add number {18} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">&nbsp;&nbsp;ssh.connect ip {FE80::1} port {22} username {cisco} password {cisco} </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src">&nbsp;&nbsp;ssh.set onrecv {-More-} send { %0a} </td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">&nbsp;&nbsp;ssh.recv for {3} seconds </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">&nbsp;&nbsp;ssh.send {show version%0a} </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">&nbsp;&nbsp;ssh.recv expect {Version} </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">&nbsp;&nbsp;ssh.recv for {3} seconds </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">&nbsp;&nbsp;ssh.close </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">&nbsp;&nbsp;text.headpointer move to head </td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">&nbsp;&nbsp;text.tailpointer move to tail </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">&nbsp;&nbsp;text.save append to file {C:\snmlipv6\ssh\ssh_out_ipv4~v_i~.txt} </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">&nbsp;&nbsp;screen.text at point {10} {~v_y~} string {~v_i~} </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">&nbsp;&nbsp;screen.text at point {50} {~v_y~} string {[FE80::1]:22 send 'show version'} </td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">&nbsp;&nbsp;screen.text at point {300} {~v_y~} string {ssh.recv  : ~text.bytes~ Bytes } </td></tr> 
+<tr><td class="line_no">033</td><td class="line_src">&nbsp;&nbsp;text.delete from headpointer </td></tr> 
+<tr><td class="line_no">034</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">035</td><td class="line_src">&nbsp;&nbsp;if.var {v_y} > {100} </td></tr> 
+<tr><td class="line_no">036</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;loop.exit </td></tr> 
+<tr><td class="line_no">037</td><td class="line_src">&nbsp;&nbsp;if.end </td></tr> 
+<tr><td class="line_no">038</td><td class="line_src">loop.end </td></tr> 
+<tr><td class="line_no">039</td><td class="line_src">run.end </td></tr> 
+</table> 
+  <br>
+ &nbsp;&nbsp;脚本执行画面如下： <br>
+    <img src="images/ssh_ipv6.png" />
+ <br> 
+    <br><br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+    <h2><a name="C16"></a> 第16章、web</h2><hr />
+    &nbsp;&nbsp;web（World Wide Web）即全球广域网，也称为万维网，它是一种基于超文本和HTTP协议的一种网络服务，部分网络设备支持基于web的远程管理。<br>
+    <h3>
+        1、web语句分析
+    </h3>
+    web.open {https://github.com/snml2019/snml/blob/master/snmlVer.txt}<br>
+    web.get<br>
+    以上两条语句用get方式获取web文件https://github.com/snml2019/snml/blob/master/snmlVer.txt，写入文本区<br>
+    <br>
+    web.add header {myhead} value {myval1}<br>
+    web.add var {login}<br>
+    web.post<br>
+    post方式可以提交web请求，可以添加变量<br>
+    <br>
+    web.close<br>
+    关闭web请求<br>
+    <h3>
+        2、示例脚本[C:\snmlipv6\web\web_nms1.txt]
+    </h3>
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\web\web_nms1.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.text at point {150} {30} string {16. Web Test} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">screen.text at point {10} {55} string {No.} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src">screen.text at point {100} {55} string {github,snml2019.eu5.org web demo} </td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.line from point {10} {75} to point {630} {75} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">var {i} value {0} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">var {x} value {0} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">var {y} value {0} </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">var {i} add number {1} </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src">var {t1} value datetime </td></tr> 
+<tr><td class="line_no">012</td><td class="line_src">var {y} value number {70+28*~i~} </td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">screen.text at point {5} {~y~} string {1. http://snml2019.eu5.org/index1.php} </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">var {i} add number {1} </td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">var {t1} value datetime </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">var {y} value number {70+28*~i~} </td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">run.set loglevel {debug} </td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">web.open {http://snml2019.eu5.org/index1.php} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">web.add var {nic.mac} </td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">web.get </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">text.headpointer move to head </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">text.tailpointer move to tail </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">text.save to file {C:\snmlipv6\web\web_out_snml.eu5.txt} </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">screen.text at point {80} {~y~} string {~t1~, text.bytes = ~text.bytes~ bytes.} </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">var {i} add number {1} </td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">var {t1} value datetime </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">var {y} value number {70+28*~i~} </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">screen.text at point {5} {~y~} string {2. https://github.com/snml2019/snml/blob/master/snmlVer.txt} </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">web.open {https://github.com/snml2019/snml/blob/master/snmlVer.txt} </td></tr> 
+<tr><td class="line_no">033</td><td class="line_src">web.get </td></tr> 
+<tr><td class="line_no">034</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">035</td><td class="line_src">text.headpointer move to head </td></tr> 
+<tr><td class="line_no">036</td><td class="line_src">text.tailpointer move to tail </td></tr> 
+<tr><td class="line_no">037</td><td class="line_src">text.save to file {C:\snmlipv6\web\web_out_github.txt} </td></tr> 
+<tr><td class="line_no">038</td><td class="line_src">var {i} add number {1} </td></tr> 
+<tr><td class="line_no">039</td><td class="line_src">var {y} value number {70+28*~i~} </td></tr> 
+<tr><td class="line_no">040</td><td class="line_src">screen.text at point {80} {~y~} string {~t1~, text.bytes = ~text.bytes~ bytes.} </td></tr> 
+<tr><td class="line_no">041</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">042</td><td class="line_src">web.close </td></tr> 
+<tr><td class="line_no">043</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">044</td><td class="line_src">run.end </td></tr> 
+</table> 
+<br>
+ &nbsp;&nbsp;脚本执行画面如下： <br>
+    <img src="images/web.png" />
+ <br> 
+
+    <br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+    <h2><a name="C17"></a>第17章、object</h2><hr />
+    &nbsp;&nbsp;获取的网络设备各项参数、指标可以存储到snmlWeb服务器上（Object对象存储），后台支持MySql数据库。MySQL 是最流行的关系型数据库管理系统之一。MySQL所使用的 SQL 语言是用于访问数据库的最常用标准化语言。MySQL分为社区版和商业版，体积小、速度快。<br>
+    <h3>
+        1、object存储语句分析
+    </h3>
+
+object.server ip {127.0.0.1} port {5001} user {user1} password {user1pwd}<br>
+连接snmlWeb服务器，采用用户名、密码方式登录，服务器返回token，作为后续语句的身份校验凭证。<br><br>
+object.server ip {127.0.0.1} port {5001} token {~run.arg.5~}<br>
+连接snmlWeb服务器，直接设置服务器发放的token，作为后续语句的身份校验凭证。<br><br>
+object.open {switch_36F_48Port2}<br>
+根据设备名称获取设备的各项属性参数，设备名称为“switch_36F_48Port2”，如果多个设备名字重复，返回第一个查询到的设备id。<br><br>
+object.open {switch_36F_48Port2} id {101} <br>
+根据设备名称、设备id获取设备的各项属性参数，设备名称为“switch_36F_48Port2”，id为“101”。<br><br>
+object.property {fa0/0.speed} value {1000}<br>
+设置、更新snmlWeb服务器上设备的属性“fa0/0.speed”的值为“1000”。<br><br>
+object.property {fa0/0.status} value {shutdown}<br>
+设置、更新snmlWeb服务器上设备的属性“fa0/0.status”的值为“shutdown”。<br><br>
+
+object.action {query_router1} id {1} status {ok.end}<br>
+更新设备action脚本的执行状态，action的名字为“query_router1”，action_id 为“1”，更新状态为“ok.end”。<br><br>
+    <h3>
+        2、object属性定义语句分析
+    </h3>
+object.create {router_bgp_1} class {router}<br>
+创建对象，名字为“router_bgp_1”，复制类“router”的各条属性的类型等参数。<br><br>
+
+object.property {cpu_percent} type {decimal} log {onchange}<br>
+定义对象的新属性，名字为“cpu_percent”，类型为数字，当值变化时（onchange/y/n 3种方式可设置）记录历史记录。<br><br>
+
+    <br><br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+    <h2><a name="C18"></a>第18章、sqlite</h2><hr />
+    &nbsp;&nbsp;SQLite是一款轻型的数据库，是遵守ACID的关系型数据库管理系统，支持Windows/Linux/Unix等主流操作系统。和MySql不同，SQLite不需要安装服务器，直接在本地文件中存储数据，适合单机存储数据。<br>
+    <h3>
+        1、sqlite语句分析
+    </h3>
+    sqlite.open {C:\snmlipv6\sqlite\sqlite_test.db}<br>
+    sqlite打开数据库文件“C:\snmlipv6\sqlite\sqlite_test.db”，如果不存在就会自动创建数据库文件，同时创建snml_log和 snml_var表。<br>
+    <br>
+    sqlite.log {sqlite测试： }<br>
+    日志记录语句， 在表snml_log中插入记录，参数值写入log字段，同时自动写入的字段有<br>
+    log_id、nms_file、nms_errors、run_pid、cur_time、run_steps、run_line、run_errors、run_seconds、run_argc、var_count、var_bytes、text_bytes、memo等<br>
+    <br>
+    sqlite.exec {select * from snml_log}<br>
+    执行sql语句，create,select等语句<br>
+    <br>
+    sqlite.save var {v_time} <br>
+    保存变量“v_time”到数据库中的 snml_var表<br>
+    <br>
+    sqlite.load var {v_time}<br>
+    从数据库的 snml_var表读取变量“v_time”<br>
+    <br>
+    sqlite.save var name prefix {sqlite} 		<br>
+    保存所有名字以“sqlite”开头的变量到数据库中的 snml_var表<br>
+    <br>
+    sqlite.load var name prefix {sqlite} <br>
+    从数据库中的 snml_var表读取所有名字以“sqlite”开头的变量<br>
+    <br>
+    sqlite.close	<br>
+    关闭数据库<br>
+    <br>
+
+    <h3>
+        2、示例脚本[C:\snmlipv6\sqlite\sqlite_nms1.txt]
+    </h3>
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\sqlite\sqlite_nms1.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.set color red {0} green {0} blue {0} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">screen.text at point {150} {30} string {18. sqlite Test: sqlite.open, sqlite.exec, sqlite.save, sqlite.load} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.text at point {10} {~v_y~} string {No.} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.text at point {250} {~v_y~} string {Test Information} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">screen.line from point {10} {75} to point {50} {75} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">screen.line from point {70} {75} to point {630} {75} </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src">var {v_i} value {0} </td></tr> 
+<tr><td class="line_no">012</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">loop.begin </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">&nbsp;&nbsp;var {v_i} add number {1} </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">&nbsp;&nbsp;var {v_y} add number {18} </td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">&nbsp;&nbsp;screen.text at point {10} {~v_y~} string {~v_i~} </td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">&nbsp;&nbsp;screen.text at point {70} {~v_y~} string {~v_time~} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">&nbsp;&nbsp;sqlite.open {C:\snmlipv6\sqlite\sqlite_test.db} </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src">&nbsp;&nbsp;sqlite.exec {delete from snml_log} </td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">&nbsp;&nbsp;sqlite.exec {delete from snml_var} </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">&nbsp;&nbsp;sqlite.log {sqlite Test: v_i=~v_i~} </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">&nbsp;&nbsp;sqlite.exec {select * from snml_log} </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">&nbsp;&nbsp;screen.text at point {200} {~v_y~} string {sqlite.1.log_id=[~sqlite.1.log_id~], sqlite.1.log = [~sqlite.1.log~]} </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">&nbsp;&nbsp;sqlite.save var {v_time} </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">&nbsp;&nbsp;sqlite.save var name prefix {sqlite} </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">&nbsp;&nbsp;sqlite.exec {select count(*) from snml_var} </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">&nbsp;&nbsp;screen.text at point {500} {~v_y~} string {sqlite.1.count(*)=[~sqlite.1.count(*)~]} </td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">033</td><td class="line_src">&nbsp;&nbsp;sqlite.load var {v_time} </td></tr> 
+<tr><td class="line_no">034</td><td class="line_src">&nbsp;&nbsp;sqlite.load var name prefix {sqlite} </td></tr> 
+<tr><td class="line_no">035</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">036</td><td class="line_src">&nbsp;&nbsp;sqlite.close </td></tr> 
+<tr><td class="line_no">037</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">038</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">039</td><td class="line_src">&nbsp;&nbsp;if.var {v_y} > {200} </td></tr> 
+<tr><td class="line_no">040</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;loop.exit </td></tr> 
+<tr><td class="line_no">041</td><td class="line_src">&nbsp;&nbsp;if.end </td></tr> 
+<tr><td class="line_no">042</td><td class="line_src">loop.end </td></tr> 
+<tr><td class="line_no">043</td><td class="line_src">run.end </td></tr> 
+</table> 
+    <br>
+    &nbsp;&nbsp;脚本执行画面如下：<br>
+    <img src="images/sqlite_nms1.png" />
+   
+    <br>
+    变量值如下：<br><pre>
+  33 sqlite.version=[3.26.0]
+  34 sqlite.snml_log=[1]
+  35 sqlite.snml_var=[21]
+  36 sqlite.rows=[1]
+  37 sqlite.1.log_id=[78]
+  38 sqlite.1.nms_file=[C:\snmlipv6\sqlite\sqlite_nms1.txt]
+  39 sqlite.1.nms_errors=[0]
+  40 sqlite.1.run_pid=[2952]
+  41 sqlite.1.cur_time=[2020-02-10 20:15:18]
+  42 sqlite.1.log=[sqlite Test: v_i=8]
+  43 sqlite.1.run_steps=[226]
+  44 sqlite.1.run_line=[23]
+  45 sqlite.1.run_errors=[0]
+  46 sqlite.1.run_seconds=[20]
+  47 sqlite.1.run_argc=[3]
+  48 sqlite.1.var_count=[52]
+  49 sqlite.1.var_bytes=[1091]
+  50 sqlite.1.text_bytes=[0]
+</pre><br>
+    <br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+    <h2><a name="C19"></a>第19章、	Run</h2><hr />
+    &nbsp;&nbsp; Run用来设置脚本执行的控制参数，例如日志级别、运行时间、错误处理模式、调用其他脚本等。<br>
+    <br>
+    <h3>
+        1、run语句分析
+    </h3>
+    run.end<br>
+    脚本执行结束，如果是后台无界面（hide模式）运行，进程退出。<br>
+    <br>
+    run.sleep {2} seconds<br>
+    脚本执行暂停2秒<br>
+    <br>
+    run.set loglevel {debug}<br>
+    &nbsp;&nbsp;设置脚本执行时的日志级别，有debug,error,info,nolog几个级别，日志信息依次减少，nolog模式不记录日志。<br>
+    <br>
+    run.set onerror {run.end}<br>
+    &nbsp;&nbsp;设置脚本执行时碰到执行错误怎么处理，参数“run.end”的处理方式时结束脚本执行，如果是后台无界面（hide模式）运行，进程退出。默认的处理方式是继续执行下一行。<br>
+    <br>
+    run.set run.maxtime {33} seconds	<br>
+    &nbsp;&nbsp;设置脚本执行的最长运行时间，本示例为33秒，每行执行完后检查脚本总执行时间，如果超过设置时间脚本执行结束，如果是后台无界面（hide模式）运行，进程退出。<br>
+    &nbsp;&nbsp;更新变量：run.end=[MaxRunTime]<br>
+    <br>
+    run.set step.timeout {3} seconds<br>
+    &nbsp;&nbsp;设置后面每行脚本执行的超时时间，本示例为3秒，用于控制tcp、telnet等语句的等待时间，超时时本行脚本的执行强制结束，本行执行出错，继续执行下一行。<br>
+    <br>
+    run.nms {C:\snmlipv6\ping\ping_ipv4.txt 192.168.1.2}<br>
+    &nbsp;&nbsp;以后台无界面（hide模式）运行脚本“C:\snmlipv6\ping\ping_ipv4.txt”，参数为“192.168.1.2”。<br>
+    <br>
+    <h3>
+        2、示例脚本[C:\snmlipv6\run\run_nms1.txt]
+    </h3>
+    <table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\run\run_nms1.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.set color red {0} green {0} blue {0} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">screen.text at point {150} {30} string {18. run Test} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.text at point {10} {~v_y~} string {No.} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.text at point {250} {~v_y~} string {Test Information} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">screen.line from point {10} {75} to point {50} {75} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">screen.line from point {70} {75} to point {630} {75} </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src">var {v_i} value {0} </td></tr> 
+<tr><td class="line_no">012</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">loop.begin </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">&nbsp;&nbsp;var {v_i} add number {1} </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">&nbsp;&nbsp;var {v_y} add number {18} </td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">&nbsp;&nbsp;run.nms {C:\snmlipv6\ping\ping_ipv6.txt} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">&nbsp;&nbsp;run.set run.maxtime {30} seconds </td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">&nbsp;&nbsp;run.set loglevel {nolog} </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src">&nbsp;&nbsp;run.set onerror {run.end} </td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">&nbsp;&nbsp;run.set loglevel {debug} </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">&nbsp;&nbsp;run.set step.timeout {3} seconds </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">&nbsp;&nbsp;run.sleep {3} seconds </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">&nbsp;&nbsp;screen.text at point {10} {~v_y~} string {~v_i~} </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">&nbsp;&nbsp;screen.text at point {70} {~v_y~} string {v_time=~v_time~, run.steps=~run.steps~, run.seconds=~run.seconds~,  run.errors=~run.errors~, } </td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">&nbsp;&nbsp;if.var {v_y} > {400} </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;loop.exit </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">&nbsp;&nbsp;if.end </td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">loop.end </td></tr> 
+<tr><td class="line_no">033</td><td class="line_src">run.end </td></tr> 
+</table> 
+<br>
+    &nbsp;&nbsp;脚本执行画面如下：<br>
+    <img src="images/run.png" />
+  
+    <br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+    <h2><a name="C20"></a>第20章、	sys</h2><hr />
+    &nbsp;&nbsp;sys用于执行本地的命令，访问本机的资源。<br>
+    <br>
+    <h3>
+        1、sys语句分析
+    </h3>
+    sys.command {ping www.126.com} <br>
+    sys.command {ipconfig /all} <br>
+    &nbsp;&nbsp;执行本机系统命令，本示例中“ping www.126.com”，“ipconfig /all”，执行命令显示的文本内容将写入文本区<br>
+    <br>
+    sys.execute open {cmd}<br>
+    交互式执行命令“cmd” 	<br>
+    <br>
+    sys.execute send {dir c:\ %0d%0a} <br>
+    交互式执行命令键入内容“dir c:\ %0d%0a”<br>
+    <br>
+    sys.execute recv expect {可用字节} <br>
+    交互式执行命令接收命令的输出文本，写入文本区，一直接收直到接收到特定字符串“可用字节”<br>
+    <br>
+    sys.execute recv for {A4} seconds<br>
+    交互式执行命令接收命令的输出文本，写入文本区，一直接收4秒钟时间。<br>
+    <br>
+    sys.execute close<br>
+    关闭交互式执行命令<br>
+    <br>
+    <h3>
+        2、示例脚本[C:\snmlipv6\sys\sys_nms1.txt]
+    </h3>
+<table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\sys\sys_nms1.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.set color red {0} green {0} blue {0} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">screen.text at point {150} {30} string {20. sys Test} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.text at point {10} {~v_y~} string {No.} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.text at point {250} {~v_y~} string {Test Information} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">screen.line from point {10} {75} to point {50} {75} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">screen.line from point {70} {75} to point {630} {75} </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src">var {v_i} value {0} </td></tr> 
+<tr><td class="line_no">012</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">var {v_i} add number {1} </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">var {v_y} add number {18} </td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">screen.text at point {10} {~v_y~} string {~v_i~} </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">sys.command {ping www.126.com} </td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">screen.text at point {70} {~v_y~} string {v_time=~v_time~,  sys.command(ping www.126.com), step.bytes=[~step.bytes~], text.bytes=[~text.bytes~]} </td></tr> 
+<tr><td class="line_no">018</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">var {v_i} add number {1} </td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">var {v_y} add number {18} </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src">screen.text at point {10} {~v_y~} string {~v_i~} </td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">sys.command {ipconfig /all} </td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">screen.text at point {70} {~v_y~} string {v_time=~v_time~,  sys.command(ipconfig /all), step.bytes=[~step.bytes~], text.bytes=[~text.bytes~]} </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">var {v_i} add number {1} </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">var {v_y} add number {18} </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">screen.text at point {10} {~v_y~} string {~v_i~} </td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">sys.execute open {cmd} </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">sys.execute send {dir c:\ %0d%0a} </td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">sys.execute recv expect {snmlipv6} </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">screen.text at point {70} {~v_y~} string {v_time=~v_time~,  sys.execute(cmd->dir)), step.bytes=[~step.bytes~], text.bytes=[~text.bytes~]} </td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">sys.execute close </td></tr> 
+<tr><td class="line_no">033</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">034</td><td class="line_src">run.end </td></tr> 
+</table> 
+<br>
+    &nbsp;&nbsp;脚本另存为UTF8格式：<br>
+    <img src="images/sys_saveas_utf8.png" />
+<br>
+    &nbsp;&nbsp;脚本执行画面如下：<br>
+    <img src="images/sys_nms1.png" />
+    <br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+    <h2><a name="C21"></a>第21章、	macro</h2><hr />
+    &nbsp;&nbsp;如果一段脚本代码需要重复使用，就可以把这段脚本定义为一个宏，然后脚本中调用该宏即可。宏必须放置在run.end语句的后面<br>
+    <h3>
+        1、macro语句分析
+    </h3>
+    macro.call {macro_test}<br>
+    脚本中调用宏，本示例中宏的名字为“macro_test”<br>
+    <br>
+    macro.begin {macro_test} <br>
+    定义宏，本示例中宏的名字为“macro_test”。该语句必须放在run.end语句之后。<br>
+    <br>
+    macro.return<br>
+    宏返回语句<br>
+    <br>
+    macro.end<br>
+    宏结束语句<br>
+    <h3>
+        2、示例脚本[C:\snmlipv6\macro\macro_nms1.txt]
+    </h3>
+   <table> 
+<tr><th class="snml_png"></th><th class="snml_nms">C:\snmlipv6\macro\macro_nms1.txt</th></tr> 
+<tr><td class="line_no">001</td><td class="line_src">screen.set color red {0} green {0} blue {0} </td></tr> 
+<tr><td class="line_no">002</td><td class="line_src">screen.text at point {150} {30} string {21. macro Test} </td></tr> 
+<tr><td class="line_no">003</td><td class="line_src">var {v_y} value {60} </td></tr> 
+<tr><td class="line_no">004</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">005</td><td class="line_src">screen.text at point {10} {~v_y~} string {No.} </td></tr> 
+<tr><td class="line_no">006</td><td class="line_src">screen.text at point {250} {~v_y~} string {Test Information} </td></tr> 
+<tr><td class="line_no">007</td><td class="line_src">screen.line from point {10} {75} to point {50} {75} </td></tr> 
+<tr><td class="line_no">008</td><td class="line_src">screen.line from point {70} {75} to point {630} {75} </td></tr> 
+<tr><td class="line_no">009</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">010</td><td class="line_src">var {v_time} value datetime </td></tr> 
+<tr><td class="line_no">011</td><td class="line_src">var {v_i} value {0} </td></tr> 
+<tr><td class="line_no">012</td><td class="line_src"></td></tr> 
+<tr><td class="line_no">013</td><td class="line_src">loop.begin </td></tr> 
+<tr><td class="line_no">014</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">015</td><td class="line_src">&nbsp;&nbsp;var {v_i} add number {1} </td></tr> 
+<tr><td class="line_no">016</td><td class="line_src">&nbsp;&nbsp;var {v_y} add number {18} </td></tr> 
+<tr><td class="line_no">017</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">018</td><td class="line_src">&nbsp;&nbsp;macro.call {macro_test} </td></tr> 
+<tr><td class="line_no">019</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">020</td><td class="line_src">&nbsp;&nbsp;screen.text at point {10} {~v_y~} string {~v_i~} </td></tr> 
+<tr><td class="line_no">021</td><td class="line_src">&nbsp;&nbsp;screen.text at point {70} {~v_y~} string {v_time=~v_time~} </td></tr> 
+<tr><td class="line_no">022</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">023</td><td class="line_src">&nbsp;&nbsp;if.var {v_y} > {400} </td></tr> 
+<tr><td class="line_no">024</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;loop.exit </td></tr> 
+<tr><td class="line_no">025</td><td class="line_src">&nbsp;&nbsp;if.end </td></tr> 
+<tr><td class="line_no">026</td><td class="line_src">loop.end </td></tr> 
+<tr><td class="line_no">027</td><td class="line_src">run.end </td></tr> 
+<tr><td class="line_no">028</td><td class="line_src">macro.begin {macro_test} </td></tr> 
+<tr><td class="line_no">029</td><td class="line_src">&nbsp;&nbsp;</td></tr> 
+<tr><td class="line_no">030</td><td class="line_src">&nbsp;&nbsp;if.var {v_i} <= {10} </td></tr> 
+<tr><td class="line_no">031</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;screen.text at point {270} {~v_y~} string {~v_i~<=10} </td></tr> 
+<tr><td class="line_no">032</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;macro.return </td></tr> 
+<tr><td class="line_no">033</td><td class="line_src">&nbsp;&nbsp;if.end </td></tr> 
+<tr><td class="line_no">034</td><td class="line_src">&nbsp;&nbsp;if.var {v_i} > {12} </td></tr> 
+<tr><td class="line_no">035</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;screen.text at point {270} {~v_y~} string {~v_i~>12} </td></tr> 
+<tr><td class="line_no">036</td><td class="line_src">&nbsp;&nbsp;&nbsp;&nbsp;macro.return </td></tr> 
+<tr><td class="line_no">037</td><td class="line_src">&nbsp;&nbsp;if.end </td></tr> 
+<tr><td class="line_no">038</td><td class="line_src">&nbsp;&nbsp;screen.text at point {270} {~v_y~} string {~v_i~ be 11 or 12} </td></tr> 
+<tr><td class="line_no">039</td><td class="line_src">macro.end </td></tr> 
+</table> 
+    <br>
+
+    &nbsp;&nbsp;脚本执行画面如下：<br>
+    <img src="images/macro_nms1.png" />
+    <br><a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>    <a href="#A1">附录1、全部语句</a>
+
+<h2><a name="C22"></a>第22章、class</h2><hr />
+    &nbsp;&nbsp;snmlWeb服务器上，Object对象分类存储，每一类设备均具有这类设备共有的公共属性值。<br>
+    <h3>
+        1、class创建、属性定义语句分析
+    </h3>
+
+class.database server {object.server}<br>
+设定snmlWeb服务器的参数，使用“object.server”相同的服务器。需要先用object.server 语句获得服务器的访问token令牌。<br><br>
+
+class.create {router}
+定义一个类，名字为“router”。<br><br>
+
+class.property {cpu_percent} type {decimal} log {onchange}
+定义类的新属性，名字为“cpu_percent”，类型为数字，当值变化时（onchange/y/n 3种方式可设置）记录历史记录。<br><br>
+    <a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>
+    <a href="#A1">附录1、全部语句</a>
+
+    <h2><a name="A1"></a> 附录1、全部语句句法格式</h2><hr />
+    <pre>
+Display Function List,Type = 90 , Byte = 0 .
+--- --- -----------------------------
+  1   1 var {A2} value {A4}
+  2   1 var {A2} value number {A5}
+  3   1 var {A2} value datetime
+  4   1 var {A2} add {A4}
+  5   1 var {A2} add number {A5}
+  6   1 var {A2} replace {A4} with {A6}
+  7   1 var {A2} adjust length {A5} align {A7}
+  8   1 var {A2} copy var {A5}
+  9   1 var {A2} copy var {A5} after {A7} bytes length {A10}
+ 10   2 screen.set color red {A4} green {A6} blue {A8}
+ 11   2 screen.set mode {A3}
+ 12   2 screen.set font {A3} size {A5}
+ 13   2 screen.text at point {A4} {A5} string {A7}
+ 14   2 screen.line from point {A4} {A5} to point {A8} {A9}
+ 15   2 screen.rect from point {A4} {A5} to point {A8} {A9}
+ 16   2 screen.arc at point {A4} {A5} radius {A7} from {A9} to {A11}
+ 17   2 screen.image url {A3} from point {A6} {A7} to point {A10} {A11}
+ 18   2 screen.save to file {A4} from point {A7} {A8} to point {A11} {A12}
+ 19   2 screen.log {A2}
+ 20   2 screen.play midi {A3}
+ 21   2 screen.speak {A2}
+ 22   3 dns.get var {A3} host {A5}
+ 23   3 dns.set ipmode {A3}
+ 24   4 ping.ip {A2} ttl {A4} size {A6}
+ 25   5 arp.get var {A3} ip {A5}
+ 26   6 telnet.connect ip {A3} port {A5}
+ 27   6 telnet.recv expect {A3}
+ 28   6 telnet.recv for {A3} seconds
+ 29   6 telnet.set onrecv {A3} send {A5}
+ 30   6 telnet.set delay {A3} ms after per byte send
+ 31   6 telnet.send {A2}
+ 32   6 telnet.send text
+ 33   6 telnet.close
+ 34   7 text.add {A2}
+ 35   7 text.add from file {A4}
+ 36   7 text.headpointer move to head
+ 37   7 text.headpointer move to tail
+ 38   7 text.headpointer move to {A4} byte
+ 39   7 text.headpointer move forward {A4} bytes
+ 40   7 text.headpointer move forward after {A5}
+ 41   7 text.tailpointer move to head
+ 42   7 text.tailpointer move to tail
+ 43   7 text.tailpointer move to {A4} byte
+ 44   7 text.tailpointer move backward {A4} bytes
+ 45   7 text.tailpointer move backward before {A5}
+ 46   7 text.replace {A2} with {A4}
+ 47   7 text.save to file {A4}
+ 48   7 text.save append to file {A5}
+ 49   7 text.get var {A3} after {A5} bytes length {A8}
+ 50   7 text.get var {A3} between {A5} and {A7}
+ 51   7 text.get var {A3} after {A5} length {A7}
+ 52   7 text.get var {A3} word number {A6}
+ 53   7 text.line get all words
+ 54   7 text.line get all words between {A6} and {A8} separated by {A11}
+ 55   7 text.delete from headpointer
+ 56   7 text.delete from {A3} byte
+ 57   7 text.delete from tailpointer
+ 58   8 ssh.connect ip {A3} port {A5} username {A7} password {A9}
+ 59   8 ssh.set onrecv {A3} send {A5}
+ 60   8 ssh.recv expect {A3}
+ 61   8 ssh.recv for {A3} seconds
+ 62   8 ssh.send {A2}
+ 63   8 ssh.close
+ 64   9 snmp.open version {A3} ip {A5} port {A7} password {A9}
+ 65   9 snmp.get var {A3} oid {A5}
+ 66   9 snmp.getnext oid {A3}
+ 67  10 tcp.server listen port {A4}
+ 68  10 tcp.connect ip {A3} port {A5}
+ 69  10 tcp.send {A2}
+ 70  10 tcp.send text
+ 71  10 tcp.recv {A2}
+ 72  10 tcp.recv expect {A3}
+ 73  10 tcp.recv for {A3} bytes
+ 74  10 tcp.recv for {A3} seconds
+ 75  10 tcp.close
+ 76  11 udp.server listen port {A4}
+ 77  11 udp.client connect ip {A4} port {A6}
+ 78  11 udp.send {A2}
+ 79  11 udp.send text
+ 80  11 udp.recv {A2} packets
+ 81  11 udp.recv {A2} seconds
+ 82  11 udp.close
+ 83  12 if.var {A2} > {A4}
+ 84  12 if.var {A2} >= {A4}
+ 85  12 if.var {A2} < {A4}
+ 86  12 if.var {A2} <= {A4}
+ 87  12 if.var {A2} == {A4}
+ 88  12 if.var {A2} <> {A4}
+ 89  12 if.var {A2} in {A4}
+ 90  12 if.var {A2} not in {A5}
+ 91  12 if.var {A2} contain {A4}
+ 92  12 if.var {A2} not contain {A5}
+ 93  12 if.text contain {A3}
+ 94  12 if.text not contain {A4}
+ 95  12 if.end
+ 96  13 loop.begin
+ 97  13 loop.next
+ 98  13 loop.exit
+ 99  13 loop.end
+100  14 smtp.server {A2} port {A4} username {A6} password {A8}
+101  14 smtp.subject {A2} body {A4}
+102  14 smtp.add attachment {A3}
+103  14 smtp.send to {A3}
+104  15 macro.call {A2}
+105  15 macro.begin {A2}
+106  15 macro.return
+107  15 macro.end
+108  16 excel.open {A2} sheet {A4}
+109  16 excel.cell {A2} value {A4}
+110  16 excel.get var {A3} cell {A5}
+111  16 excel.close
+112  17 object.server ip {A3} port {A5} user {A7} password {A9}
+113  17 object.server ip {A3} port {A5} token {A7}
+114  17 object.create {A2} class {A4}
+115  17 object.property {A2} type {A4} log {A6}
+116  17 object.open {A2}
+117  17 object.open {A2} id {A4}
+118  17 object.property {A2} value {A4}
+119  17 object.action {A2} id {A4} status {A6}
+120  18 sqlite.open {A2}
+121  18 sqlite.exec {A2}
+122  18 sqlite.log {A2}
+123  18 sqlite.save var {A3}
+124  18 sqlite.save var name prefix {A5}
+125  18 sqlite.load var {A3}
+126  18 sqlite.load var name prefix {A5}
+127  18 sqlite.close
+128  19 run.end
+129  19 run.sleep {A2} seconds
+130  19 run.set loglevel {A3}
+131  19 run.set onerror {A3}
+132  19 run.set run.maxtime {A3} seconds
+133  19 run.set step.timeout {A3} seconds
+134  19 run.nms {A2}
+135  20 sys.command {A2}
+136  20 sys.execute open {A3}
+137  20 sys.execute send {A3}
+138  20 sys.execute recv expect {A4}
+139  20 sys.execute recv for {A4} seconds
+140  20 sys.execute close
+141  21 web.open {A2}
+142  21 web.add header {A3} value {A5}
+143  21 web.add var {A3}
+144  21 web.get
+145  21 web.post
+146  21 web.close
+147  24 class.database server {A3}
+148  24 class.create {A2}
+149  24 class.property {A2} type {A4} log {A6} snml {A8}
+    </pre>
+   &nbsp;&nbsp;打包下载：<a href="https://ladybirdsnml.github.io/snmlipv6utf8snmptelnetsshweb/snml_utf8ipv6.zip">https://ladybirdsnml.github.io/snmlipv6utf8snmptelnetsshweb/snml_utf8ipv6_913.zip</a><br><br>
+    <a href="#C0">目录:</a>  <a href="#C1">1、var</a>
+    <a href="#C2">2、screen</a>
+    <a href="#C3">3、snmp</a>
+    <a href="#C4">4、telnet</a>
+    <a href="#C5">5、text</a>
+    <a href="#C6">6、if</a>
+    <a href="#C7">7、loop</a>
+    <a href="#C8">8、dns</a>
+    <a href="#C9">9、ping</a>
+    <a href="#C10">10、arp</a>
+    <a href="#C11">11、excel</a>
+    <a href="#C12">12、smtp</a>
+    <a href="#C13">13、tcp</a>
+    <a href="#C14">14、udp</a>
+    <a href="#C15">15、ssh</a>
+    <a href="#C16">16、web</a>
+    <a href="#C17">17、object</a>
+    <a href="#C18">18、sqlite</a>
+    <a href="#C19">19、Run</a>
+    <a href="#C20">20、sys</a>
+    <a href="#C21">21、macro</a>    <a href="#C22">22、class</a>   
+    <a href="#A1">附录1、全部语句</a>
+</body>
+</html>
+ 
