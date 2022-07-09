@@ -1,0 +1,1996 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Network Management Language (SNML), technical support email: ladybird_snml@protonmail.com</title>
+<meta http-equiv="Content-Language" content="utf8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<style>
+                    body
+                    {
+                        background: #F3F3F4;
+                        color: #1E1E1F;
+                        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    h1
+                    {
+		padding: 10px 0px 10px 10px;
+		font-size: 21pt;
+		background-color: #E2E2E2;
+		border-bottom: 1px #C1C1C2 solid; 
+		color: #201F20;
+		margin: 0;
+		font-weight: normal;
+	  }
+                    
+	h2
+	{
+                        font-size: 18pt;
+                        font-weight: normal;
+                        padding: 15px 0 5px 0;
+                        margin: 0;
+                }
+	h3
+	 {
+		font-weight: normal;
+		font-size: 15pt;
+		margin: 0;
+		padding: 15px 0 5px 0;
+		background-color: transparent;
+ 	}
+	 table
+	{
+		border-spacing: 0 0;
+		border-collapse: collapse;
+		font-size: 10pt;
+	}
+	table th
+	 {
+	  	background: #E7E7E8;
+		text-align: left;
+		text-decoration: none;
+		font-weight: normal;
+		padding: 3px 6px 3px 6px;
+	}
+	table td
+	{
+		vertical-align: top;
+		padding: 3px 6px 5px 5px;
+		margin: 0px;
+		border: 1px solid #E7E7E8;
+		background: #F7F7F8;
+	}
+
+                 .IconSuccessEncoded, .IconInfoEncoded, .IconWarningEncoded, .IconErrorEncoded
+	{
+                        	min-width:18px;
+	 	min-height:18px; 
+	 	background-repeat:no-repeat;
+		background-position:center;
+	}
+
+	 .IconSuccessEncoded
+	{
+ 		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABcElEQVR4Xq2TsUsCURzHv15g8ZJcBWlyiYYgCIWcb9DFRRwMW5TA2c0/QEFwFkxxUQdxVlBwCYWOi6IhWgQhBLHJUCkhLr/BW8S7gvrAg+N+v8/v+x68Z8MGy+XSCyABQAXgBgHGALoASkIIDWSLeLBetdHryMjd5IxQPWT4rn1c/P7+xxp72Cs9m5SZ0Bq2vPnbPFafK2zDvmNHypdC0BPkLlQhxJsCAhQoZwdZU5mwxh720qGo8MzTxTTKZDPCx2HoVzp6lz0Q9tKhyx0kGs8Ny+TkWRKk8lCROwEduhyg9l/6lunOPSfmH3NUH6uQ0KHLAe7JYvJjevm+DAMGJHToKtigE+vwvIidxLamb8IBY9e+C5LiXREkfho3TSd06HJA13/oh6T51MTsfQbHrsMynQ5dDihFjiK8JJAU9AKIWTp76dCVN7HWHrajmUEGvyF9nkbAE6gLIS7kTUyuf2gscLoJrElZo/Mvj+nPz/kLTmfnEwP3tB0AAAAASUVORK5CYII=);
+
+                    }
+	 .IconInfoEncoded
+	{
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHElEQVR4Xs2TsUoDQRRF7wwoziokjZUKadInhdhukR9YP8DMX1hYW+QvdsXa/QHBbcXC7W0CamWTQnclFutceIQJwwaWNLlwm5k5d94M76mmaeCrrmsLYOocY12FcxZFUeozCqKqqgYA8uevv1H6VuPxcwlfk5N92KHBxfFeCSAxxswlYAW/Xr989x/mv9gkhtyMDhcAxgzRsp7flj8B/HF1RsMXq+NZMkopaHe7lbKxQUEIGbKsYNoGn969060hZBkQex/W8oRQwsQaW2o3Ago2SVcJUzAgY3N0lTCZZm+zPS8HB51gMmS1DEYyOz9acKO1D8JWTlafKIMxdhvlfdyT94Vv5h7P8Ky7nQzACmhvKq3zk3PjW9asz9D/1oigecsioooAAAAASUVORK5CYII=);
+	}
+	 .IconWarningEncoded
+	 {
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAx0lEQVR4XpWSMQ7CMAxFf4xAyBMLCxMrO8dhaBcuwdCJS3RJBw7SA/QGTCxdWJgiQYWKXJWKIXHIlyw5lqr34tQgEOdcBsCOx5yZK3hCCKdYXneQkh4pEfqzLfu+wVDSyyzFoJjfz9NB+pAF+eizx2Vruts0k15mPgvS6GYvpVtQhB61IB/dk6AF6fS4Ben0uIX5odtFe8Q/eW1KvFeH4e8khT6+gm5B+t3juyDt7n0jpe+CANTd+oTUjN/U3yVaABnSUjFz/gFq44JaVSCXeQAAAABJRU5ErkJggg==);
+	}
+	.IconErrorEncoded
+	 {
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABQElEQVR4XqWTvUoEQRCE6wYPZUA80AfwAQz23uCMjA7MDRQEIzPBVEyNTQUFIw00vcQTTMzuAh/AxEQQT8HF/3G/oGGnEUGuoNnd6qoZuqltyKEsyzVJq5I6rnUp6SjGeGhESikzzlc1eL7opfuVbrqbU1Zw9NCgtQMaZpY0eNnaaL2fHusvTK5vKu7sjSS1Y4y3QUA6K3e3Mau5UFDyMP7tYF9o8cAHZv68vipoIJg971PZIZ5HiwdvYGGvFVFHmGmZ2MxwmQYPXubPl9Up0tfoMQGetXd6mRbvhBw+boZ6WF7Mbv1+GsHRk0fQmPAH1GfmZirbCfDJ61tw3Px8/8pZsPAG4jlVhcPgZ7adwNWBB68lkRQWFiTgFlbnLY3DGGM7izIJIyT/jjIvEJw6fdJTc6krDzh6aMwMP9bvDH4ADSsa9uSWVJkAAAAASUVORK5CYII=);
+	}
+	.snml_png 
+	{
+ 		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAN0SURBVFhHxZfPSxRhGMdfEzIIpOhgsSSriAkdZGU7lIdtF0E0JAjSRQ8VeU0QAkkpKEg8hP9AhB0UE0zBRDwkWEQgtAgqLGwZbm3RRqiHAonq7fu+87w7887Muzt26QOffZ95fzzvszszO7tlHLD/yAFqi7K0tMRaW1vpyMzMzAzr7Oyko4CITyAIuVyO7+zs8Gw2y3t6eng4HOahUIjH43E+Ozsr50xPT8t2PwQuQBCJRMTpMvovBL4GotEoi8ViLJ/Ps7W1Nba+vk4jjA0PD7NUKsVWV1fZ5uYm9QZEllGCubk5+Q63trb42NgYTyaT2jtX/W1tbTyRSNCqYAQqoKamRm7U0NDAu7u7tc39+vdDoNnOzYI4v7hIK0sT6Bp4VFfHDtO5FfftEdgHP8MH8AT8AQV7FRXsfCbDwtXV1FMCWYaJ7W1RnUcUgMZ2D6qxgpOTlKQ4mGlgedmbFM5D5+bCLijGPPb2UjIzmOVDOu1NRr6C7gKuQzHma38/JfUHM3zwS+TwDHQWoPqNLixQYi8YddHUJBcloNrgj0jiEhchD7n6lL5rDegjmYyc/JwWK69CmcThHXjc1Sc0rh0cpE109KfhwIBsquSrzTFqnWThFyvUQFEahbX4uvaFCrFQ1cK7UAzH6XgBXoNv6RgPZzkuYuENeJ/ie9C5tqC4uF2gl8jn9ckOn0GRUCn6Io74IMXCi9Tn6+gobWZjn4KNDQq8PKFW8QJ+tUL2C/60Qgm+J8yk0xTY2AXs7lLg5Ra1ihj8ZIXsO2yyQslNan3x2cMu4NAhCrycht/gY4iPUuMNTMGn8DUcgUbwnHBjF4AHTjHE1XzFCtlvagU5ai/Bs1ZoxmcPu4D6egpK85FagSogEM3NFNjYBQgaGylg7CE8CpPySEedf4FfAca1LS0UOKC7wWJqSt4u76xTXfA2FP1K3BWFsQvUpzSubW+nTXT0T4B+02fkq817ahXOT8AZC4xrJyYocEGF2KysyIpPQTEsxK2mvct+qMZwcWpjQs/aIr8LMOrD0JBM5PtLB16GagOh6ndaWIs/L8XADAMdHVpCp+dgqQKk5eWUzAxmFWFkxJsUnoTOAvC94J0XjVKS4mBmCfCng1dVacnLoLOAD1CNScfHaXFpMDsg4sdKXx/ntbWFjZUvKys57+rifB//Byw4/wvEcknVkrgkDwAAAABJRU5ErkJggg==);                        			min-width:32px;	 	min-height:32px; 	 	background-repeat:no-repeat;		background-position:center;
+	} 
+	.snml_nms
+	{
+		background: rgb(100, 149, 237) ;
+		color : rgb(255, 255,255) ;
+	}	.snml_red	{		background: rgb(255,   0,  0) ;		color : rgb(255, 255,255) ;	}	.snml_green	{		background: rgb(  0, 255,  0) ;		color : rgb(  0,   0,  0) ;	}	.snml_yellow	{		background: rgb(255, 255,  0) ;		color : rgb(000, 000,000) ;	}
+	</style>
+
+</head>
+<body>
+<table><tr><th class="snml_png" /></th><th class="snml_nms">Simple Network Management Language (SNML) Log File</th></tr> 
+<tr><td>(~_~)</td ><td>technical support: <br>
+email 1: ladybird_snml@protonmail.com<br>
+email 2: ladybird_snml@outlook.com<br><br>Now remember, Pinocchio, be a good boy. And always let your conscience be your guide.<br>Love is the flame of life, without it, everything becomes dark. -- Romain Rolland.
+</td></tr></table>
+<h1>Pid: 18064, [C:\snmlipv6\snml.exe  nolog C:\snmlipv6\web\web_nms1.txt] start ......</h1>
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:38,365</th></tr><tr><td /><td><pre>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:38,365</th></tr><tr><td /><td><pre>
+SnmlReturn, return [0], description: [run_set_loglevel_a3->A:3(debug) return.]
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [17] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [0] len [1]
+SetVar [var.count] value [33] len [2]
+SetVar [var.bytes] value [604] len [3]
+SetVar [run.seconds] value [6] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:38,400</th></tr><tr><td /><td><pre>
+(^_^) Line [17] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>17</td><td>run.steps</td><td>17</td></tr>
+
+<tr><td>2</td><td>17</td><td>run.seconds</td><td>6</td></tr>
+
+<tr><td>3</td><td>17</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>17</td><td>step.line</td><td>17</td></tr>
+
+<tr><td>5</td><td>17</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>17</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>17</td><td>var.count</td><td>33</td></tr>
+
+<tr><td>8</td><td>17</td><td>var.bytes</td><td>604</td></tr>
+
+<tr><td>9</td><td>17</td><td>text.bytes</td><td>0</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:38,443</th></tr><tr><td /><td><pre>
+
+run.steps: [17], Run Next Step, Line No.[18] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:54:38,456</th><th class="snml_nms">step.line=[18]</th><th class="snml_nms">run.steps=[18]</th><tr>
+
+ <tr><td /><td colspan=3>web.open {http://snml2019.eu5.org/index1.php} </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:38,470</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 018</td>
+	<td>web.open</td><td>{http://snml2019.eu5.org/index1.php}</td></tr><tr><td>Get All Arg:</td>
+	<td  > web.open</td><td class="snml_green"> http://snml2019.eu5.org/index1.php</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:38,471</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [18] len [2]
+__try Call [162], [web.open {A2}] ... 
+web_open_a2 ,begin ...
+SnmlReturn, return [0], description: [web_open_a2 return.]
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [18] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [0] len [1]
+SetVar [var.count] value [33] len [2]
+SetVar [var.bytes] value [604] len [3]
+SetVar [run.seconds] value [6] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:38,509</th></tr><tr><td /><td><pre>
+(^_^) Line [18] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>18</td><td>run.steps</td><td>18</td></tr>
+
+<tr><td>2</td><td>18</td><td>run.seconds</td><td>6</td></tr>
+
+<tr><td>3</td><td>18</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>18</td><td>step.line</td><td>18</td></tr>
+
+<tr><td>5</td><td>18</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>18</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>18</td><td>var.count</td><td>33</td></tr>
+
+<tr><td>8</td><td>18</td><td>var.bytes</td><td>604</td></tr>
+
+<tr><td>9</td><td>18</td><td>text.bytes</td><td>0</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:38,547</th></tr><tr><td /><td><pre>
+
+run.steps: [18], Run Next Step, Line No.[19] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:54:38,560</th><th class="snml_nms">step.line=[19]</th><th class="snml_nms">run.steps=[19]</th><tr>
+
+ <tr><td /><td colspan=3>web.add var {nic.mac} </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:38,576</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 019</td>
+	<td>web.add</td><td>var</td><td>{nic.mac}</td></tr><tr><td>Get All Arg:</td>
+	<td  > web.add</td><td  > var</td><td class="snml_green"> nic.mac</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:38,576</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [19] len [2]
+__try Call [164], [web.add var {A3}] ... 
+web_add_var_a3 ,begin ...
+SnmlReturn, return [17], description: [GetVar4(nic.mac)=<34-97-F6-89-C6-74---------------------------------------------------<table><tr><td>line No. 019</td>
+	<td>web.add</td><td>var</td><td>{nic.mac}</td></tr><tr><td>Get All Arg:</td>
+	<td  > web.add</td><td  > var</td><td class="snml_green"> nic.mac</td></tr></table>>]
+SnmlReturn, return [0], description: [web_add_var_a3 return.]
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [19] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [0] len [1]
+SetVar [var.count] value [33] len [2]
+SetVar [var.bytes] value [604] len [3]
+SetVar [run.seconds] value [6] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:38,627</th></tr><tr><td /><td><pre>
+(^_^) Line [19] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>19</td><td>run.steps</td><td>19</td></tr>
+
+<tr><td>2</td><td>19</td><td>run.seconds</td><td>6</td></tr>
+
+<tr><td>3</td><td>19</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>19</td><td>step.line</td><td>19</td></tr>
+
+<tr><td>5</td><td>19</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>19</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>19</td><td>var.count</td><td>33</td></tr>
+
+<tr><td>8</td><td>19</td><td>var.bytes</td><td>604</td></tr>
+
+<tr><td>9</td><td>19</td><td>text.bytes</td><td>0</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:38,664</th></tr><tr><td /><td><pre>
+
+run.steps: [19], Run Next Step, Line No.[20] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:54:38,676</th><th class="snml_nms">step.line=[20]</th><th class="snml_nms">run.steps=[20]</th><tr>
+
+ <tr><td /><td colspan=3>web.get </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:38,690</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 020</td>
+	<td>web.get</td></tr><tr><td>Get All Arg:</td>
+	<td  > web.get</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:38,690</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [20] len [2]
+__try Call [165], [web.get] ... 
+web_get ,begin ...
+sgWeb.varBufLen=26
+{&nic.mac=34-97-F6-89-C6-74}
+sgWeb.url=[http://snml2019.eu5.org/index1.php?nic.mac=34-97-F6-89-C6-74]
+CrackUrl, host Len=16,: 
+CrackUrl, urlPath: 
+CrackUrl, Port:80
+web_get, Session is NULL,now to open ......
+WinHttpQueryOption Connection timeout: 60000 msHeaders Len = 468/strlen=468 {
+HTTP/1.1 200 OK
+Cache-Control: no-store, no-cache, must-revalidate
+Cache-Control: no-cache
+Connection: Upgrade, Keep-Alive
+Date: Tue, 08 Mar 2022 12:54:44 GMT
+Keep-Alive: timeout=1, max=10000
+Pragma: no-cache
+Pragma: no-cache
+Transfer-Encoding: chunked
+Upgrade: h2,h2c
+Content-Type: text/html; charset=UTF-8
+Expires: Thu, 19 Nov 1981 08:52:00 GMT
+Server: Apache/2.4.41
+Set-Cookie: PHPSESSID=c974vt9inqrf806r18ef5qukpe; path=/
+X-Powered-By: PHP/7.3.21
+
+}
+web_get: Read Server Length = 58
+web_get: Read Server Length = 0
+SnmlReturn, return [0], description: [web_get return.]
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [20] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [58] len [2]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [33] len [2]
+SetVar [var.bytes] value [604] len [3]
+SetVar [run.seconds] value [7] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:39,432</th></tr><tr><td /><td><pre>
+(^_^) Line [20] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>20</td><td>run.steps</td><td>20</td></tr>
+
+<tr><td>2</td><td>20</td><td>run.seconds</td><td>7</td></tr>
+
+<tr><td>3</td><td>20</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>20</td><td>step.line</td><td>20</td></tr>
+
+<tr><td>5</td><td>20</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>20</td><td>step.bytes</td><td>58</td></tr>
+
+<tr><td>7</td><td>20</td><td>var.count</td><td>33</td></tr>
+
+<tr><td>8</td><td>20</td><td>var.bytes</td><td>604</td></tr>
+
+<tr><td>9</td><td>20</td><td>text.bytes</td><td>58</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th>List Text, step.bytes=[58]</th></tr>
+<tr><th><pre>
+ read_count1346<!DOCTYPE html>
+ read_count:1346 <br>
+ mac:
+</pre></th></tr></table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:39,489</th></tr><tr><td /><td><pre>
+
+run.steps: [20], Run Next Step, Line No.[21] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:54:39,501</th><th class="snml_nms">step.line=[21]</th><th class="snml_nms">run.steps=[21]</th><tr>
+
+ <tr><td /><td colspan=3></td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:39,516</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 021</td>
+	</tr><tr><td>Get All Arg:</td>
+	</tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:39,516</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [21] len [2]
+__try Call [0], [#] ... 
+[], Line No. [21] be blank, don't need to run.
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [21] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [33] len [2]
+SetVar [var.bytes] value [604] len [3]
+SetVar [run.seconds] value [7] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:39,559</th></tr><tr><td /><td><pre>
+(^_^) Line [21] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>21</td><td>run.steps</td><td>21</td></tr>
+
+<tr><td>2</td><td>21</td><td>run.seconds</td><td>7</td></tr>
+
+<tr><td>3</td><td>21</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>21</td><td>step.line</td><td>21</td></tr>
+
+<tr><td>5</td><td>21</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>21</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>21</td><td>var.count</td><td>33</td></tr>
+
+<tr><td>8</td><td>21</td><td>var.bytes</td><td>604</td></tr>
+
+<tr><td>9</td><td>21</td><td>text.bytes</td><td>58</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:39,598</th></tr><tr><td /><td><pre>
+
+run.steps: [21], Run Next Step, Line No.[22] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:54:39,610</th><th class="snml_nms">step.line=[22]</th><th class="snml_nms">run.steps=[22]</th><tr>
+
+ <tr><td /><td colspan=3>text.headpointer move to head </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:39,624</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 022</td>
+	<td>text.headpointer</td><td>move</td><td>to</td><td>head</td></tr><tr><td>Get All Arg:</td>
+	<td  > text.headpointer</td><td  > move</td><td  > to</td><td  > head</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:39,624</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [22] len [2]
+__try Call [49], [text.headpointer move to head] ... 
+text_headpointer_move_to_head ,begin ...
+SetVar [text.headpointer] value [1] len [1]
+SnmlReturn, return [0], description: [text_headpointer_move_to_head return.]
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [22] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [33] len [2]
+SetVar [var.bytes] value [604] len [3]
+SetVar [run.seconds] value [7] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:39,666</th></tr><tr><td /><td><pre>
+(^_^) Line [22] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>22</td><td>run.steps</td><td>22</td></tr>
+
+<tr><td>2</td><td>22</td><td>run.seconds</td><td>7</td></tr>
+
+<tr><td>3</td><td>22</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>22</td><td>step.line</td><td>22</td></tr>
+
+<tr><td>5</td><td>22</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>22</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>22</td><td>var.count</td><td>33</td></tr>
+
+<tr><td>8</td><td>22</td><td>var.bytes</td><td>604</td></tr>
+
+<tr><td>9</td><td>22</td><td>text.bytes</td><td>58</td></tr>
+
+<tr><td>10</td><td>22</td><td>text.headpointer</td><td>1</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:39,711</th></tr><tr><td /><td><pre>
+
+run.steps: [22], Run Next Step, Line No.[23] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:54:39,724</th><th class="snml_nms">step.line=[23]</th><th class="snml_nms">run.steps=[23]</th><tr>
+
+ <tr><td /><td colspan=3>text.tailpointer move to tail </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:39,737</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 023</td>
+	<td>text.tailpointer</td><td>move</td><td>to</td><td>tail</td></tr><tr><td>Get All Arg:</td>
+	<td  > text.tailpointer</td><td  > move</td><td  > to</td><td  > tail</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:39,737</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [23] len [2]
+__try Call [57], [text.tailpointer move to tail] ... 
+text_tailpointer_move_to_tail ,begin ...
+SetVar [text.tailpointer] value [58] len [2]
+SnmlReturn, return [0], description: [text_tailpointer_move_to_tail return.]
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [23] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [33] len [2]
+SetVar [var.bytes] value [604] len [3]
+SetVar [run.seconds] value [7] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:39,779</th></tr><tr><td /><td><pre>
+(^_^) Line [23] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>23</td><td>run.steps</td><td>23</td></tr>
+
+<tr><td>2</td><td>23</td><td>run.seconds</td><td>7</td></tr>
+
+<tr><td>3</td><td>23</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>23</td><td>step.line</td><td>23</td></tr>
+
+<tr><td>5</td><td>23</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>23</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>23</td><td>var.count</td><td>33</td></tr>
+
+<tr><td>8</td><td>23</td><td>var.bytes</td><td>604</td></tr>
+
+<tr><td>9</td><td>23</td><td>text.bytes</td><td>58</td></tr>
+
+<tr><td>11</td><td>23</td><td>text.tailpointer</td><td>58</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:39,816</th></tr><tr><td /><td><pre>
+
+run.steps: [23], Run Next Step, Line No.[24] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:54:39,828</th><th class="snml_nms">step.line=[24]</th><th class="snml_nms">run.steps=[24]</th><tr>
+
+ <tr><td /><td colspan=3>text.save to file {C:\snmlipv6\web\web_out_snml.eu5.txt} </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:39,843</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 024</td>
+	<td>text.save</td><td>to</td><td>file</td><td>{C:\snmlipv6\web\web_out_snml.eu5.txt}</td></tr><tr><td>Get All Arg:</td>
+	<td  > text.save</td><td  > to</td><td  > file</td><td class="snml_green"> C:\snmlipv6\web\web_out_snml.eu5.txt</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:39,843</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [24] len [2]
+__try Call [64], [text.save to file {A4}] ... 
+text_save_to_file_a4  ,begin ...
+SnmlReturn, return [0], description: [text_save_to_file_a4  return.]
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [24] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [33] len [2]
+SetVar [var.bytes] value [604] len [3]
+SetVar [run.seconds] value [7] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:39,882</th></tr><tr><td /><td><pre>
+(^_^) Line [24] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>24</td><td>run.steps</td><td>24</td></tr>
+
+<tr><td>2</td><td>24</td><td>run.seconds</td><td>7</td></tr>
+
+<tr><td>3</td><td>24</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>24</td><td>step.line</td><td>24</td></tr>
+
+<tr><td>5</td><td>24</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>24</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>24</td><td>var.count</td><td>33</td></tr>
+
+<tr><td>8</td><td>24</td><td>var.bytes</td><td>604</td></tr>
+
+<tr><td>9</td><td>24</td><td>text.bytes</td><td>58</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:39,920</th></tr><tr><td /><td><pre>
+
+run.steps: [24], Run Next Step, Line No.[25] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:54:39,932</th><th class="snml_nms">step.line=[25]</th><th class="snml_nms">run.steps=[25]</th><tr>
+
+ <tr><td /><td colspan=3>screen.text at point {80} {~y~} string {~t1~, text.bytes = ~text.bytes~ bytes.} </td></tr></table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:39,945</th></tr><tr><td /><td><pre>
+ var flag (~): p[1] = 0;
+ var flag (~): p[2] = 2;
+SnmlReturn, return [3], description: [GetVar4(y)=<126>]
+SnmlReturn, return [3], description: [SnmlReplaceVar:=<126>,l=3.]
+ var flag (~): p[1] = 0;
+ var flag (~): p[2] = 3;
+ var flag (~): p[3] = 19;
+ var flag (~): p[4] = 30;
+SnmlReturn, return [19], description: [GetVar4(t1)=<2022-03-08 20:54:38>]
+SnmlReturn, return [2], description: [GetVar4(text.bytes)=<58>]
+SnmlReturn, return [43], description: [SnmlReplaceVar:=<2022-03-08 20:54:38, text.bytes = 58 bytes.>,l=43.]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:39,962</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 025</td>
+	<td>screen.text</td><td>at</td><td>point</td><td>{80}</td><td>{~y~}</td><td>string</td><td>{~t1~, text.bytes = ~text.bytes~ bytes.}</td></tr><tr><td>Get All Arg:</td>
+	<td  > screen.text</td><td  > at</td><td  > point</td><td class="snml_green"> 80</td><td class="snml_green"> 126</td><td  > string</td><td class="snml_green"> 2022-03-08 20:54:38, text.bytes = 58 bytes.</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:39,962</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [25] len [2]
+__try Call [16], [screen.text at point {A4} {A5} string {A7}] ... 
+screen_text_at_point_a4_a5_string_a7 ,begin ...
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconWarningEncoded" /><th  class="snml_yellow">2022-03-08,20:54:39,985 ThreadId: [8896]</th></tr><tr><td /><td><pre>
+Warnings: [SnmlReturn, return [-1], description: [WinUdpSend3: send return,len=-1.]]
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:39,986</th></tr><tr><td /><td><pre>
+SnmlScreenSendToServer,sgScreen.sendPkts=6,Len=148,Data:[screen.set mode {0}; screen.set color red{0} green{0} blue{0}; screen.text at point {80} {126} string {2022-03-08 20:54:38, text.bytes = 58 bytes.} ]
+SnmlReturn, return [0], description: [screen_text_at_point_a4_a5_string_a7 return.]
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [25] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [33] len [2]
+SetVar [var.bytes] value [604] len [3]
+SetVar [run.seconds] value [8] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:40,20</th></tr><tr><td /><td><pre>
+(^_^) Line [25] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>25</td><td>run.steps</td><td>25</td></tr>
+
+<tr><td>2</td><td>25</td><td>run.seconds</td><td>8</td></tr>
+
+<tr><td>3</td><td>25</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>25</td><td>step.line</td><td>25</td></tr>
+
+<tr><td>5</td><td>25</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>25</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>25</td><td>var.count</td><td>33</td></tr>
+
+<tr><td>8</td><td>25</td><td>var.bytes</td><td>604</td></tr>
+
+<tr><td>9</td><td>25</td><td>text.bytes</td><td>58</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,57</th></tr><tr><td /><td><pre>
+
+run.steps: [25], Run Next Step, Line No.[26] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:54:40,69</th><th class="snml_nms">step.line=[26]</th><th class="snml_nms">run.steps=[26]</th><tr>
+
+ <tr><td /><td colspan=3></td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:40,83</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 026</td>
+	</tr><tr><td>Get All Arg:</td>
+	</tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,83</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [26] len [2]
+__try Call [0], [#] ... 
+[], Line No. [26] be blank, don't need to run.
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [26] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [33] len [2]
+SetVar [var.bytes] value [604] len [3]
+SetVar [run.seconds] value [8] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:40,122</th></tr><tr><td /><td><pre>
+(^_^) Line [26] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>26</td><td>run.steps</td><td>26</td></tr>
+
+<tr><td>2</td><td>26</td><td>run.seconds</td><td>8</td></tr>
+
+<tr><td>3</td><td>26</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>26</td><td>step.line</td><td>26</td></tr>
+
+<tr><td>5</td><td>26</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>26</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>26</td><td>var.count</td><td>33</td></tr>
+
+<tr><td>8</td><td>26</td><td>var.bytes</td><td>604</td></tr>
+
+<tr><td>9</td><td>26</td><td>text.bytes</td><td>58</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,158</th></tr><tr><td /><td><pre>
+
+run.steps: [26], Run Next Step, Line No.[27] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:54:40,170</th><th class="snml_nms">step.line=[27]</th><th class="snml_nms">run.steps=[27]</th><tr>
+
+ <tr><td /><td colspan=3>var {i} add number {1} </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:40,185</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 027</td>
+	<td>var</td><td>{i}</td><td>add</td><td>number</td><td>{1}</td></tr><tr><td>Get All Arg:</td>
+	<td  > var</td><td class="snml_green"> i</td><td  > add</td><td  > number</td><td class="snml_green"> 1</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,185</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [27] len [2]
+__try Call [7], [var {A2} add number {A5}] ... 
+var_a2_add_number_a5 ,begin ...
+SnmlReturn, return [1], description: [GetVar4(i)=<2>]Var2.value =[2]
+L[4]=1,A[4]=<3>,redirect call var_a2_value_a4
+var_a2_value_a4 ,begin ...
+SetVar [i] value [3] len [1]
+SnmlReturn, return [0], description: [var_a2_value_a4 return.]
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [27] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [33] len [2]
+SetVar [var.bytes] value [604] len [3]
+SetVar [run.seconds] value [8] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:40,233</th></tr><tr><td /><td><pre>
+(^_^) Line [27] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>27</td><td>run.steps</td><td>27</td></tr>
+
+<tr><td>2</td><td>27</td><td>run.seconds</td><td>8</td></tr>
+
+<tr><td>3</td><td>27</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>27</td><td>step.line</td><td>27</td></tr>
+
+<tr><td>5</td><td>27</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>27</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>27</td><td>var.count</td><td>33</td></tr>
+
+<tr><td>8</td><td>27</td><td>var.bytes</td><td>604</td></tr>
+
+<tr><td>9</td><td>27</td><td>text.bytes</td><td>58</td></tr>
+
+<tr><td>30</td><td>27</td><td>i</td><td>3</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,274</th></tr><tr><td /><td><pre>
+
+run.steps: [27], Run Next Step, Line No.[28] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:54:40,288</th><th class="snml_nms">step.line=[28]</th><th class="snml_nms">run.steps=[28]</th><tr>
+
+ <tr><td /><td colspan=3>var {t1} value datetime </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:40,305</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 028</td>
+	<td>var</td><td>{t1}</td><td>value</td><td>datetime</td></tr><tr><td>Get All Arg:</td>
+	<td  > var</td><td class="snml_green"> t1</td><td  > value</td><td  > datetime</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,305</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [28] len [2]
+__try Call [3], [var {A2} value datetime] ... 
+var_a2_value_datetime ,begin ...L[4]=19,A[4]=<2022-03-08 20:54:40>,redirect call var_a2_value_a4
+var_a2_value_a4 ,begin ...
+SetVar [t1] value [2022-03-08 20:54:40] len [19]
+SnmlReturn, return [0], description: [var_a2_value_a4 return.]
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [28] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [33] len [2]
+SetVar [var.bytes] value [604] len [3]
+SetVar [run.seconds] value [8] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:40,352</th></tr><tr><td /><td><pre>
+(^_^) Line [28] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>28</td><td>run.steps</td><td>28</td></tr>
+
+<tr><td>2</td><td>28</td><td>run.seconds</td><td>8</td></tr>
+
+<tr><td>3</td><td>28</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>28</td><td>step.line</td><td>28</td></tr>
+
+<tr><td>5</td><td>28</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>28</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>28</td><td>var.count</td><td>33</td></tr>
+
+<tr><td>8</td><td>28</td><td>var.bytes</td><td>604</td></tr>
+
+<tr><td>9</td><td>28</td><td>text.bytes</td><td>58</td></tr>
+
+<tr><td>33</td><td>28</td><td>t1</td><td>2022-03-08 20:54:40</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,394</th></tr><tr><td /><td><pre>
+
+run.steps: [28], Run Next Step, Line No.[29] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:54:40,408</th><th class="snml_nms">step.line=[29]</th><th class="snml_nms">run.steps=[29]</th><tr>
+
+ <tr><td /><td colspan=3>var {y} value number {70+28*~i~} </td></tr></table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,420</th></tr><tr><td /><td><pre>
+ var flag (~): p[1] = 6;
+ var flag (~): p[2] = 8;
+SnmlReturn, return [1], description: [GetVar4(i)=<3>]
+SnmlReturn, return [7], description: [SnmlReplaceVar:=<70+28*3>,l=7.]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:40,435</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 029</td>
+	<td>var</td><td>{y}</td><td>value</td><td>number</td><td>{70+28*~i~}</td></tr><tr><td>Get All Arg:</td>
+	<td  > var</td><td class="snml_green"> y</td><td  > value</td><td  > number</td><td class="snml_green"> 70+28*3</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,435</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [29] len [2]
+__try Call [2], [var {A2} value number {A5}] ... 
+var_a2_value_number_a5 ,begin ...
+vbscript_caluate ,begin ...
+Vbs.Len=91
+Private Function SnmlMain()
+Dim Ret 
+Ret = 70+28*3 
+SnmlMain = Round(Ret, 0) 
+End Function
+L[4]=3,A[4]=<154>,redirect call var_a2_value_a4
+var_a2_value_a4 ,begin ...
+SetVar [y] value [154] len [3]
+SnmlReturn, return [0], description: [var_a2_value_a4 return.]
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [29] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [33] len [2]
+SetVar [var.bytes] value [604] len [3]
+SetVar [run.seconds] value [8] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:40,482</th></tr><tr><td /><td><pre>
+(^_^) Line [29] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>29</td><td>run.steps</td><td>29</td></tr>
+
+<tr><td>2</td><td>29</td><td>run.seconds</td><td>8</td></tr>
+
+<tr><td>3</td><td>29</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>29</td><td>step.line</td><td>29</td></tr>
+
+<tr><td>5</td><td>29</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>29</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>29</td><td>var.count</td><td>33</td></tr>
+
+<tr><td>8</td><td>29</td><td>var.bytes</td><td>604</td></tr>
+
+<tr><td>9</td><td>29</td><td>text.bytes</td><td>58</td></tr>
+
+<tr><td>32</td><td>29</td><td>y</td><td>154</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,523</th></tr><tr><td /><td><pre>
+
+run.steps: [29], Run Next Step, Line No.[30] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:54:40,536</th><th class="snml_nms">step.line=[30]</th><th class="snml_nms">run.steps=[30]</th><tr>
+
+ <tr><td /><td colspan=3>screen.text at point {5} {~y~} string {2. https://github.com/snml2019/snml/blob/master/snmlVer.txt} </td></tr></table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,550</th></tr><tr><td /><td><pre>
+ var flag (~): p[1] = 0;
+ var flag (~): p[2] = 2;
+SnmlReturn, return [3], description: [GetVar4(y)=<154>]
+SnmlReturn, return [3], description: [SnmlReplaceVar:=<154>,l=3.]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:40,569</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 030</td>
+	<td>screen.text</td><td>at</td><td>point</td><td>{5}</td><td>{~y~}</td><td>string</td><td>{2. https://github.com/snml2019/snml/blob/master/snmlVer.txt}</td></tr><tr><td>Get All Arg:</td>
+	<td  > screen.text</td><td  > at</td><td  > point</td><td class="snml_green"> 5</td><td class="snml_green"> 154</td><td  > string</td><td class="snml_green"> 2. https://github.com/snml2019/snml/blob/master/snmlVer.txt</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,569</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [30] len [2]
+__try Call [16], [screen.text at point {A4} {A5} string {A7}] ... 
+screen_text_at_point_a4_a5_string_a7 ,begin ...
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconWarningEncoded" /><th  class="snml_yellow">2022-03-08,20:54:40,596 ThreadId: [8896]</th></tr><tr><td /><td><pre>
+Warnings: [SnmlReturn, return [-1], description: [WinUdpSend3: send return,len=-1.]]
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,596</th></tr><tr><td /><td><pre>
+SnmlScreenSendToServer,sgScreen.sendPkts=7,Len=163,Data:[screen.set mode {0}; screen.set color red{0} green{0} blue{0}; screen.text at point {5} {154} string {2. https://github.com/snml2019/snml/blob/master/snmlVer.txt} ]
+SnmlReturn, return [0], description: [screen_text_at_point_a4_a5_string_a7 return.]
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [30] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [33] len [2]
+SetVar [var.bytes] value [604] len [3]
+SetVar [run.seconds] value [8] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:40,633</th></tr><tr><td /><td><pre>
+(^_^) Line [30] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>30</td><td>run.steps</td><td>30</td></tr>
+
+<tr><td>2</td><td>30</td><td>run.seconds</td><td>8</td></tr>
+
+<tr><td>3</td><td>30</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>30</td><td>step.line</td><td>30</td></tr>
+
+<tr><td>5</td><td>30</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>30</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>30</td><td>var.count</td><td>33</td></tr>
+
+<tr><td>8</td><td>30</td><td>var.bytes</td><td>604</td></tr>
+
+<tr><td>9</td><td>30</td><td>text.bytes</td><td>58</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,673</th></tr><tr><td /><td><pre>
+
+run.steps: [30], Run Next Step, Line No.[31] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:54:40,686</th><th class="snml_nms">step.line=[31]</th><th class="snml_nms">run.steps=[31]</th><tr>
+
+ <tr><td /><td colspan=3></td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:40,701</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 031</td>
+	</tr><tr><td>Get All Arg:</td>
+	</tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,701</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [31] len [2]
+__try Call [0], [#] ... 
+[], Line No. [31] be blank, don't need to run.
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [31] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [33] len [2]
+SetVar [var.bytes] value [604] len [3]
+SetVar [run.seconds] value [8] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:40,729</th></tr><tr><td /><td><pre>
+(^_^) Line [31] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>31</td><td>run.steps</td><td>31</td></tr>
+
+<tr><td>2</td><td>31</td><td>run.seconds</td><td>8</td></tr>
+
+<tr><td>3</td><td>31</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>31</td><td>step.line</td><td>31</td></tr>
+
+<tr><td>5</td><td>31</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>31</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>31</td><td>var.count</td><td>33</td></tr>
+
+<tr><td>8</td><td>31</td><td>var.bytes</td><td>604</td></tr>
+
+<tr><td>9</td><td>31</td><td>text.bytes</td><td>58</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,770</th></tr><tr><td /><td><pre>
+
+run.steps: [31], Run Next Step, Line No.[32] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:54:40,784</th><th class="snml_nms">step.line=[32]</th><th class="snml_nms">run.steps=[32]</th><tr>
+
+ <tr><td /><td colspan=3>web.open {https://github.com/snml2019/snml/blob/master/snmlVer.txt} </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:40,799</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 032</td>
+	<td>web.open</td><td>{https://github.com/snml2019/snml/blob/master/snmlVer.txt}</td></tr><tr><td>Get All Arg:</td>
+	<td  > web.open</td><td class="snml_green"> https://github.com/snml2019/snml/blob/master/snmlVer.txt</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,799</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [32] len [2]
+__try Call [162], [web.open {A2}] ... 
+web_open_a2 ,begin ...
+SnmlReturn, return [0], description: [web_open_a2 return.]
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [32] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [33] len [2]
+SetVar [var.bytes] value [604] len [3]
+SetVar [run.seconds] value [8] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:40,842</th></tr><tr><td /><td><pre>
+(^_^) Line [32] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>32</td><td>run.steps</td><td>32</td></tr>
+
+<tr><td>2</td><td>32</td><td>run.seconds</td><td>8</td></tr>
+
+<tr><td>3</td><td>32</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>32</td><td>step.line</td><td>32</td></tr>
+
+<tr><td>5</td><td>32</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>32</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>32</td><td>var.count</td><td>33</td></tr>
+
+<tr><td>8</td><td>32</td><td>var.bytes</td><td>604</td></tr>
+
+<tr><td>9</td><td>32</td><td>text.bytes</td><td>58</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,888</th></tr><tr><td /><td><pre>
+
+run.steps: [32], Run Next Step, Line No.[33] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:54:40,902</th><th class="snml_nms">step.line=[33]</th><th class="snml_nms">run.steps=[33]</th><tr>
+
+ <tr><td /><td colspan=3>web.get </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:54:40,917</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 033</td>
+	<td>web.get</td></tr><tr><td>Get All Arg:</td>
+	<td  > web.get</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:54:40,917</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [33] len [2]
+__try Call [165], [web.get] ... 
+web_get ,begin ...
+sgWeb.url=[https://github.com/snml2019/snml/blob/master/snmlVer.txt]
+CrackUrl, host Len=10,: 
+CrackUrl, urlPath: 
+CrackUrl, Port:443
+web_get, Session is opened .
+WinHttpQueryOption Connection timeout: 60000 ms
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconErrorEncoded" /><th class="snml_red">2022-03-08,20:55:02,57 ThreadId: [8896]</th></tr><tr><td /><td><pre>
+run.errors: [1] , description: [Error 0 in WinHttpSendRequest.]
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:02,57</th></tr><tr><td /><td><pre>
+SetVar [run.errors] value [1] len [1]
+SetVar [run.error.1] value [run.steps [33], Line No. [33], Error: [Error 0 in WinHttpSendRequest.]] len [70]
+SetVar [run.errors] value [1] len [1]
+SetVar [run.steps] value [33] len [2]
+SetVar [step.errors] value [1] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [34] len [2]
+SetVar [var.bytes] value [685] len [3]
+SetVar [run.seconds] value [31] len [2]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconErrorEncoded" /><th class="snml_red">2022-03-08,20:55:03,146 ThreadId: [8896]</th></tr><tr><td /><td><pre>
+(^_^) Line [33] Run End, step.errors=1
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>33</td><td>run.steps</td><td>33</td></tr>
+
+<tr><td>2</td><td>33</td><td>run.seconds</td><td>31</td></tr>
+
+<tr><td>3</td><td>33</td><td>run.errors</td><td>1</td></tr>
+
+<tr><td>4</td><td>33</td><td>step.line</td><td>33</td></tr>
+
+<tr><td>5</td><td>33</td><td>step.errors</td><td>1</td></tr>
+
+<tr><td>6</td><td>33</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>33</td><td>var.count</td><td>34</td></tr>
+
+<tr><td>8</td><td>33</td><td>var.bytes</td><td>685</td></tr>
+
+<tr><td>9</td><td>33</td><td>text.bytes</td><td>58</td></tr>
+
+<tr><td>34</td><td>33</td><td>run.error.1</td><td>run.steps [33], Line No. [33], Error: [Error 0 in WinHttpSendRequest.]</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:03,187</th></tr><tr><td /><td><pre>
+
+run.steps: [33], Run Next Step, Line No.[34] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:55:03,199</th><th class="snml_nms">step.line=[34]</th><th class="snml_nms">run.steps=[34]</th><tr>
+
+ <tr><td /><td colspan=3></td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:03,213</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 034</td>
+	</tr><tr><td>Get All Arg:</td>
+	</tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:03,213</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [34] len [2]
+__try Call [0], [#] ... 
+[], Line No. [34] be blank, don't need to run.
+SetVar [run.errors] value [1] len [1]
+SetVar [run.steps] value [34] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [34] len [2]
+SetVar [var.bytes] value [685] len [3]
+SetVar [run.seconds] value [31] len [2]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:03,252</th></tr><tr><td /><td><pre>
+(^_^) Line [34] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>34</td><td>run.steps</td><td>34</td></tr>
+
+<tr><td>2</td><td>34</td><td>run.seconds</td><td>31</td></tr>
+
+<tr><td>3</td><td>34</td><td>run.errors</td><td>1</td></tr>
+
+<tr><td>4</td><td>34</td><td>step.line</td><td>34</td></tr>
+
+<tr><td>5</td><td>34</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>34</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>34</td><td>var.count</td><td>34</td></tr>
+
+<tr><td>8</td><td>34</td><td>var.bytes</td><td>685</td></tr>
+
+<tr><td>9</td><td>34</td><td>text.bytes</td><td>58</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:03,291</th></tr><tr><td /><td><pre>
+
+run.steps: [34], Run Next Step, Line No.[35] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:55:03,303</th><th class="snml_nms">step.line=[35]</th><th class="snml_nms">run.steps=[35]</th><tr>
+
+ <tr><td /><td colspan=3>text.headpointer move to head </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:03,319</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 035</td>
+	<td>text.headpointer</td><td>move</td><td>to</td><td>head</td></tr><tr><td>Get All Arg:</td>
+	<td  > text.headpointer</td><td  > move</td><td  > to</td><td  > head</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:03,319</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [35] len [2]
+__try Call [49], [text.headpointer move to head] ... 
+text_headpointer_move_to_head ,begin ...
+SetVar [text.headpointer] value [1] len [1]
+SnmlReturn, return [0], description: [text_headpointer_move_to_head return.]
+SetVar [run.errors] value [1] len [1]
+SetVar [run.steps] value [35] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [34] len [2]
+SetVar [var.bytes] value [685] len [3]
+SetVar [run.seconds] value [31] len [2]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:03,363</th></tr><tr><td /><td><pre>
+(^_^) Line [35] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>35</td><td>run.steps</td><td>35</td></tr>
+
+<tr><td>2</td><td>35</td><td>run.seconds</td><td>31</td></tr>
+
+<tr><td>3</td><td>35</td><td>run.errors</td><td>1</td></tr>
+
+<tr><td>4</td><td>35</td><td>step.line</td><td>35</td></tr>
+
+<tr><td>5</td><td>35</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>35</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>35</td><td>var.count</td><td>34</td></tr>
+
+<tr><td>8</td><td>35</td><td>var.bytes</td><td>685</td></tr>
+
+<tr><td>9</td><td>35</td><td>text.bytes</td><td>58</td></tr>
+
+<tr><td>10</td><td>35</td><td>text.headpointer</td><td>1</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:03,402</th></tr><tr><td /><td><pre>
+
+run.steps: [35], Run Next Step, Line No.[36] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:55:03,415</th><th class="snml_nms">step.line=[36]</th><th class="snml_nms">run.steps=[36]</th><tr>
+
+ <tr><td /><td colspan=3>text.tailpointer move to tail </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:03,430</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 036</td>
+	<td>text.tailpointer</td><td>move</td><td>to</td><td>tail</td></tr><tr><td>Get All Arg:</td>
+	<td  > text.tailpointer</td><td  > move</td><td  > to</td><td  > tail</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:03,430</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [36] len [2]
+__try Call [57], [text.tailpointer move to tail] ... 
+text_tailpointer_move_to_tail ,begin ...
+SetVar [text.tailpointer] value [58] len [2]
+SnmlReturn, return [0], description: [text_tailpointer_move_to_tail return.]
+SetVar [run.errors] value [1] len [1]
+SetVar [run.steps] value [36] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [34] len [2]
+SetVar [var.bytes] value [685] len [3]
+SetVar [run.seconds] value [31] len [2]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:03,471</th></tr><tr><td /><td><pre>
+(^_^) Line [36] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>36</td><td>run.steps</td><td>36</td></tr>
+
+<tr><td>2</td><td>36</td><td>run.seconds</td><td>31</td></tr>
+
+<tr><td>3</td><td>36</td><td>run.errors</td><td>1</td></tr>
+
+<tr><td>4</td><td>36</td><td>step.line</td><td>36</td></tr>
+
+<tr><td>5</td><td>36</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>36</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>36</td><td>var.count</td><td>34</td></tr>
+
+<tr><td>8</td><td>36</td><td>var.bytes</td><td>685</td></tr>
+
+<tr><td>9</td><td>36</td><td>text.bytes</td><td>58</td></tr>
+
+<tr><td>11</td><td>36</td><td>text.tailpointer</td><td>58</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:03,510</th></tr><tr><td /><td><pre>
+
+run.steps: [36], Run Next Step, Line No.[37] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:55:03,524</th><th class="snml_nms">step.line=[37]</th><th class="snml_nms">run.steps=[37]</th><tr>
+
+ <tr><td /><td colspan=3>text.save to file {C:\snmlipv6\web\web_out_github.txt} </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:03,539</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 037</td>
+	<td>text.save</td><td>to</td><td>file</td><td>{C:\snmlipv6\web\web_out_github.txt}</td></tr><tr><td>Get All Arg:</td>
+	<td  > text.save</td><td  > to</td><td  > file</td><td class="snml_green"> C:\snmlipv6\web\web_out_github.txt</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:03,540</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [37] len [2]
+__try Call [64], [text.save to file {A4}] ... 
+text_save_to_file_a4  ,begin ...
+SnmlReturn, return [0], description: [text_save_to_file_a4  return.]
+SetVar [run.errors] value [1] len [1]
+SetVar [run.steps] value [37] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [34] len [2]
+SetVar [var.bytes] value [685] len [3]
+SetVar [run.seconds] value [31] len [2]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:03,582</th></tr><tr><td /><td><pre>
+(^_^) Line [37] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>37</td><td>run.steps</td><td>37</td></tr>
+
+<tr><td>2</td><td>37</td><td>run.seconds</td><td>31</td></tr>
+
+<tr><td>3</td><td>37</td><td>run.errors</td><td>1</td></tr>
+
+<tr><td>4</td><td>37</td><td>step.line</td><td>37</td></tr>
+
+<tr><td>5</td><td>37</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>37</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>37</td><td>var.count</td><td>34</td></tr>
+
+<tr><td>8</td><td>37</td><td>var.bytes</td><td>685</td></tr>
+
+<tr><td>9</td><td>37</td><td>text.bytes</td><td>58</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:03,624</th></tr><tr><td /><td><pre>
+
+run.steps: [37], Run Next Step, Line No.[38] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:55:03,638</th><th class="snml_nms">step.line=[38]</th><th class="snml_nms">run.steps=[38]</th><tr>
+
+ <tr><td /><td colspan=3>var {i} add number {1} </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:03,653</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 038</td>
+	<td>var</td><td>{i}</td><td>add</td><td>number</td><td>{1}</td></tr><tr><td>Get All Arg:</td>
+	<td  > var</td><td class="snml_green"> i</td><td  > add</td><td  > number</td><td class="snml_green"> 1</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:03,654</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [38] len [2]
+__try Call [7], [var {A2} add number {A5}] ... 
+var_a2_add_number_a5 ,begin ...
+SnmlReturn, return [1], description: [GetVar4(i)=<3>]Var2.value =[3]
+L[4]=1,A[4]=<4>,redirect call var_a2_value_a4
+var_a2_value_a4 ,begin ...
+SetVar [i] value [4] len [1]
+SnmlReturn, return [0], description: [var_a2_value_a4 return.]
+SetVar [run.errors] value [1] len [1]
+SetVar [run.steps] value [38] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [34] len [2]
+SetVar [var.bytes] value [685] len [3]
+SetVar [run.seconds] value [31] len [2]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:03,695</th></tr><tr><td /><td><pre>
+(^_^) Line [38] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>38</td><td>run.steps</td><td>38</td></tr>
+
+<tr><td>2</td><td>38</td><td>run.seconds</td><td>31</td></tr>
+
+<tr><td>3</td><td>38</td><td>run.errors</td><td>1</td></tr>
+
+<tr><td>4</td><td>38</td><td>step.line</td><td>38</td></tr>
+
+<tr><td>5</td><td>38</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>38</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>38</td><td>var.count</td><td>34</td></tr>
+
+<tr><td>8</td><td>38</td><td>var.bytes</td><td>685</td></tr>
+
+<tr><td>9</td><td>38</td><td>text.bytes</td><td>58</td></tr>
+
+<tr><td>30</td><td>38</td><td>i</td><td>4</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:03,735</th></tr><tr><td /><td><pre>
+
+run.steps: [38], Run Next Step, Line No.[39] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:55:03,747</th><th class="snml_nms">step.line=[39]</th><th class="snml_nms">run.steps=[39]</th><tr>
+
+ <tr><td /><td colspan=3>var {y} value number {70+28*~i~} </td></tr></table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:03,758</th></tr><tr><td /><td><pre>
+ var flag (~): p[1] = 6;
+ var flag (~): p[2] = 8;
+SnmlReturn, return [1], description: [GetVar4(i)=<4>]
+SnmlReturn, return [7], description: [SnmlReplaceVar:=<70+28*4>,l=7.]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:03,774</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 039</td>
+	<td>var</td><td>{y}</td><td>value</td><td>number</td><td>{70+28*~i~}</td></tr><tr><td>Get All Arg:</td>
+	<td  > var</td><td class="snml_green"> y</td><td  > value</td><td  > number</td><td class="snml_green"> 70+28*4</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:03,775</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [39] len [2]
+__try Call [2], [var {A2} value number {A5}] ... 
+var_a2_value_number_a5 ,begin ...
+vbscript_caluate ,begin ...
+Vbs.Len=91
+Private Function SnmlMain()
+Dim Ret 
+Ret = 70+28*4 
+SnmlMain = Round(Ret, 0) 
+End Function
+L[4]=3,A[4]=<182>,redirect call var_a2_value_a4
+var_a2_value_a4 ,begin ...
+SetVar [y] value [182] len [3]
+SnmlReturn, return [0], description: [var_a2_value_a4 return.]
+SetVar [run.errors] value [1] len [1]
+SetVar [run.steps] value [39] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [34] len [2]
+SetVar [var.bytes] value [685] len [3]
+SetVar [run.seconds] value [31] len [2]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:03,818</th></tr><tr><td /><td><pre>
+(^_^) Line [39] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>39</td><td>run.steps</td><td>39</td></tr>
+
+<tr><td>2</td><td>39</td><td>run.seconds</td><td>31</td></tr>
+
+<tr><td>3</td><td>39</td><td>run.errors</td><td>1</td></tr>
+
+<tr><td>4</td><td>39</td><td>step.line</td><td>39</td></tr>
+
+<tr><td>5</td><td>39</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>39</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>39</td><td>var.count</td><td>34</td></tr>
+
+<tr><td>8</td><td>39</td><td>var.bytes</td><td>685</td></tr>
+
+<tr><td>9</td><td>39</td><td>text.bytes</td><td>58</td></tr>
+
+<tr><td>32</td><td>39</td><td>y</td><td>182</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:03,858</th></tr><tr><td /><td><pre>
+
+run.steps: [39], Run Next Step, Line No.[40] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:55:03,871</th><th class="snml_nms">step.line=[40]</th><th class="snml_nms">run.steps=[40]</th><tr>
+
+ <tr><td /><td colspan=3>screen.text at point {80} {~y~} string {~t1~, text.bytes = ~text.bytes~ bytes.} </td></tr></table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:03,882</th></tr><tr><td /><td><pre>
+ var flag (~): p[1] = 0;
+ var flag (~): p[2] = 2;
+SnmlReturn, return [3], description: [GetVar4(y)=<182>]
+SnmlReturn, return [3], description: [SnmlReplaceVar:=<182>,l=3.]
+ var flag (~): p[1] = 0;
+ var flag (~): p[2] = 3;
+ var flag (~): p[3] = 19;
+ var flag (~): p[4] = 30;
+SnmlReturn, return [19], description: [GetVar4(t1)=<2022-03-08 20:54:40>]
+SnmlReturn, return [2], description: [GetVar4(text.bytes)=<58>]
+SnmlReturn, return [43], description: [SnmlReplaceVar:=<2022-03-08 20:54:40, text.bytes = 58 bytes.>,l=43.]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:03,899</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 040</td>
+	<td>screen.text</td><td>at</td><td>point</td><td>{80}</td><td>{~y~}</td><td>string</td><td>{~t1~, text.bytes = ~text.bytes~ bytes.}</td></tr><tr><td>Get All Arg:</td>
+	<td  > screen.text</td><td  > at</td><td  > point</td><td class="snml_green"> 80</td><td class="snml_green"> 182</td><td  > string</td><td class="snml_green"> 2022-03-08 20:54:40, text.bytes = 58 bytes.</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:03,900</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [40] len [2]
+__try Call [16], [screen.text at point {A4} {A5} string {A7}] ... 
+screen_text_at_point_a4_a5_string_a7 ,begin ...
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconWarningEncoded" /><th  class="snml_yellow">2022-03-08,20:55:03,925 ThreadId: [8896]</th></tr><tr><td /><td><pre>
+Warnings: [SnmlReturn, return [-1], description: [WinUdpSend3: send return,len=-1.]]
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:03,925</th></tr><tr><td /><td><pre>
+SnmlScreenSendToServer,sgScreen.sendPkts=8,Len=148,Data:[screen.set mode {0}; screen.set color red{0} green{0} blue{0}; screen.text at point {80} {182} string {2022-03-08 20:54:40, text.bytes = 58 bytes.} ]
+SnmlReturn, return [0], description: [screen_text_at_point_a4_a5_string_a7 return.]
+SetVar [run.errors] value [1] len [1]
+SetVar [run.steps] value [40] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [34] len [2]
+SetVar [var.bytes] value [685] len [3]
+SetVar [run.seconds] value [31] len [2]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:03,959</th></tr><tr><td /><td><pre>
+(^_^) Line [40] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>40</td><td>run.steps</td><td>40</td></tr>
+
+<tr><td>2</td><td>40</td><td>run.seconds</td><td>31</td></tr>
+
+<tr><td>3</td><td>40</td><td>run.errors</td><td>1</td></tr>
+
+<tr><td>4</td><td>40</td><td>step.line</td><td>40</td></tr>
+
+<tr><td>5</td><td>40</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>40</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>40</td><td>var.count</td><td>34</td></tr>
+
+<tr><td>8</td><td>40</td><td>var.bytes</td><td>685</td></tr>
+
+<tr><td>9</td><td>40</td><td>text.bytes</td><td>58</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:03,998</th></tr><tr><td /><td><pre>
+
+run.steps: [40], Run Next Step, Line No.[41] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:55:04,13</th><th class="snml_nms">step.line=[41]</th><th class="snml_nms">run.steps=[41]</th><tr>
+
+ <tr><td /><td colspan=3></td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:04,28</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 041</td>
+	</tr><tr><td>Get All Arg:</td>
+	</tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:04,28</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [41] len [2]
+__try Call [0], [#] ... 
+[], Line No. [41] be blank, don't need to run.
+SetVar [run.errors] value [1] len [1]
+SetVar [run.steps] value [41] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [34] len [2]
+SetVar [var.bytes] value [685] len [3]
+SetVar [run.seconds] value [32] len [2]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:04,65</th></tr><tr><td /><td><pre>
+(^_^) Line [41] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>41</td><td>run.steps</td><td>41</td></tr>
+
+<tr><td>2</td><td>41</td><td>run.seconds</td><td>32</td></tr>
+
+<tr><td>3</td><td>41</td><td>run.errors</td><td>1</td></tr>
+
+<tr><td>4</td><td>41</td><td>step.line</td><td>41</td></tr>
+
+<tr><td>5</td><td>41</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>41</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>41</td><td>var.count</td><td>34</td></tr>
+
+<tr><td>8</td><td>41</td><td>var.bytes</td><td>685</td></tr>
+
+<tr><td>9</td><td>41</td><td>text.bytes</td><td>58</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:04,106</th></tr><tr><td /><td><pre>
+
+run.steps: [41], Run Next Step, Line No.[42] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:55:04,119</th><th class="snml_nms">step.line=[42]</th><th class="snml_nms">run.steps=[42]</th><tr>
+
+ <tr><td /><td colspan=3>web.close </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:04,132</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 042</td>
+	<td>web.close</td></tr><tr><td>Get All Arg:</td>
+	<td  > web.close</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:04,132</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [42] len [2]
+__try Call [167], [web.close] ... 
+web_close ,begin ...
+SnmlReturn, return [0], description: [web_close return.]
+SetVar [run.errors] value [1] len [1]
+SetVar [run.steps] value [42] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [34] len [2]
+SetVar [var.bytes] value [685] len [3]
+SetVar [run.seconds] value [32] len [2]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:04,168</th></tr><tr><td /><td><pre>
+(^_^) Line [42] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>42</td><td>run.steps</td><td>42</td></tr>
+
+<tr><td>2</td><td>42</td><td>run.seconds</td><td>32</td></tr>
+
+<tr><td>3</td><td>42</td><td>run.errors</td><td>1</td></tr>
+
+<tr><td>4</td><td>42</td><td>step.line</td><td>42</td></tr>
+
+<tr><td>5</td><td>42</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>42</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>42</td><td>var.count</td><td>34</td></tr>
+
+<tr><td>8</td><td>42</td><td>var.bytes</td><td>685</td></tr>
+
+<tr><td>9</td><td>42</td><td>text.bytes</td><td>58</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:04,209</th></tr><tr><td /><td><pre>
+
+run.steps: [42], Run Next Step, Line No.[43] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:55:04,222</th><th class="snml_nms">step.line=[43]</th><th class="snml_nms">run.steps=[43]</th><tr>
+
+ <tr><td /><td colspan=3></td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:04,236</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 043</td>
+	</tr><tr><td>Get All Arg:</td>
+	</tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:04,236</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [43] len [2]
+__try Call [0], [#] ... 
+[], Line No. [43] be blank, don't need to run.
+SetVar [run.errors] value [1] len [1]
+SetVar [run.steps] value [43] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [34] len [2]
+SetVar [var.bytes] value [685] len [3]
+SetVar [run.seconds] value [32] len [2]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:04,274</th></tr><tr><td /><td><pre>
+(^_^) Line [43] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>43</td><td>run.steps</td><td>43</td></tr>
+
+<tr><td>2</td><td>43</td><td>run.seconds</td><td>32</td></tr>
+
+<tr><td>3</td><td>43</td><td>run.errors</td><td>1</td></tr>
+
+<tr><td>4</td><td>43</td><td>step.line</td><td>43</td></tr>
+
+<tr><td>5</td><td>43</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>43</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>43</td><td>var.count</td><td>34</td></tr>
+
+<tr><td>8</td><td>43</td><td>var.bytes</td><td>685</td></tr>
+
+<tr><td>9</td><td>43</td><td>text.bytes</td><td>58</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:04,314</th></tr><tr><td /><td><pre>
+
+run.steps: [43], Run Next Step, Line No.[44] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-08,20:55:04,328</th><th class="snml_nms">step.line=[44]</th><th class="snml_nms">run.steps=[44]</th><tr>
+
+ <tr><td /><td colspan=3>run.end </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:04,342</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 044</td>
+	<td>run.end</td></tr><tr><td>Get All Arg:</td>
+	<td  > run.end</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-08,20:55:04,343</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [44] len [2]
+__try Call [148], [run.end] ... 
+run_end ,begin ... ,run end.
+SetVar [run.end] value [run.end] len [7]
+SnmlReturn, return [0], description: [run_end return.]
+SetVar [run.errors] value [1] len [1]
+SetVar [run.steps] value [44] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [58] len [2]
+SetVar [var.count] value [35] len [2]
+SetVar [var.bytes] value [699] len [3]
+SetVar [run.seconds] value [32] len [2]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-08,20:55:04,382</th></tr><tr><td /><td><pre>
+(^_^) Line [44], Run End
+pid:18064, [C:\snmlipv6\snml.exe  nolog C:\snmlipv6\web\web_nms1.txt] run.ed, exit ......
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>44</td><td>run.steps</td><td>44</td></tr>
+
+<tr><td>2</td><td>44</td><td>run.seconds</td><td>32</td></tr>
+
+<tr><td>3</td><td>44</td><td>run.errors</td><td>1</td></tr>
+
+<tr><td>4</td><td>44</td><td>step.line</td><td>44</td></tr>
+
+<tr><td>5</td><td>44</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>44</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>44</td><td>var.count</td><td>35</td></tr>
+
+<tr><td>8</td><td>44</td><td>var.bytes</td><td>699</td></tr>
+
+<tr><td>9</td><td>44</td><td>text.bytes</td><td>58</td></tr>
+
+<tr><td>10</td><td>35</td><td>text.headpointer</td><td>1</td></tr>
+
+<tr><td>11</td><td>36</td><td>text.tailpointer</td><td>58</td></tr>
+
+<tr><td>12</td><td>0</td><td>run.pid</td><td>18064</td></tr>
+
+<tr><td>13</td><td>0</td><td>run.arg.1</td><td>C:\snmlipv6\snml.exe</td></tr>
+
+<tr><td>14</td><td>0</td><td>run.path</td><td>C:\snmlipv6</td></tr>
+
+<tr><td>15</td><td>0</td><td>run.arg.2</td><td>nolog</td></tr>
+
+<tr><td>16</td><td>0</td><td>run.arg.3</td><td>C:\snmlipv6\web\web_nms1.txt</td></tr>
+
+<tr><td>17</td><td>0</td><td>run.arg.count</td><td>3</td></tr>
+
+<tr><td>18</td><td>0</td><td>run.version</td><td>snml8.13(ladybird-ipv6-20200205)</td></tr>
+
+<tr><td>19</td><td>0</td><td>os.type</td><td>windows</td></tr>
+
+<tr><td>20</td><td>0</td><td>os.version</td><td>6.2</td></tr>
+
+<tr><td>21</td><td>0</td><td>nms.file</td><td>C:\snmlipv6\web\web_nms1.txt</td></tr>
+
+<tr><td>22</td><td>0</td><td>nms.length</td><td>1414</td></tr>
+
+<tr><td>23</td><td>0</td><td>nms.words</td><td>160</td></tr>
+
+<tr><td>24</td><td>0</td><td>nms.lines</td><td>44</td></tr>
+
+<tr><td>25</td><td>0</td><td>nms.errors</td><td>0</td></tr>
+
+<tr><td>26</td><td>0</td><td>snml.key</td><td>NO</td></tr>
+
+<tr><td>27</td><td>0</td><td>nic.ip</td><td>192.168.2.107</td></tr>
+
+<tr><td>28</td><td>0</td><td>nic.description</td><td>Intel(R) Ethernet Connection (2) I219-V</td></tr>
+
+<tr><td>29</td><td>0</td><td>nic.mac</td><td>34-97-F6-89-C6-74</td></tr>
+
+<tr><td>30</td><td>38</td><td>i</td><td>4</td></tr>
+
+<tr><td>31</td><td>7</td><td>x</td><td>0</td></tr>
+
+<tr><td>32</td><td>39</td><td>y</td><td>182</td></tr>
+
+<tr><td>33</td><td>28</td><td>t1</td><td>2022-03-08 20:54:40</td></tr>
+
+<tr><td>34</td><td>33</td><td>run.error.1</td><td>run.steps [33], Line No. [33], Error: [Error 0 in WinHttpSendRequest.]</td></tr>
+
+<tr><td>35</td><td>44</td><td>run.end</td><td>run.end</td></tr>
+
+</table>

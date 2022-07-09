@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Network Management Language (SNML), technical support email: ladybird_snml@protonmail.com</title>
+<meta http-equiv="Content-Language" content="utf8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<style>
+                    body
+                    {
+                        background: #F3F3F4;
+                        color: #1E1E1F;
+                        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    h1
+                    {
+		padding: 10px 0px 10px 10px;
+		font-size: 21pt;
+		background-color: #E2E2E2;
+		border-bottom: 1px #C1C1C2 solid; 
+		color: #201F20;
+		margin: 0;
+		font-weight: normal;
+	  }
+                    
+	h2
+	{
+                        font-size: 18pt;
+                        font-weight: normal;
+                        padding: 15px 0 5px 0;
+                        margin: 0;
+                }
+	h3
+	 {
+		font-weight: normal;
+		font-size: 15pt;
+		margin: 0;
+		padding: 15px 0 5px 0;
+		background-color: transparent;
+ 	}
+	 table
+	{
+		border-spacing: 0 0;
+		border-collapse: collapse;
+		font-size: 10pt;
+	}
+	table th
+	 {
+	  	background: #E7E7E8;
+		text-align: left;
+		text-decoration: none;
+		font-weight: normal;
+		padding: 3px 6px 3px 6px;
+	}
+	table td
+	{
+		vertical-align: top;
+		padding: 3px 6px 5px 5px;
+		margin: 0px;
+		border: 1px solid #E7E7E8;
+		background: #F7F7F8;
+	}
+
+                 .IconSuccessEncoded, .IconInfoEncoded, .IconWarningEncoded, .IconErrorEncoded
+	{
+                        	min-width:18px;
+	 	min-height:18px; 
+	 	background-repeat:no-repeat;
+		background-position:center;
+	}
+
+	 .IconSuccessEncoded
+	{
+ 		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABcElEQVR4Xq2TsUsCURzHv15g8ZJcBWlyiYYgCIWcb9DFRRwMW5TA2c0/QEFwFkxxUQdxVlBwCYWOi6IhWgQhBLHJUCkhLr/BW8S7gvrAg+N+v8/v+x68Z8MGy+XSCyABQAXgBgHGALoASkIIDWSLeLBetdHryMjd5IxQPWT4rn1c/P7+xxp72Cs9m5SZ0Bq2vPnbPFafK2zDvmNHypdC0BPkLlQhxJsCAhQoZwdZU5mwxh720qGo8MzTxTTKZDPCx2HoVzp6lz0Q9tKhyx0kGs8Ny+TkWRKk8lCROwEduhyg9l/6lunOPSfmH3NUH6uQ0KHLAe7JYvJjevm+DAMGJHToKtigE+vwvIidxLamb8IBY9e+C5LiXREkfho3TSd06HJA13/oh6T51MTsfQbHrsMynQ5dDihFjiK8JJAU9AKIWTp76dCVN7HWHrajmUEGvyF9nkbAE6gLIS7kTUyuf2gscLoJrElZo/Mvj+nPz/kLTmfnEwP3tB0AAAAASUVORK5CYII=);
+
+                    }
+	 .IconInfoEncoded
+	{
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHElEQVR4Xs2TsUoDQRRF7wwoziokjZUKadInhdhukR9YP8DMX1hYW+QvdsXa/QHBbcXC7W0CamWTQnclFutceIQJwwaWNLlwm5k5d94M76mmaeCrrmsLYOocY12FcxZFUeozCqKqqgYA8uevv1H6VuPxcwlfk5N92KHBxfFeCSAxxswlYAW/Xr989x/mv9gkhtyMDhcAxgzRsp7flj8B/HF1RsMXq+NZMkopaHe7lbKxQUEIGbKsYNoGn969060hZBkQex/W8oRQwsQaW2o3Ago2SVcJUzAgY3N0lTCZZm+zPS8HB51gMmS1DEYyOz9acKO1D8JWTlafKIMxdhvlfdyT94Vv5h7P8Ky7nQzACmhvKq3zk3PjW9asz9D/1oigecsioooAAAAASUVORK5CYII=);
+	}
+	 .IconWarningEncoded
+	 {
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAx0lEQVR4XpWSMQ7CMAxFf4xAyBMLCxMrO8dhaBcuwdCJS3RJBw7SA/QGTCxdWJgiQYWKXJWKIXHIlyw5lqr34tQgEOdcBsCOx5yZK3hCCKdYXneQkh4pEfqzLfu+wVDSyyzFoJjfz9NB+pAF+eizx2Vruts0k15mPgvS6GYvpVtQhB61IB/dk6AF6fS4Ben0uIX5odtFe8Q/eW1KvFeH4e8khT6+gm5B+t3juyDt7n0jpe+CANTd+oTUjN/U3yVaABnSUjFz/gFq44JaVSCXeQAAAABJRU5ErkJggg==);
+	}
+	.IconErrorEncoded
+	 {
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABQElEQVR4XqWTvUoEQRCE6wYPZUA80AfwAQz23uCMjA7MDRQEIzPBVEyNTQUFIw00vcQTTMzuAh/AxEQQT8HF/3G/oGGnEUGuoNnd6qoZuqltyKEsyzVJq5I6rnUp6SjGeGhESikzzlc1eL7opfuVbrqbU1Zw9NCgtQMaZpY0eNnaaL2fHusvTK5vKu7sjSS1Y4y3QUA6K3e3Mau5UFDyMP7tYF9o8cAHZv68vipoIJg971PZIZ5HiwdvYGGvFVFHmGmZ2MxwmQYPXubPl9Up0tfoMQGetXd6mRbvhBw+boZ6WF7Mbv1+GsHRk0fQmPAH1GfmZirbCfDJ61tw3Px8/8pZsPAG4jlVhcPgZ7adwNWBB68lkRQWFiTgFlbnLY3DGGM7izIJIyT/jjIvEJw6fdJTc6krDzh6aMwMP9bvDH4ADSsa9uSWVJkAAAAASUVORK5CYII=);
+	}
+	.snml_png 
+	{
+ 		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAN0SURBVFhHxZfPSxRhGMdfEzIIpOhgsSSriAkdZGU7lIdtF0E0JAjSRQ8VeU0QAkkpKEg8hP9AhB0UE0zBRDwkWEQgtAgqLGwZbm3RRqiHAonq7fu+87w7887Muzt26QOffZ95fzzvszszO7tlHLD/yAFqi7K0tMRaW1vpyMzMzAzr7Oyko4CITyAIuVyO7+zs8Gw2y3t6eng4HOahUIjH43E+Ozsr50xPT8t2PwQuQBCJRMTpMvovBL4GotEoi8ViLJ/Ps7W1Nba+vk4jjA0PD7NUKsVWV1fZ5uYm9QZEllGCubk5+Q63trb42NgYTyaT2jtX/W1tbTyRSNCqYAQqoKamRm7U0NDAu7u7tc39+vdDoNnOzYI4v7hIK0sT6Bp4VFfHDtO5FfftEdgHP8MH8AT8AQV7FRXsfCbDwtXV1FMCWYaJ7W1RnUcUgMZ2D6qxgpOTlKQ4mGlgedmbFM5D5+bCLijGPPb2UjIzmOVDOu1NRr6C7gKuQzHma38/JfUHM3zwS+TwDHQWoPqNLixQYi8YddHUJBcloNrgj0jiEhchD7n6lL5rDegjmYyc/JwWK69CmcThHXjc1Sc0rh0cpE109KfhwIBsquSrzTFqnWThFyvUQFEahbX4uvaFCrFQ1cK7UAzH6XgBXoNv6RgPZzkuYuENeJ/ie9C5tqC4uF2gl8jn9ckOn0GRUCn6Io74IMXCi9Tn6+gobWZjn4KNDQq8PKFW8QJ+tUL2C/60Qgm+J8yk0xTY2AXs7lLg5Ra1ihj8ZIXsO2yyQslNan3x2cMu4NAhCrycht/gY4iPUuMNTMGn8DUcgUbwnHBjF4AHTjHE1XzFCtlvagU5ai/Bs1ZoxmcPu4D6egpK85FagSogEM3NFNjYBQgaGylg7CE8CpPySEedf4FfAca1LS0UOKC7wWJqSt4u76xTXfA2FP1K3BWFsQvUpzSubW+nTXT0T4B+02fkq817ahXOT8AZC4xrJyYocEGF2KysyIpPQTEsxK2mvct+qMZwcWpjQs/aIr8LMOrD0JBM5PtLB16GagOh6ndaWIs/L8XADAMdHVpCp+dgqQKk5eWUzAxmFWFkxJsUnoTOAvC94J0XjVKS4mBmCfCng1dVacnLoLOAD1CNScfHaXFpMDsg4sdKXx/ntbWFjZUvKys57+rifB//Byw4/wvEcknVkrgkDwAAAABJRU5ErkJggg==);                        			min-width:32px;	 	min-height:32px; 	 	background-repeat:no-repeat;		background-position:center;
+	} 
+	.snml_nms
+	{
+		background: rgb(100, 149, 237) ;
+		color : rgb(255, 255,255) ;
+	}	.snml_red	{		background: rgb(255,   0,  0) ;		color : rgb(255, 255,255) ;	}	.snml_green	{		background: rgb(  0, 255,  0) ;		color : rgb(  0,   0,  0) ;	}	.snml_yellow	{		background: rgb(255, 255,  0) ;		color : rgb(000, 000,000) ;	}
+	</style>
+
+</head>
+<body>
+<table><tr><th class="snml_png" /></th><th class="snml_nms">Simple Network Management Language (SNML) Log File</th></tr> 
+<tr><td>(~_~)</td ><td>technical support: <br>
+email 1: ladybird_snml@protonmail.com<br>
+email 2: ladybird_snml@outlook.com<br><br>Now remember, Pinocchio, be a good boy. And always let your conscience be your guide.<br>Love is the flame of life, without it, everything becomes dark. -- Romain Rolland.
+</td></tr></table>
+<h1>Pid: 16128, [C:\snmlipv6\snml.exe  nolog C:\snmlipv6\screen\screen_nms1.txt] start ......</h1>
+<table><tr><th class="IconSuccessEncoded" /><th>2021-09-19,08:08:49,821</th><tr><tr><td /><td><pre>
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2021-09-19,08:08:49,835</th></tr><tr><td /><td><pre>
+(^_^) Line [30] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>107</td><td>run.steps</td><td>107</td></tr>
+
+<tr><td>2</td><td>107</td><td>run.seconds</td><td>36</td></tr>
+
+<tr><td>3</td><td>107</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>107</td><td>step.line</td><td>30</td></tr>
+
+<tr><td>5</td><td>107</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>107</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>107</td><td>var.count</td><td>35</td></tr>
+
+<tr><td>8</td><td>107</td><td>var.bytes</td><td>615</td></tr>
+
+<tr><td>9</td><td>107</td><td>text.bytes</td><td>0</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2021-09-19,08:08:49,881</th><th class="snml_nms">step.line=[31]</th><th class="snml_nms">run.steps=[108]</th><tr>
+
+ <tr><td /><td colspan=3></td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2021-09-19,08:08:49,896</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 031</td>
+	</tr><tr><td>Get All Arg:</td>
+	</tr></table>
+(^_^) Line [31] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>108</td><td>run.steps</td><td>108</td></tr>
+
+<tr><td>2</td><td>108</td><td>run.seconds</td><td>36</td></tr>
+
+<tr><td>3</td><td>108</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>108</td><td>step.line</td><td>31</td></tr>
+
+<tr><td>5</td><td>108</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>108</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>108</td><td>var.count</td><td>35</td></tr>
+
+<tr><td>8</td><td>108</td><td>var.bytes</td><td>615</td></tr>
+
+<tr><td>9</td><td>108</td><td>text.bytes</td><td>0</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2021-09-19,08:08:49,973</th><th class="snml_nms">step.line=[32]</th><th class="snml_nms">run.steps=[109]</th><tr>
+
+ <tr><td /><td colspan=3>screen.speak {1、什么是简单网络管理协议S N M P（ Simple Network Management Protocol ）？} </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2021-09-19,08:08:49,993</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 032</td>
+	<td>screen.speak</td><td>{1、什么是简单网络管理协议S N M P（ Simple Network Management Protocol ）？}</td></tr><tr><td>Get All Arg:</td>
+	<td  > screen.speak</td><td class="snml_green"> 1、什么是简单网络管理协议S N M P（ Simple Network Management Protocol ）？</td></tr></table>
+(^_^) Line [32] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>109</td><td>run.steps</td><td>109</td></tr>
+
+<tr><td>2</td><td>109</td><td>run.seconds</td><td>45</td></tr>
+
+<tr><td>3</td><td>109</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>109</td><td>step.line</td><td>32</td></tr>
+
+<tr><td>5</td><td>109</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>109</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>109</td><td>var.count</td><td>35</td></tr>
+
+<tr><td>8</td><td>109</td><td>var.bytes</td><td>615</td></tr>
+
+<tr><td>9</td><td>109</td><td>text.bytes</td><td>0</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2021-09-19,08:08:58,383</th><th class="snml_nms">step.line=[33]</th><th class="snml_nms">run.steps=[110]</th><tr>
+
+ <tr><td /><td colspan=3></td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2021-09-19,08:08:58,399</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 033</td>
+	</tr><tr><td>Get All Arg:</td>
+	</tr></table>
+(^_^) Line [33] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>110</td><td>run.steps</td><td>110</td></tr>
+
+<tr><td>2</td><td>110</td><td>run.seconds</td><td>45</td></tr>
+
+<tr><td>3</td><td>110</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>110</td><td>step.line</td><td>33</td></tr>
+
+<tr><td>5</td><td>110</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>110</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>110</td><td>var.count</td><td>35</td></tr>
+
+<tr><td>8</td><td>110</td><td>var.bytes</td><td>615</td></tr>
+
+<tr><td>9</td><td>110</td><td>text.bytes</td><td>0</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2021-09-19,08:08:58,479</th><th class="snml_nms">step.line=[34]</th><th class="snml_nms">run.steps=[111]</th><tr>
+
+ <tr><td /><td colspan=3>screen.text at point {50} {205} string {简单网络管理协议是可以管理不同厂家网络设备的简单通讯协议。} </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2021-09-19,08:08:58,502</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 034</td>
+	<td>screen.text</td><td>at</td><td>point</td><td>{50}</td><td>{205}</td><td>string</td><td>{简单网络管理协议是可以管理不同厂家网络设备的简单通讯协议。}</td></tr><tr><td>Get All Arg:</td>
+	<td  > screen.text</td><td  > at</td><td  > point</td><td class="snml_green"> 50</td><td class="snml_green"> 205</td><td  > string</td><td class="snml_green"> 简单网络管理协议是可以管理不同厂家网络设备的简单通讯协议。</td></tr></table>
+(^_^) Line [34] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>111</td><td>run.steps</td><td>111</td></tr>
+
+<tr><td>2</td><td>111</td><td>run.seconds</td><td>45</td></tr>
+
+<tr><td>3</td><td>111</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>111</td><td>step.line</td><td>34</td></tr>
+
+<tr><td>5</td><td>111</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>111</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>111</td><td>var.count</td><td>35</td></tr>
+
+<tr><td>8</td><td>111</td><td>var.bytes</td><td>615</td></tr>
+
+<tr><td>9</td><td>111</td><td>text.bytes</td><td>0</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2021-09-19,08:08:58,580</th><th class="snml_nms">step.line=[35]</th><th class="snml_nms">run.steps=[112]</th><tr>
+
+ <tr><td /><td colspan=3>screen.speak {简单网络管理协议是可以管理不同厂家网络设备的简单通讯协议。} </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2021-09-19,08:08:58,597</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 035</td>
+	<td>screen.speak</td><td>{简单网络管理协议是可以管理不同厂家网络设备的简单通讯协议。}</td></tr><tr><td>Get All Arg:</td>
+	<td  > screen.speak</td><td class="snml_green"> 简单网络管理协议是可以管理不同厂家网络设备的简单通讯协议。</td></tr></table>
+(^_^) Line [35] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>112</td><td>run.steps</td><td>112</td></tr>
+
+<tr><td>2</td><td>112</td><td>run.seconds</td><td>52</td></tr>
+
+<tr><td>3</td><td>112</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>112</td><td>step.line</td><td>35</td></tr>
+
+<tr><td>5</td><td>112</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>112</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>112</td><td>var.count</td><td>35</td></tr>
+
+<tr><td>8</td><td>112</td><td>var.bytes</td><td>615</td></tr>
+
+<tr><td>9</td><td>112</td><td>text.bytes</td><td>0</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2021-09-19,08:09:06,0</th><th class="snml_nms">step.line=[36]</th><th class="snml_nms">run.steps=[113]</th><tr>
+
+ <tr><td /><td colspan=3>screen.text at point {50} {250} string {简单网络管理语言是一种类自然语言的脚本语言，它采用snmp、telnet、ping、dns、arp、ssh、} </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2021-09-19,08:09:06,18</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 036</td>
+	<td>screen.text</td><td>at</td><td>point</td><td>{50}</td><td>{250}</td><td>string</td><td>{简单网络管理语言是一种类自然语言的脚本语言，它采用snmp、telnet、ping、dns、arp、ssh、}</td></tr><tr><td>Get All Arg:</td>
+	<td  > screen.text</td><td  > at</td><td  > point</td><td class="snml_green"> 50</td><td class="snml_green"> 250</td><td  > string</td><td class="snml_green"> 简单网络管理语言是一种类自然语言的脚本语言，它采用snmp、telnet、ping、dns、arp、ssh、</td></tr></table>
+(^_^) Line [36] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>113</td><td>run.steps</td><td>113</td></tr>
+
+<tr><td>2</td><td>113</td><td>run.seconds</td><td>53</td></tr>
+
+<tr><td>3</td><td>113</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>113</td><td>step.line</td><td>36</td></tr>
+
+<tr><td>5</td><td>113</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>113</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>113</td><td>var.count</td><td>35</td></tr>
+
+<tr><td>8</td><td>113</td><td>var.bytes</td><td>615</td></tr>
+
+<tr><td>9</td><td>113</td><td>text.bytes</td><td>0</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2021-09-19,08:09:06,98</th><th class="snml_nms">step.line=[37]</th><th class="snml_nms">run.steps=[114]</th><tr>
+
+ <tr><td /><td colspan=3>screen.speak {简单网络管理语言是一种类自然语言的脚本语言，它采用snmp、telnet、ping、dns、arp、ssh、} </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2021-09-19,08:09:06,114</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 037</td>
+	<td>screen.speak</td><td>{简单网络管理语言是一种类自然语言的脚本语言，它采用snmp、telnet、ping、dns、arp、ssh、}</td></tr><tr><td>Get All Arg:</td>
+	<td  > screen.speak</td><td class="snml_green"> 简单网络管理语言是一种类自然语言的脚本语言，它采用snmp、telnet、ping、dns、arp、ssh、</td></tr></table>

@@ -1,0 +1,3 @@
+read_count1346<!DOCTYPE html>
+ read_count:1346 <br>
+ mac: 

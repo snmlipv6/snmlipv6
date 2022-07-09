@@ -1,0 +1,158 @@
+snml.debug {ListScriptHtml}
+screen.set color red {0} green {0} blue {0} 
+screen.text at point {150}  {10} string {10.snmp (ipv4): mib-2.interfaces.ifInOctets、ifOutOctets } 
+
+snmp.open version {2c} ip {192.168.186.132} port {161} password {cisco} 
+screen.set color red {0} green {0} blue {255} 
+snmp.get var {system.sysDescr} oid {1.3.6.1.2.1.1.1.0} 
+screen.text at point {5} {30} string {snmp.get (oid:1.3.6.1.2.1.1.1.0  -- system.sysDescr) return value:} 
+screen.set color red {0} green {0} blue {0} 
+screen.text at point {5} {48} string {[~system.sysDescr~]} 
+snmp.get var {interfaces.ifNumber} oid {1.3.6.1.2.1.2.1.0} 
+screen.set color red {0} green {0} blue {255} 
+screen.text at point {5} {110} string {snmp.get (oid:1.3.6.1.2.1.2.1.0  -- interfaces.ifNumber) return value: [~interfaces.ifNumber~]} 
+
+screen.set color red {0} green {0} blue {0} 
+
+var {v_time} value datetime 
+var {v_y} value {140} 
+screen.text at point {8}  {~v_y~} string {ifIndex} 
+screen.line from point {10}  {155} to point {40}  {155} 
+screen.text at point {60}  {~v_y~} string {ifDescr ~v_time~} 
+screen.line from point {50}  {155} to point {230}  {155} 
+screen.text at point {270}  {~v_y~} string {ifInOctets} 
+screen.line from point {250}  {155} to point {350}  {155} 
+screen.text at point {390}  {~v_y~} string {ifOutOctets} 
+screen.line from point {370}  {155} to point {470}  {155} 
+
+screen.line from point {60} {460} to point {630} {460}
+screen.line from point {60} {460} to point {60} {160}
+
+var {v_i} value {0} 
+var {ifOutOctets.Max} value {0}
+var {ifInOctets.Max} value {0}
+loop.begin 
+
+	var {v_i} add number {1} 
+	var {v_y} add number {18} 
+	run.sleep {4} seconds
+	screen.set color red {200} green {200} blue {200}
+	screen.set mode {fill}
+	screen.rect from  point {10} {135} to point {630} {155}
+
+	screen.set color red {0} green {0} blue {0} 
+	screen.text at point {10}  {140} string {~v_i~,~run.seconds~s} 
+
+	snmp.get var  {ifDescr.1} oid {1.3.6.1.2.1.2.2.1.2.1} 
+	var {snmp.value} copy  var {ifDescr.1}	
+	screen.text at point {60}  {140} string {ifDescr:~snmp.value~} 
+
+	screen.set color red {0} green {0} blue {255} 
+	snmp.get var  {ifInOctets.~v_i~} oid {1.3.6.1.2.1.2.2.1.10.1} 
+	var {snmp.value} copy  var {ifInOctets.~v_i~}	
+	if.var {ifInOctets.Max} < {snmp.value}
+		var  {ifInOctets.Max} copy var {snmp.value}
+	if.end
+	screen.text at point {270}  {140} string {ifInOctets:~snmp.value~} 
+	var {y1} value number  {460-(300*~snmp.value~/~ifInOctets.Max~)} 		
+         	screen.line from point {~run.seconds~} {460} to point {~run.seconds~} {~y1~}
+
+	screen.set color red {255} green {0} blue {0} 	
+	snmp.get var  {ifOutOctets.~v_i~} oid {1.3.6.1.2.1.2.2.1.16.1} 
+	var {snmp.value} copy  var {ifOutOctets.~v_i~}
+	if.var {ifOutOctets.Max} < {snmp.value}
+		var  {ifInOctets.Max} copy var {snmp.value}
+	if.end	
+	screen.text at point {390}  {140} string {ifOutOctets:~snmp.value~} 
+	var {y1} value number  {460-(300*~snmp.value~/~ifInOctets.Max~)} 
+         	screen.line from point {~run.seconds~} {460} to point {~run.seconds~} {~y1~}
+
+	if.var {v_i} > {18}		
+		loop.exit
+	if.end
+loop.end
+run.end
+macro.begin {drawCoordinateSystem}
+	#x0,y0 xMax,yMax,
+	#var.prefix.x1 y1, x2 y2, x3 y3, ......
+	screen.line from point {~run.seconds~} {460} to point {~run.seconds~} {~y1~}
+	#run.set  loglevel {debug}
+var {CoordinateSystem.x} value {100}
+var {CoordinateSystem.y} value {400}
+var {CoordinateSystem.width} value {500}
+var {CoordinateSystem.height} value {300}
+var {CoordinateSystem.endId} value {30}
+var {CoordinateSystem.startId} value {10}
+var {CoordinateSystem.verticalLabel} value {Mbytes}
+var {CoordinateSystem.horizontalLabel} value {seconds}
+
+var {CoordinateSystem.x2} value number {~CoordinateSystem.x~ + ~CoordinateSystem.width~}
+var {CoordinateSystem.y2} value number {~CoordinateSystem.y~ - ~CoordinateSystem.height~}
+var {CoordinateSystem.x0} value number {~CoordinateSystem.x~ + 100}
+var {CoordinateSystem.y0} value number {~CoordinateSystem.y~ - 50}
+var {CoordinateSystem.x3} value number {~CoordinateSystem.x2~ -  25}
+var {CoordinateSystem.y3} value number {~CoordinateSystem.y2~ + 25}
+
+var {CoordinateSystem.x4} value number {~CoordinateSystem.x0~ -  25}
+var {CoordinateSystem.y4} copy var  {CoordinateSystem.y0}
+
+var {CoordinateSystem.x6}  copy var {CoordinateSystem.x0}
+var {CoordinateSystem.y6} value number  {~CoordinateSystem.y0~ +25 }
+
+var {CoordinateSystem.x7} value number {~CoordinateSystem.x0~ -  2}
+var {CoordinateSystem.y7} copy var  {CoordinateSystem.y3}
+
+var {CoordinateSystem.x9} value number {~CoordinateSystem.x0~ + 2}
+var {CoordinateSystem.y9} copy var  {CoordinateSystem.y3}
+
+var {CoordinateSystem.x8}  copy var {CoordinateSystem.x0}
+var {CoordinateSystem.y8} value number  {~CoordinateSystem.y3~ - 8 }
+
+var {CoordinateSystem.x11} value number {~CoordinateSystem.x3~ + 8}
+var {CoordinateSystem.y11} copy var  {CoordinateSystem.y0}
+
+var {CoordinateSystem.x10}  copy var {CoordinateSystem.x3}
+var {CoordinateSystem.y10} value number  {~CoordinateSystem.y0~ - 2 }
+
+var {CoordinateSystem.x12}  copy var {CoordinateSystem.x3}
+var {CoordinateSystem.y12} value number  {~CoordinateSystem.y0~ + 2 }
+
+	screen.set color red {200} green {200} blue {200} 
+	screen.set mode {fill}
+	screen.rect from point {~CoordinateSystem.x~} {~CoordinateSystem.y2~} to point {~CoordinateSystem.x2~} {~CoordinateSystem.y~}
+	
+	screen.set color red {255} green {255} blue {255} 
+	screen.rect from point {~CoordinateSystem.x0~} {~CoordinateSystem.y3~} to point {~CoordinateSystem.x3~} {~CoordinateSystem.y0~}
+
+	screen.set color red {0} green {0} blue {0} 
+	screen.line from point {~CoordinateSystem.x4~} {~CoordinateSystem.y4~} to point {~CoordinateSystem.x11~} {~CoordinateSystem.y11~}
+	screen.line from point {~CoordinateSystem.x6~} {~CoordinateSystem.y6~} to point {~CoordinateSystem.x8~} {~CoordinateSystem.y8~}
+
+screen.line from point {~CoordinateSystem.x7~} {~CoordinateSystem.y7~} to point {~CoordinateSystem.x8~} {~CoordinateSystem.y8~}
+screen.line from point {~CoordinateSystem.x9~} {~CoordinateSystem.y9~} to point {~CoordinateSystem.x8~} {~CoordinateSystem.y8~}
+screen.line from point {~CoordinateSystem.x7~} {~CoordinateSystem.y7~} to point {~CoordinateSystem.x9~} {~CoordinateSystem.y9~}
+
+screen.line from point {~CoordinateSystem.x11~} {~CoordinateSystem.y11~} to point {~CoordinateSystem.x10~} {~CoordinateSystem.y10~}
+screen.line from point {~CoordinateSystem.x11~} {~CoordinateSystem.y11~} to point {~CoordinateSystem.x12~} {~CoordinateSystem.y12~}
+screen.line from point {~CoordinateSystem.x10~} {~CoordinateSystem.y10~} to point {~CoordinateSystem.x12~} {~CoordinateSystem.y12~}
+
+screen.text at point {~CoordinateSystem.x6~} {~CoordinateSystem.y6~} string {~CoordinateSystem.horizontalLabel~}
+screen.text at point {~CoordinateSystem.x~} {~CoordinateSystem.y3~} string  {~CoordinateSystem.verticalLabel~} 
+
+screen.set color red {220} green {220} blue {220} 
+
+var {CoordinateSystem.x4} value number {~CoordinateSystem.x0~ -  25}
+var {CoordinateSystem.y4} copy var  {CoordinateSystem.y0}
+
+
+
+
+macro.end
+
+
+
+
+
+
+
+

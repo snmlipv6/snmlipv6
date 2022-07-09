@@ -1,0 +1,54 @@
+run.version=[snml8.13(ladybird-ipv6-20200205)]
+run.arg.1=[C:\snmlipv6\snml.exe]
+v_time=[2020-02-08 20:16:15]
+os.type=[windows]
+os.version=[6.2]
+nic.ip=[192.168.1.3 ]
+nic.description=[Intel(R) Ethernet Connection (2) I219-V]
+nic.mac=[34-97-F6-89-C6-74]
+1. run ssh_req.bat  2. send email with file ssh_req.txt
+email1: ladybird_snml@protonmail.com, email2:  ladybird_snml@hotmail.com
+
+
+
+run.version=[snml8.13(ladybird-ipv6-20200205)]
+run.arg.1=[C:\snmlipv6\snml.exe]
+v_time=[2020-02-08 20:17:06]
+os.type=[windows]
+os.version=[6.2]
+nic.ip=[192.168.1.3 ]
+nic.description=[Intel(R) Ethernet Connection (2) I219-V]
+nic.mac=[34-97-F6-89-C6-74]
+1. run ssh_req.bat  2. send email with file ssh_req.txt
+email1: ladybird_snml@protonmail.com, email2:  ladybird_snml@hotmail.com
+
+	ilLen = sprintf_s(szStr, SIZE_1K - 2, "ssh.key({%s},{%s})", sgKey.nicDescription, sgKey.nicMac);
+	ilLen = WinGetHash((BYTE*)szStr, ilLen, CALG_SHA, szHash);
+	 SnmlDebugLog("\nSHA(%s)=[%s],Len=%d.", szStr, szHash, ilLen);
+
+	if (ilLen == sgKey.sshKeyLen && memcmp(sgKey.sshKey, szHash, sgKey.sshKeyLen) == 0)
+	{
+		SnmlSetVar4("snml.key", 8, "ssh.enable=yes", 14);
+		sgSsh.enableClose = 1;
+		sgSsh.enableOpen = 1;
+		sgSsh.enableRecv = 1;
+		sgSsh.enableSend = 1;
+
+		return SnmlReturn(0, "SnmlSshKeyEnable() ssh.enable=yes,return.");
+	}
+	else
+	{
+		SnmlSetVar4("snml.key", 8, "ssh.enable=no", 13);
+		return NmsRunError(-90, "ssh.key match the hardware ok. But the ssh.key is error!");
+	}
+
+run.version=[snml8.13(ladybird-ipv6-20200205)]
+run.arg.1=[C:\snmlipv6\snml.exe]
+v_time=[2022-03-08 20:47:28]
+os.type=[windows]
+os.version=[6.2]
+nic.ip=[192.168.2.107 ]
+nic.description=[Intel(R) Ethernet Connection (2) I219-V]
+nic.mac=[34-97-F6-89-C6-74]
+1. run ssh_req.bat  2. send email with file ssh_req.txt
+email1: ladybird_snml@protonmail.com, email2:  ladybird_snml@hotmail.com

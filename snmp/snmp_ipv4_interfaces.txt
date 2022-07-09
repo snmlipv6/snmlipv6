@@ -1,0 +1,52 @@
+snml.debug {ListScriptHtml}
+screen.set color red {0} green {0} blue {0} 
+screen.text at point {150}  {10} string {10.snmp (ipv4): mib-2.interfaces } 
+
+snmp.open version {2c} ip {192.168.186.132} port {161} password {cisco} 
+screen.set color red {0} green {0} blue {255} 
+snmp.get var {system.sysDescr} oid {1.3.6.1.2.1.1.1.0} 
+screen.text at point {5} {30} string {snmp.get (oid:1.3.6.1.2.1.1.1.0  -- system.sysDescr) return value:} 
+screen.set color red {0} green {0} blue {0} 
+screen.text at point {5} {48} string {[~system.sysDescr~]} 
+snmp.get var {interfaces.ifNumber} oid {1.3.6.1.2.1.2.1.0} 
+screen.set color red {0} green {0} blue {255} 
+screen.text at point {5} {110} string {snmp.get (oid:1.3.6.1.2.1.2.1.0  -- interfaces.ifNumber) return value: [~interfaces.ifNumber~]} 
+
+screen.set color red {0} green {0} blue {0} 
+var {v_y} value {140} 
+screen.text at point {8}  {~v_y~} string {ifIndex} 
+screen.line from point {10}  {155} to point {40}  {155} 
+screen.text at point {60}  {~v_y~} string {ifDescr:1.3.6.1.2.1.2.2.1.2.X} 
+screen.line from point {50}  {155} to point {230}  {155} 
+screen.text at point {270}  {~v_y~} string {ifInOctets} 
+screen.line from point {250}  {155} to point {350}  {155} 
+screen.text at point {390}  {~v_y~} string {ifOutOctets} 
+screen.line from point {370}  {155} to point {470}  {155} 
+
+var {v_time} value datetime 
+var {v_i} value {0} 
+
+loop.begin 
+
+	var {v_i} add number {1} 
+	var {v_y} add number {18} 
+
+	screen.text at point {10}  {~v_y~} string {~v_i~} 
+
+	snmp.get var  {ifDescr.~v_i~} oid {1.3.6.1.2.1.2.2.1.2.~v_i~} 
+	var {snmp.value} copy  var {ifDescr.~v_i~}	
+	screen.text at point {50}  {~v_y~} string {~snmp.value~} 	
+
+	snmp.get var  {ifInOctets.~v_i~} oid {1.3.6.1.2.1.2.2.1.10.~v_i~} 
+	var {snmp.value} copy  var {ifInOctets.~v_i~}	
+	screen.text at point {250}  {~v_y~} string {~snmp.value~} 
+
+	snmp.get var  {ifOutOctets.~v_i~} oid {1.3.6.1.2.1.2.2.1.16.~v_i~} 
+	var {snmp.value} copy  var {ifOutOctets.~v_i~}	
+	screen.text at point {370}  {~v_y~} string {~snmp.value~} 
+
+	if.var {v_i} > {~interfaces.ifNumber~}		
+		loop.exit
+	if.end
+loop.end
+run.end

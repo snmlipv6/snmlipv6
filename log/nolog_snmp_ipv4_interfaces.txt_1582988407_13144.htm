@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Network Management Language (SNML), technical support email: ladybird_snml@protonmail.com</title>
+<meta http-equiv="Content-Language" content="utf8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<style>
+                    body
+                    {
+                        background: #F3F3F4;
+                        color: #1E1E1F;
+                        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    h1
+                    {
+		padding: 10px 0px 10px 10px;
+		font-size: 21pt;
+		background-color: #E2E2E2;
+		border-bottom: 1px #C1C1C2 solid; 
+		color: #201F20;
+		margin: 0;
+		font-weight: normal;
+	  }
+                    
+	h2
+	{
+                        font-size: 18pt;
+                        font-weight: normal;
+                        padding: 15px 0 5px 0;
+                        margin: 0;
+                }
+	h3
+	 {
+		font-weight: normal;
+		font-size: 15pt;
+		margin: 0;
+		padding: 15px 0 5px 0;
+		background-color: transparent;
+ 	}
+	 table
+	{
+		border-spacing: 0 0;
+		border-collapse: collapse;
+		font-size: 10pt;
+	}
+	table th
+	 {
+	  	background: #E7E7E8;
+		text-align: left;
+		text-decoration: none;
+		font-weight: normal;
+		padding: 3px 6px 3px 6px;
+	}
+	table td
+	{
+		vertical-align: top;
+		padding: 3px 6px 5px 5px;
+		margin: 0px;
+		border: 1px solid #E7E7E8;
+		background: #F7F7F8;
+	}
+
+                 .IconSuccessEncoded, .IconInfoEncoded, .IconWarningEncoded, .IconErrorEncoded
+	{
+                        	min-width:18px;
+	 	min-height:18px; 
+	 	background-repeat:no-repeat;
+		background-position:center;
+	}
+
+	 .IconSuccessEncoded
+	{
+ 		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABcElEQVR4Xq2TsUsCURzHv15g8ZJcBWlyiYYgCIWcb9DFRRwMW5TA2c0/QEFwFkxxUQdxVlBwCYWOi6IhWgQhBLHJUCkhLr/BW8S7gvrAg+N+v8/v+x68Z8MGy+XSCyABQAXgBgHGALoASkIIDWSLeLBetdHryMjd5IxQPWT4rn1c/P7+xxp72Cs9m5SZ0Bq2vPnbPFafK2zDvmNHypdC0BPkLlQhxJsCAhQoZwdZU5mwxh720qGo8MzTxTTKZDPCx2HoVzp6lz0Q9tKhyx0kGs8Ny+TkWRKk8lCROwEduhyg9l/6lunOPSfmH3NUH6uQ0KHLAe7JYvJjevm+DAMGJHToKtigE+vwvIidxLamb8IBY9e+C5LiXREkfho3TSd06HJA13/oh6T51MTsfQbHrsMynQ5dDihFjiK8JJAU9AKIWTp76dCVN7HWHrajmUEGvyF9nkbAE6gLIS7kTUyuf2gscLoJrElZo/Mvj+nPz/kLTmfnEwP3tB0AAAAASUVORK5CYII=);
+
+                    }
+	 .IconInfoEncoded
+	{
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHElEQVR4Xs2TsUoDQRRF7wwoziokjZUKadInhdhukR9YP8DMX1hYW+QvdsXa/QHBbcXC7W0CamWTQnclFutceIQJwwaWNLlwm5k5d94M76mmaeCrrmsLYOocY12FcxZFUeozCqKqqgYA8uevv1H6VuPxcwlfk5N92KHBxfFeCSAxxswlYAW/Xr989x/mv9gkhtyMDhcAxgzRsp7flj8B/HF1RsMXq+NZMkopaHe7lbKxQUEIGbKsYNoGn969060hZBkQex/W8oRQwsQaW2o3Ago2SVcJUzAgY3N0lTCZZm+zPS8HB51gMmS1DEYyOz9acKO1D8JWTlafKIMxdhvlfdyT94Vv5h7P8Ky7nQzACmhvKq3zk3PjW9asz9D/1oigecsioooAAAAASUVORK5CYII=);
+	}
+	 .IconWarningEncoded
+	 {
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAx0lEQVR4XpWSMQ7CMAxFf4xAyBMLCxMrO8dhaBcuwdCJS3RJBw7SA/QGTCxdWJgiQYWKXJWKIXHIlyw5lqr34tQgEOdcBsCOx5yZK3hCCKdYXneQkh4pEfqzLfu+wVDSyyzFoJjfz9NB+pAF+eizx2Vruts0k15mPgvS6GYvpVtQhB61IB/dk6AF6fS4Ben0uIX5odtFe8Q/eW1KvFeH4e8khT6+gm5B+t3juyDt7n0jpe+CANTd+oTUjN/U3yVaABnSUjFz/gFq44JaVSCXeQAAAABJRU5ErkJggg==);
+	}
+	.IconErrorEncoded
+	 {
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABQElEQVR4XqWTvUoEQRCE6wYPZUA80AfwAQz23uCMjA7MDRQEIzPBVEyNTQUFIw00vcQTTMzuAh/AxEQQT8HF/3G/oGGnEUGuoNnd6qoZuqltyKEsyzVJq5I6rnUp6SjGeGhESikzzlc1eL7opfuVbrqbU1Zw9NCgtQMaZpY0eNnaaL2fHusvTK5vKu7sjSS1Y4y3QUA6K3e3Mau5UFDyMP7tYF9o8cAHZv68vipoIJg971PZIZ5HiwdvYGGvFVFHmGmZ2MxwmQYPXubPl9Up0tfoMQGetXd6mRbvhBw+boZ6WF7Mbv1+GsHRk0fQmPAH1GfmZirbCfDJ61tw3Px8/8pZsPAG4jlVhcPgZ7adwNWBB68lkRQWFiTgFlbnLY3DGGM7izIJIyT/jjIvEJw6fdJTc6krDzh6aMwMP9bvDH4ADSsa9uSWVJkAAAAASUVORK5CYII=);
+	}
+	.snml_png 
+	{
+ 		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAN0SURBVFhHxZfPSxRhGMdfEzIIpOhgsSSriAkdZGU7lIdtF0E0JAjSRQ8VeU0QAkkpKEg8hP9AhB0UE0zBRDwkWEQgtAgqLGwZbm3RRqiHAonq7fu+87w7887Muzt26QOffZ95fzzvszszO7tlHLD/yAFqi7K0tMRaW1vpyMzMzAzr7Oyko4CITyAIuVyO7+zs8Gw2y3t6eng4HOahUIjH43E+Ozsr50xPT8t2PwQuQBCJRMTpMvovBL4GotEoi8ViLJ/Ps7W1Nba+vk4jjA0PD7NUKsVWV1fZ5uYm9QZEllGCubk5+Q63trb42NgYTyaT2jtX/W1tbTyRSNCqYAQqoKamRm7U0NDAu7u7tc39+vdDoNnOzYI4v7hIK0sT6Bp4VFfHDtO5FfftEdgHP8MH8AT8AQV7FRXsfCbDwtXV1FMCWYaJ7W1RnUcUgMZ2D6qxgpOTlKQ4mGlgedmbFM5D5+bCLijGPPb2UjIzmOVDOu1NRr6C7gKuQzHma38/JfUHM3zwS+TwDHQWoPqNLixQYi8YddHUJBcloNrgj0jiEhchD7n6lL5rDegjmYyc/JwWK69CmcThHXjc1Sc0rh0cpE109KfhwIBsquSrzTFqnWThFyvUQFEahbX4uvaFCrFQ1cK7UAzH6XgBXoNv6RgPZzkuYuENeJ/ie9C5tqC4uF2gl8jn9ckOn0GRUCn6Io74IMXCi9Tn6+gobWZjn4KNDQq8PKFW8QJ+tUL2C/60Qgm+J8yk0xTY2AXs7lLg5Ra1ihj8ZIXsO2yyQslNan3x2cMu4NAhCrycht/gY4iPUuMNTMGn8DUcgUbwnHBjF4AHTjHE1XzFCtlvagU5ai/Bs1ZoxmcPu4D6egpK85FagSogEM3NFNjYBQgaGylg7CE8CpPySEedf4FfAca1LS0UOKC7wWJqSt4u76xTXfA2FP1K3BWFsQvUpzSubW+nTXT0T4B+02fkq817ahXOT8AZC4xrJyYocEGF2KysyIpPQTEsxK2mvct+qMZwcWpjQs/aIr8LMOrD0JBM5PtLB16GagOh6ndaWIs/L8XADAMdHVpCp+dgqQKk5eWUzAxmFWFkxJsUnoTOAvC94J0XjVKS4mBmCfCng1dVacnLoLOAD1CNScfHaXFpMDsg4sdKXx/ntbWFjZUvKys57+rifB//Byw4/wvEcknVkrgkDwAAAABJRU5ErkJggg==);                        			min-width:32px;	 	min-height:32px; 	 	background-repeat:no-repeat;		background-position:center;
+	} 
+	.snml_nms
+	{
+		background: rgb(100, 149, 237) ;
+		color : rgb(255, 255,255) ;
+	}	.snml_red	{		background: rgb(255,   0,  0) ;		color : rgb(255, 255,255) ;	}	.snml_green	{		background: rgb(  0, 255,  0) ;		color : rgb(  0,   0,  0) ;	}	.snml_yellow	{		background: rgb(255, 255,  0) ;		color : rgb(000, 000,000) ;	}
+	</style>
+
+</head>
+<body>
+<table><tr><th class="snml_png" /></th><th class="snml_nms">Simple Network Management Language (SNML) Log File</th></tr> 
+<tr><td>(~_~)</td ><td>technical support: <br>
+email 1: ladybird_snml@protonmail.com<br>
+email 2: ladybird_snml@outlook.com<br><br>Now remember, Pinocchio, be a good boy. And always let your conscience be your guide.<br>Love is the flame of life, without it, everything becomes dark. -- Romain Rolland.
+</td></tr></table>
+<h1>Pid: 13144, [C:\snmlipv6\snml.exe  nolog C:\snmlipv6\snmp\snmp_ipv4_interfaces.txt] start ......</h1>
+<table><tr><th class="IconInfoEncoded" /><th>2020-02-29,23:00:10,913</th></tr><tr><td /><td><pre>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2020-02-29,23:00:10,919</th></tr><tr><td /><td><pre>
+SnmlReturn, return [0], description: [run_set_loglevel_a3->A:3(debug) return.]
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [32] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [0] len [1]
+SetVar [var.count] value [39] len [2]
+SetVar [var.bytes] value [1003] len [4]
+SetVar [run.seconds] value [3] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2020-02-29,23:00:10,944</th></tr><tr><td /><td><pre>
+(^_^) Line [32] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>32</td><td>run.steps</td><td>32</td></tr>
+
+<tr><td>2</td><td>32</td><td>run.seconds</td><td>3</td></tr>
+
+<tr><td>3</td><td>32</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>32</td><td>step.line</td><td>32</td></tr>
+
+<tr><td>5</td><td>32</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>32</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>32</td><td>var.count</td><td>39</td></tr>
+
+<tr><td>8</td><td>32</td><td>var.bytes</td><td>1003</td></tr>
+
+<tr><td>9</td><td>32</td><td>text.bytes</td><td>0</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2020-02-29,23:00:10,983</th></tr><tr><td /><td><pre>
+
+run.steps: [32], Run Next Step, Line No.[33] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2020-02-29,23:00:10,989</th><th class="snml_nms">step.line=[33]</th><th class="snml_nms">run.steps=[33]</th><tr>
+
+ <tr><td /><td colspan=3>var {color} number {255*~v_i~/~interfaces.ifNumber~} </td></tr></table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2020-02-29,23:00:11,6</th></tr><tr><td /><td><pre>
+ var flag (~): p[1] = 4;
+ var flag (~): p[2] = 8;
+ var flag (~): p[3] = 10;
+ var flag (~): p[4] = 30;
+SnmlReturn, return [1], description: [GetVar4(v_i)=<1>]
+SnmlReturn, return [1], description: [GetVar4(interfaces.ifNumber)=<8>]
+SnmlReturn, return [7], description: [SnmlReplaceVar:=<255*1/8>,l=7.]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2020-02-29,23:00:11,15</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 033</td>
+	<td>var</td><td>{color}</td><td>number</td><td>{255*~v_i~/~interfaces.ifNumber~}</td></tr><tr><td>Get All Arg:</td>
+	<td  > var</td><td class="snml_green"> color</td><td  > number</td><td class="snml_green"> 255*1/8</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2020-02-29,23:00:11,20</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [33] len [2]
+[var], Line No. [33] be blank, don't need to run.
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [33] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [0] len [1]
+SetVar [var.count] value [39] len [2]
+SetVar [var.bytes] value [1003] len [4]
+SetVar [run.seconds] value [4] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2020-02-29,23:00:11,47</th></tr><tr><td /><td><pre>
+(^_^) Line [33] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>33</td><td>run.steps</td><td>33</td></tr>
+
+<tr><td>2</td><td>33</td><td>run.seconds</td><td>4</td></tr>
+
+<tr><td>3</td><td>33</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>33</td><td>step.line</td><td>33</td></tr>
+
+<tr><td>5</td><td>33</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>33</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>33</td><td>var.count</td><td>39</td></tr>
+
+<tr><td>8</td><td>33</td><td>var.bytes</td><td>1003</td></tr>
+
+<tr><td>9</td><td>33</td><td>text.bytes</td><td>0</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2020-02-29,23:00:11,87</th></tr><tr><td /><td><pre>
+
+run.steps: [33], Run Next Step, Line No.[34] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2020-02-29,23:00:11,93</th><th class="snml_nms">step.line=[34]</th><th class="snml_nms">run.steps=[34]</th><tr>
+
+ <tr><td /><td colspan=3>run.set loglevel {nolog} </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2020-02-29,23:00:11,108</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 034</td>
+	<td>run.set</td><td>loglevel</td><td>{nolog}</td></tr><tr><td>Get All Arg:</td>
+	<td  > run.set</td><td  > loglevel</td><td class="snml_green"> nolog</td></tr></table>

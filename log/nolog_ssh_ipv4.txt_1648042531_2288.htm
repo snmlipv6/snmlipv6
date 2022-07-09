@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Network Management Language (SNML), technical support email: ladybird_snml@protonmail.com</title>
+<meta http-equiv="Content-Language" content="utf8">
+<meta http-equiv="Content-Type" content="text/html; charset=utf8">
+<style>
+                    body
+                    {
+                        background: #F3F3F4;
+                        color: #1E1E1F;
+                        font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+                        padding: 0;
+                        margin: 0;
+                    }
+
+                    h1
+                    {
+		padding: 10px 0px 10px 10px;
+		font-size: 21pt;
+		background-color: #E2E2E2;
+		border-bottom: 1px #C1C1C2 solid; 
+		color: #201F20;
+		margin: 0;
+		font-weight: normal;
+	  }
+                    
+	h2
+	{
+                        font-size: 18pt;
+                        font-weight: normal;
+                        padding: 15px 0 5px 0;
+                        margin: 0;
+                }
+	h3
+	 {
+		font-weight: normal;
+		font-size: 15pt;
+		margin: 0;
+		padding: 15px 0 5px 0;
+		background-color: transparent;
+ 	}
+	 table
+	{
+		border-spacing: 0 0;
+		border-collapse: collapse;
+		font-size: 10pt;
+	}
+	table th
+	 {
+	  	background: #E7E7E8;
+		text-align: left;
+		text-decoration: none;
+		font-weight: normal;
+		padding: 3px 6px 3px 6px;
+	}
+	table td
+	{
+		vertical-align: top;
+		padding: 3px 6px 5px 5px;
+		margin: 0px;
+		border: 1px solid #E7E7E8;
+		background: #F7F7F8;
+	}
+
+                 .IconSuccessEncoded, .IconInfoEncoded, .IconWarningEncoded, .IconErrorEncoded
+	{
+                        	min-width:18px;
+	 	min-height:18px; 
+	 	background-repeat:no-repeat;
+		background-position:center;
+	}
+
+	 .IconSuccessEncoded
+	{
+ 		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAABcElEQVR4Xq2TsUsCURzHv15g8ZJcBWlyiYYgCIWcb9DFRRwMW5TA2c0/QEFwFkxxUQdxVlBwCYWOi6IhWgQhBLHJUCkhLr/BW8S7gvrAg+N+v8/v+x68Z8MGy+XSCyABQAXgBgHGALoASkIIDWSLeLBetdHryMjd5IxQPWT4rn1c/P7+xxp72Cs9m5SZ0Bq2vPnbPFafK2zDvmNHypdC0BPkLlQhxJsCAhQoZwdZU5mwxh720qGo8MzTxTTKZDPCx2HoVzp6lz0Q9tKhyx0kGs8Ny+TkWRKk8lCROwEduhyg9l/6lunOPSfmH3NUH6uQ0KHLAe7JYvJjevm+DAMGJHToKtigE+vwvIidxLamb8IBY9e+C5LiXREkfho3TSd06HJA13/oh6T51MTsfQbHrsMynQ5dDihFjiK8JJAU9AKIWTp76dCVN7HWHrajmUEGvyF9nkbAE6gLIS7kTUyuf2gscLoJrElZo/Mvj+nPz/kLTmfnEwP3tB0AAAAASUVORK5CYII=);
+
+                    }
+	 .IconInfoEncoded
+	{
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABHElEQVR4Xs2TsUoDQRRF7wwoziokjZUKadInhdhukR9YP8DMX1hYW+QvdsXa/QHBbcXC7W0CamWTQnclFutceIQJwwaWNLlwm5k5d94M76mmaeCrrmsLYOocY12FcxZFUeozCqKqqgYA8uevv1H6VuPxcwlfk5N92KHBxfFeCSAxxswlYAW/Xr989x/mv9gkhtyMDhcAxgzRsp7flj8B/HF1RsMXq+NZMkopaHe7lbKxQUEIGbKsYNoGn969060hZBkQex/W8oRQwsQaW2o3Ago2SVcJUzAgY3N0lTCZZm+zPS8HB51gMmS1DEYyOz9acKO1D8JWTlafKIMxdhvlfdyT94Vv5h7P8Ky7nQzACmhvKq3zk3PjW9asz9D/1oigecsioooAAAAASUVORK5CYII=);
+	}
+	 .IconWarningEncoded
+	 {
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAAACXBIWXMAAA7EAAAOxAGVKw4bAAAAx0lEQVR4XpWSMQ7CMAxFf4xAyBMLCxMrO8dhaBcuwdCJS3RJBw7SA/QGTCxdWJgiQYWKXJWKIXHIlyw5lqr34tQgEOdcBsCOx5yZK3hCCKdYXneQkh4pEfqzLfu+wVDSyyzFoJjfz9NB+pAF+eizx2Vruts0k15mPgvS6GYvpVtQhB61IB/dk6AF6fS4Ben0uIX5odtFe8Q/eW1KvFeH4e8khT6+gm5B+t3juyDt7n0jpe+CANTd+oTUjN/U3yVaABnSUjFz/gFq44JaVSCXeQAAAABJRU5ErkJggg==);
+	}
+	.IconErrorEncoded
+	 {
+		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABAAAAAQCAYAAAAf8/9hAAABQElEQVR4XqWTvUoEQRCE6wYPZUA80AfwAQz23uCMjA7MDRQEIzPBVEyNTQUFIw00vcQTTMzuAh/AxEQQT8HF/3G/oGGnEUGuoNnd6qoZuqltyKEsyzVJq5I6rnUp6SjGeGhESikzzlc1eL7opfuVbrqbU1Zw9NCgtQMaZpY0eNnaaL2fHusvTK5vKu7sjSS1Y4y3QUA6K3e3Mau5UFDyMP7tYF9o8cAHZv68vipoIJg971PZIZ5HiwdvYGGvFVFHmGmZ2MxwmQYPXubPl9Up0tfoMQGetXd6mRbvhBw+boZ6WF7Mbv1+GsHRk0fQmPAH1GfmZirbCfDJ61tw3Px8/8pZsPAG4jlVhcPgZ7adwNWBB68lkRQWFiTgFlbnLY3DGGM7izIJIyT/jjIvEJw6fdJTc6krDzh6aMwMP9bvDH4ADSsa9uSWVJkAAAAASUVORK5CYII=);
+	}
+	.snml_png 
+	{
+ 		background-image: url(data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsQAAA7EAZUrDhsAAAN0SURBVFhHxZfPSxRhGMdfEzIIpOhgsSSriAkdZGU7lIdtF0E0JAjSRQ8VeU0QAkkpKEg8hP9AhB0UE0zBRDwkWEQgtAgqLGwZbm3RRqiHAonq7fu+87w7887Muzt26QOffZ95fzzvszszO7tlHLD/yAFqi7K0tMRaW1vpyMzMzAzr7Oyko4CITyAIuVyO7+zs8Gw2y3t6eng4HOahUIjH43E+Ozsr50xPT8t2PwQuQBCJRMTpMvovBL4GotEoi8ViLJ/Ps7W1Nba+vk4jjA0PD7NUKsVWV1fZ5uYm9QZEllGCubk5+Q63trb42NgYTyaT2jtX/W1tbTyRSNCqYAQqoKamRm7U0NDAu7u7tc39+vdDoNnOzYI4v7hIK0sT6Bp4VFfHDtO5FfftEdgHP8MH8AT8AQV7FRXsfCbDwtXV1FMCWYaJ7W1RnUcUgMZ2D6qxgpOTlKQ4mGlgedmbFM5D5+bCLijGPPb2UjIzmOVDOu1NRr6C7gKuQzHma38/JfUHM3zwS+TwDHQWoPqNLixQYi8YddHUJBcloNrgj0jiEhchD7n6lL5rDegjmYyc/JwWK69CmcThHXjc1Sc0rh0cpE109KfhwIBsquSrzTFqnWThFyvUQFEahbX4uvaFCrFQ1cK7UAzH6XgBXoNv6RgPZzkuYuENeJ/ie9C5tqC4uF2gl8jn9ckOn0GRUCn6Io74IMXCi9Tn6+gobWZjn4KNDQq8PKFW8QJ+tUL2C/60Qgm+J8yk0xTY2AXs7lLg5Ra1ihj8ZIXsO2yyQslNan3x2cMu4NAhCrycht/gY4iPUuMNTMGn8DUcgUbwnHBjF4AHTjHE1XzFCtlvagU5ai/Bs1ZoxmcPu4D6egpK85FagSogEM3NFNjYBQgaGylg7CE8CpPySEedf4FfAca1LS0UOKC7wWJqSt4u76xTXfA2FP1K3BWFsQvUpzSubW+nTXT0T4B+02fkq817ahXOT8AZC4xrJyYocEGF2KysyIpPQTEsxK2mvct+qMZwcWpjQs/aIr8LMOrD0JBM5PtLB16GagOh6ndaWIs/L8XADAMdHVpCp+dgqQKk5eWUzAxmFWFkxJsUnoTOAvC94J0XjVKS4mBmCfCng1dVacnLoLOAD1CNScfHaXFpMDsg4sdKXx/ntbWFjZUvKys57+rifB//Byw4/wvEcknVkrgkDwAAAABJRU5ErkJggg==);                        			min-width:32px;	 	min-height:32px; 	 	background-repeat:no-repeat;		background-position:center;
+	} 
+	.snml_nms
+	{
+		background: rgb(100, 149, 237) ;
+		color : rgb(255, 255,255) ;
+	}	.snml_red	{		background: rgb(255,   0,  0) ;		color : rgb(255, 255,255) ;	}	.snml_green	{		background: rgb(  0, 255,  0) ;		color : rgb(  0,   0,  0) ;	}	.snml_yellow	{		background: rgb(255, 255,  0) ;		color : rgb(000, 000,000) ;	}
+	</style>
+
+</head>
+<body>
+<table><tr><th class="snml_png" /></th><th class="snml_nms">Simple Network Management Language (SNML) Log File</th></tr> 
+<tr><td>(~_~)</td ><td>technical support: <br>
+email 1: ladybird_snml@protonmail.com<br>
+email 2: ladybird_snml@outlook.com<br><br>Now remember, Pinocchio, be a good boy. And always let your conscience be your guide.<br>Love is the flame of life, without it, everything becomes dark. -- Romain Rolland.
+</td></tr></table>
+<h1>Pid: 2288, [C:\snmlipv6\snml.exe  nolog C:\snmlipv6\ssh\ssh_ipv4.txt] start ......</h1>
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:35,372</th></tr><tr><td /><td><pre>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:35,373</th></tr><tr><td /><td><pre>
+SnmlReturn, return [0], description: [run_set_loglevel_a3->A:3(debug) return.]
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [14] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [0] len [1]
+SetVar [var.count] value [32] len [2]
+SetVar [var.bytes] value [616] len [3]
+SetVar [run.seconds] value [4] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-23,21:35:35,408</th></tr><tr><td /><td><pre>
+(^_^) Line [14] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>14</td><td>run.steps</td><td>14</td></tr>
+
+<tr><td>2</td><td>14</td><td>run.seconds</td><td>4</td></tr>
+
+<tr><td>3</td><td>14</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>14</td><td>step.line</td><td>14</td></tr>
+
+<tr><td>5</td><td>14</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>14</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>14</td><td>var.count</td><td>32</td></tr>
+
+<tr><td>8</td><td>14</td><td>var.bytes</td><td>616</td></tr>
+
+<tr><td>9</td><td>14</td><td>text.bytes</td><td>0</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:35,444</th></tr><tr><td /><td><pre>
+
+run.steps: [14], Run Next Step, Line No.[15] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-23,21:35:35,458</th><th class="snml_nms">step.line=[15]</th><th class="snml_nms">run.steps=[15]</th><tr>
+
+ <tr><td /><td colspan=3>loop.begin </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-23,21:35:35,471</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 015</td>
+	<td>loop.begin</td></tr><tr><td>Get All Arg:</td>
+	<td  > loop.begin</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:35,472</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [15] len [2]
+__try Call [115], [loop.begin] ... 
+loop_begin ,LoopTimes = 0,begin ...
+SnmlReturn, return [0], description: [loop_begin return.]
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [15] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [0] len [1]
+SetVar [var.count] value [32] len [2]
+SetVar [var.bytes] value [616] len [3]
+SetVar [run.seconds] value [4] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-23,21:35:35,512</th></tr><tr><td /><td><pre>
+(^_^) Line [15] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>15</td><td>run.steps</td><td>15</td></tr>
+
+<tr><td>2</td><td>15</td><td>run.seconds</td><td>4</td></tr>
+
+<tr><td>3</td><td>15</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>15</td><td>step.line</td><td>15</td></tr>
+
+<tr><td>5</td><td>15</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>15</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>15</td><td>var.count</td><td>32</td></tr>
+
+<tr><td>8</td><td>15</td><td>var.bytes</td><td>616</td></tr>
+
+<tr><td>9</td><td>15</td><td>text.bytes</td><td>0</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:35,549</th></tr><tr><td /><td><pre>
+
+run.steps: [15], Run Next Step, Line No.[16] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-23,21:35:35,561</th><th class="snml_nms">step.line=[16]</th><th class="snml_nms">run.steps=[16]</th><tr>
+
+ <tr><td /><td colspan=3></td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-23,21:35:35,575</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 016</td>
+	</tr><tr><td>Get All Arg:</td>
+	</tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:35,575</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [16] len [2]
+__try Call [0], [#] ... 
+[], Line No. [16] be blank, don't need to run.
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [16] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [0] len [1]
+SetVar [var.count] value [32] len [2]
+SetVar [var.bytes] value [616] len [3]
+SetVar [run.seconds] value [4] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-23,21:35:35,615</th></tr><tr><td /><td><pre>
+(^_^) Line [16] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>16</td><td>run.steps</td><td>16</td></tr>
+
+<tr><td>2</td><td>16</td><td>run.seconds</td><td>4</td></tr>
+
+<tr><td>3</td><td>16</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>16</td><td>step.line</td><td>16</td></tr>
+
+<tr><td>5</td><td>16</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>16</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>16</td><td>var.count</td><td>32</td></tr>
+
+<tr><td>8</td><td>16</td><td>var.bytes</td><td>616</td></tr>
+
+<tr><td>9</td><td>16</td><td>text.bytes</td><td>0</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:35,653</th></tr><tr><td /><td><pre>
+
+run.steps: [16], Run Next Step, Line No.[17] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-23,21:35:35,670</th><th class="snml_nms">step.line=[17]</th><th class="snml_nms">run.steps=[17]</th><tr>
+
+ <tr><td /><td colspan=3>var {v_i} add number {1} </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-23,21:35:35,685</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 017</td>
+	<td>var</td><td>{v_i}</td><td>add</td><td>number</td><td>{1}</td></tr><tr><td>Get All Arg:</td>
+	<td  > var</td><td class="snml_green"> v_i</td><td  > add</td><td  > number</td><td class="snml_green"> 1</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:35,685</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [17] len [2]
+__try Call [7], [var {A2} add number {A5}] ... 
+var_a2_add_number_a5 ,begin ...
+SnmlReturn, return [1], description: [GetVar4(v_i)=<0>]Var2.value =[0]
+L[4]=1,A[4]=<1>,redirect call var_a2_value_a4
+var_a2_value_a4 ,begin ...
+SetVar [v_i] value [1] len [1]
+SnmlReturn, return [0], description: [var_a2_value_a4 return.]
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [17] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [0] len [1]
+SetVar [var.count] value [32] len [2]
+SetVar [var.bytes] value [616] len [3]
+SetVar [run.seconds] value [4] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-23,21:35:35,725</th></tr><tr><td /><td><pre>
+(^_^) Line [17] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>17</td><td>run.steps</td><td>17</td></tr>
+
+<tr><td>2</td><td>17</td><td>run.seconds</td><td>4</td></tr>
+
+<tr><td>3</td><td>17</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>17</td><td>step.line</td><td>17</td></tr>
+
+<tr><td>5</td><td>17</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>17</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>17</td><td>var.count</td><td>32</td></tr>
+
+<tr><td>8</td><td>17</td><td>var.bytes</td><td>616</td></tr>
+
+<tr><td>9</td><td>17</td><td>text.bytes</td><td>0</td></tr>
+
+<tr><td>32</td><td>17</td><td>v_i</td><td>1</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:35,762</th></tr><tr><td /><td><pre>
+
+run.steps: [17], Run Next Step, Line No.[18] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-23,21:35:35,775</th><th class="snml_nms">step.line=[18]</th><th class="snml_nms">run.steps=[18]</th><tr>
+
+ <tr><td /><td colspan=3>var {v_y} add number {18} </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-23,21:35:35,790</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 018</td>
+	<td>var</td><td>{v_y}</td><td>add</td><td>number</td><td>{18}</td></tr><tr><td>Get All Arg:</td>
+	<td  > var</td><td class="snml_green"> v_y</td><td  > add</td><td  > number</td><td class="snml_green"> 18</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:35,790</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [18] len [2]
+__try Call [7], [var {A2} add number {A5}] ... 
+var_a2_add_number_a5 ,begin ...
+SnmlReturn, return [2], description: [GetVar4(v_y)=<60>]Var2.value =[60]
+L[4]=2,A[4]=<78>,redirect call var_a2_value_a4
+var_a2_value_a4 ,begin ...
+SetVar [v_y] value [78] len [2]
+SnmlReturn, return [0], description: [var_a2_value_a4 return.]
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [18] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [0] len [1]
+SetVar [var.count] value [32] len [2]
+SetVar [var.bytes] value [616] len [3]
+SetVar [run.seconds] value [4] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-23,21:35:35,833</th></tr><tr><td /><td><pre>
+(^_^) Line [18] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>18</td><td>run.steps</td><td>18</td></tr>
+
+<tr><td>2</td><td>18</td><td>run.seconds</td><td>4</td></tr>
+
+<tr><td>3</td><td>18</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>18</td><td>step.line</td><td>18</td></tr>
+
+<tr><td>5</td><td>18</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>18</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>18</td><td>var.count</td><td>32</td></tr>
+
+<tr><td>8</td><td>18</td><td>var.bytes</td><td>616</td></tr>
+
+<tr><td>9</td><td>18</td><td>text.bytes</td><td>0</td></tr>
+
+<tr><td>30</td><td>18</td><td>v_y</td><td>78</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:35,870</th></tr><tr><td /><td><pre>
+
+run.steps: [18], Run Next Step, Line No.[19] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-23,21:35:35,881</th><th class="snml_nms">step.line=[19]</th><th class="snml_nms">run.steps=[19]</th><tr>
+
+ <tr><td /><td colspan=3></td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-23,21:35:35,895</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 019</td>
+	</tr><tr><td>Get All Arg:</td>
+	</tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:35,895</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [19] len [2]
+__try Call [0], [#] ... 
+[], Line No. [19] be blank, don't need to run.
+SetVar [run.errors] value [0] len [1]
+SetVar [run.steps] value [19] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [0] len [1]
+SetVar [var.count] value [32] len [2]
+SetVar [var.bytes] value [616] len [3]
+SetVar [run.seconds] value [4] len [1]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-23,21:35:35,937</th></tr><tr><td /><td><pre>
+(^_^) Line [19] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>19</td><td>run.steps</td><td>19</td></tr>
+
+<tr><td>2</td><td>19</td><td>run.seconds</td><td>4</td></tr>
+
+<tr><td>3</td><td>19</td><td>run.errors</td><td>0</td></tr>
+
+<tr><td>4</td><td>19</td><td>step.line</td><td>19</td></tr>
+
+<tr><td>5</td><td>19</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>19</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>19</td><td>var.count</td><td>32</td></tr>
+
+<tr><td>8</td><td>19</td><td>var.bytes</td><td>616</td></tr>
+
+<tr><td>9</td><td>19</td><td>text.bytes</td><td>0</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:35,972</th></tr><tr><td /><td><pre>
+
+run.steps: [19], Run Next Step, Line No.[20] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-23,21:35:35,984</th><th class="snml_nms">step.line=[20]</th><th class="snml_nms">run.steps=[20]</th><tr>
+
+ <tr><td /><td colspan=3>ssh.connect ip {192.168.186.132} port {22} username {cisco} password {cisco} </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-23,21:35:36,6</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 020</td>
+	<td>ssh.connect</td><td>ip</td><td>{192.168.186.132}</td><td>port</td><td>{22}</td><td>username</td><td>{cisco}</td><td>password</td><td>{cisco}</td></tr><tr><td>Get All Arg:</td>
+	<td  > ssh.connect</td><td  > ip</td><td class="snml_green"> 192.168.186.132</td><td  > port</td><td class="snml_green"> 22</td><td  > username</td><td class="snml_green"> cisco</td><td  > password</td><td class="snml_green"> cisco</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:36,6</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [20] len [2]
+__try Call [75], [ssh.connect ip {A3} port {A5} username {A7} password {A9}] ... 
+ssh_connect_ip_a3_port_a5_username_a7_password_a9 ,begin ...
+SHA(ssh.key({Intel(R) Ethernet Connection (2) I219-V},{34-97-F6-89-C6-74}))=[47C7524E2D14F4191CF9EAFB07933E316A6DEC9B],Len=40.
+SetVar [snml.key] value [ssh.enable=yes] len [14]
+SnmlReturn, return [0], description: [SnmlSshKeyEnable() ssh.enable=yes,return.]
+SnmlReturn, return [0], description: [SnmlIsIpV4: is IpV4 address]
+
+WinTcpConnect to server [192.168.186.132:22] ...
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconErrorEncoded" /><th class="snml_red">2022-03-23,21:35:57,93 ThreadId: [1884]</th></tr><tr><td /><td><pre>
+run.errors: [1] , description: [WinTcpConnect: connect,ERROR]
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:57,94</th></tr><tr><td /><td><pre>
+SetVar [run.errors] value [1] len [1]
+SetVar [run.error.1] value [run.steps [20], Line No. [20], Error: [WinTcpConnect: connect,ERROR]] len [68]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconErrorEncoded" /><th class="snml_red">2022-03-23,21:35:58,167 ThreadId: [1884]</th></tr><tr><td /><td><pre>
+run.errors: [2] , description: [ssh_connect_ip_a3_port_a5_username_a7_password_a9: WinTcpConnect < 0 .]
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:58,167</th></tr><tr><td /><td><pre>
+SetVar [run.errors] value [2] len [1]
+SetVar [run.error.2] value [run.steps [20], Line No. [20], Error: [ssh_connect_ip_a3_port_a5_username_a7_password_a9: WinTcpConnect < 0 .]] len [110]
+SetVar [run.errors] value [2] len [1]
+SetVar [run.steps] value [20] len [2]
+SetVar [step.errors] value [2] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [0] len [1]
+SetVar [var.count] value [34] len [2]
+SetVar [var.bytes] value [830] len [3]
+SetVar [run.seconds] value [28] len [2]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconErrorEncoded" /><th class="snml_red">2022-03-23,21:35:59,273 ThreadId: [1884]</th></tr><tr><td /><td><pre>
+(^_^) Line [20] Run End, step.errors=2
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>20</td><td>run.steps</td><td>20</td></tr>
+
+<tr><td>2</td><td>20</td><td>run.seconds</td><td>28</td></tr>
+
+<tr><td>3</td><td>20</td><td>run.errors</td><td>2</td></tr>
+
+<tr><td>4</td><td>20</td><td>step.line</td><td>20</td></tr>
+
+<tr><td>5</td><td>20</td><td>step.errors</td><td>2</td></tr>
+
+<tr><td>6</td><td>20</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>20</td><td>var.count</td><td>34</td></tr>
+
+<tr><td>8</td><td>20</td><td>var.bytes</td><td>830</td></tr>
+
+<tr><td>9</td><td>20</td><td>text.bytes</td><td>0</td></tr>
+
+<tr><td>26</td><td>20</td><td>snml.key</td><td>ssh.enable=yes</td></tr>
+
+<tr><td>33</td><td>20</td><td>run.error.1</td><td>run.steps [20], Line No. [20], Error: [WinTcpConnect: connect,ERROR]</td></tr>
+
+<tr><td>34</td><td>20</td><td>run.error.2</td><td>run.steps [20], Line No. [20], Error: [ssh_connect_ip_a3_port_a5_username_a7_password_a9: WinTcpConnect < 0 .]</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:59,313</th></tr><tr><td /><td><pre>
+
+run.steps: [20], Run Next Step, Line No.[21] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-23,21:35:59,326</th><th class="snml_nms">step.line=[21]</th><th class="snml_nms">run.steps=[21]</th><tr>
+
+ <tr><td /><td colspan=3>ssh.set onrecv {-More-} send { %0a} </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-23,21:35:59,341</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 021</td>
+	<td>ssh.set</td><td>onrecv</td><td>{-More-}</td><td>send</td><td>{ %0a}</td></tr><tr><td>Get All Arg:</td>
+	<td  > ssh.set</td><td  > onrecv</td><td class="snml_green"> -More-</td><td  > send</td><td class="snml_green">  
+</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:59,342</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [21] len [2]
+__try Call [76], [ssh.set onrecv {A3} send {A5}] ... 
+ssh_set_onrecv_a3_send_a5 ,begin ...
+SetVar [ssh.onrecv] value [-More-] len [6]
+SetVar [ssh.autosend] value [ 
+] len [2]
+SnmlReturn, return [0], description: [ssh_set_onrecv_a3_send_a5 return.]
+SetVar [run.errors] value [2] len [1]
+SetVar [run.steps] value [21] len [2]
+SetVar [step.errors] value [0] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [0] len [1]
+SetVar [var.count] value [36] len [2]
+SetVar [var.bytes] value [860] len [3]
+SetVar [run.seconds] value [28] len [2]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-23,21:35:59,389</th></tr><tr><td /><td><pre>
+(^_^) Line [21] Run End, Ok!
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>21</td><td>run.steps</td><td>21</td></tr>
+
+<tr><td>2</td><td>21</td><td>run.seconds</td><td>28</td></tr>
+
+<tr><td>3</td><td>21</td><td>run.errors</td><td>2</td></tr>
+
+<tr><td>4</td><td>21</td><td>step.line</td><td>21</td></tr>
+
+<tr><td>5</td><td>21</td><td>step.errors</td><td>0</td></tr>
+
+<tr><td>6</td><td>21</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>21</td><td>var.count</td><td>36</td></tr>
+
+<tr><td>8</td><td>21</td><td>var.bytes</td><td>860</td></tr>
+
+<tr><td>9</td><td>21</td><td>text.bytes</td><td>0</td></tr>
+
+<tr><td>35</td><td>21</td><td>ssh.onrecv</td><td>-More-</td></tr>
+
+<tr><td>36</td><td>21</td><td>ssh.autosend</td><td> 
+</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:59,427</th></tr><tr><td /><td><pre>
+
+run.steps: [21], Run Next Step, Line No.[22] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-23,21:35:59,441</th><th class="snml_nms">step.line=[22]</th><th class="snml_nms">run.steps=[22]</th><tr>
+
+ <tr><td /><td colspan=3>ssh.recv for {3} seconds </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-23,21:35:59,455</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 022</td>
+	<td>ssh.recv</td><td>for</td><td>{3}</td><td>seconds</td></tr><tr><td>Get All Arg:</td>
+	<td  > ssh.recv</td><td  > for</td><td class="snml_green"> 3</td><td  > seconds</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:59,456</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [22] len [2]
+__try Call [78], [ssh.recv for {A3} seconds] ... 
+ssh_recv_for_a3_seconds ,begin ...
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconErrorEncoded" /><th class="snml_red">2022-03-23,21:35:59,480 ThreadId: [1884]</th></tr><tr><td /><td><pre>
+run.errors: [3] , description: [ssh_recv_for_a3_seconds:  ShellChannel == NULL, Error]
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:35:59,480</th></tr><tr><td /><td><pre>
+SetVar [run.errors] value [3] len [1]
+SetVar [run.error.3] value [run.steps [22], Line No. [22], Error: [ssh_recv_for_a3_seconds:  ShellChannel == NULL, Error]] len [93]
+SetVar [run.errors] value [3] len [1]
+SetVar [run.steps] value [22] len [2]
+SetVar [step.errors] value [1] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [0] len [1]
+SetVar [var.count] value [37] len [2]
+SetVar [var.bytes] value [964] len [3]
+SetVar [run.seconds] value [29] len [2]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconErrorEncoded" /><th class="snml_red">2022-03-23,21:36:00,576 ThreadId: [1884]</th></tr><tr><td /><td><pre>
+(^_^) Line [22] Run End, step.errors=1
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>22</td><td>run.steps</td><td>22</td></tr>
+
+<tr><td>2</td><td>22</td><td>run.seconds</td><td>29</td></tr>
+
+<tr><td>3</td><td>22</td><td>run.errors</td><td>3</td></tr>
+
+<tr><td>4</td><td>22</td><td>step.line</td><td>22</td></tr>
+
+<tr><td>5</td><td>22</td><td>step.errors</td><td>1</td></tr>
+
+<tr><td>6</td><td>22</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>22</td><td>var.count</td><td>37</td></tr>
+
+<tr><td>8</td><td>22</td><td>var.bytes</td><td>964</td></tr>
+
+<tr><td>9</td><td>22</td><td>text.bytes</td><td>0</td></tr>
+
+<tr><td>37</td><td>22</td><td>run.error.3</td><td>run.steps [22], Line No. [22], Error: [ssh_recv_for_a3_seconds:  ShellChannel == NULL, Error]</td></tr>
+
+</table>
+
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:36:00,613</th></tr><tr><td /><td><pre>
+
+run.steps: [22], Run Next Step, Line No.[23] ......
+</pre></td></tr></table>
+ 
+<table><tr><th class="snml_png" /><th class="snml_nms">2022-03-23,21:36:00,626</th><th class="snml_nms">step.line=[23]</th><th class="snml_nms">run.steps=[23]</th><tr>
+
+ <tr><td /><td colspan=3>ssh.send {show version%0a} </td></tr></table>
+
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconSuccessEncoded" /><th>2022-03-23,21:36:00,641</th></tr><tr><td /><td><pre>
+<table><tr><td>line No. 023</td>
+	<td>ssh.send</td><td>{show version%0a}</td></tr><tr><td>Get All Arg:</td>
+	<td  > ssh.send</td><td class="snml_green"> show version
+</td></tr></table>
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:36:00,641</th></tr><tr><td /><td><pre>
+SetVar [step.line] value [23] len [2]
+__try Call [79], [ssh.send {A2}] ... 
+ssh_send_a2 ,begin ...
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconErrorEncoded" /><th class="snml_red">2022-03-23,21:36:00,667 ThreadId: [1884]</th></tr><tr><td /><td><pre>
+run.errors: [4] , description: [ssh_send_a2:  ShellChannel == NULL, Error]
+</pre></td></tr></table>
+
+<table><tr><th class="IconInfoEncoded" /><th>2022-03-23,21:36:00,667</th></tr><tr><td /><td><pre>
+SetVar [run.errors] value [4] len [1]
+SetVar [run.error.4] value [run.steps [23], Line No. [23], Error: [ssh_send_a2:  ShellChannel == NULL, Error]] len [81]
+SetVar [run.errors] value [4] len [1]
+SetVar [run.steps] value [23] len [2]
+SetVar [step.errors] value [1] len [1]
+SetVar [step.bytes] value [0] len [1]
+SetVar [text.bytes] value [0] len [1]
+SetVar [var.count] value [38] len [2]
+SetVar [var.bytes] value [1056] len [4]
+SetVar [run.seconds] value [30] len [2]
+</pre></td></tr></table>
+ 
+<table><tr><th class="IconErrorEncoded" /><th class="snml_red">2022-03-23,21:36:01,786 ThreadId: [1884]</th></tr><tr><td /><td><pre>
+(^_^) Line [23] Run End, step.errors=1
+List created or updated Var:
+</pre></td></tr></table>
+ 
+<table><tr><th>index</th><th>editByStep</th><th>Name</th><th>Value</th></tr>
+<tr><td>1</td><td>23</td><td>run.steps</td><td>23</td></tr>
+
+<tr><td>2</td><td>23</td><td>run.seconds</td><td>30</td></tr>
+
+<tr><td>3</td><td>23</td><td>run.errors</td><td>4</td></tr>
+
+<tr><td>4</td><td>23</td><td>step.line</td><td>23</td></tr>
+
+<tr><td>5</td><td>23</td><td>step.errors</td><td>1</td></tr>
+
+<tr><td>6</td><td>23</td><td>step.bytes</td><td>0</td></tr>
+
+<tr><td>7</td><td>23</td><td>var.count</td><td>38</td></tr>
+
+<tr><td>8</td><td>23</td><td>var.bytes</td><td>1056</td></tr>
+
+<tr><td>9</td><td>23</td><td>text.bytes</td><td>0</td></tr>
+
+<tr><td>38</td><td>23</td><td>run.error.4</td><td>run.steps [23], Line No. [23], Error: [ssh_send_a2:  ShellChannel == NULL, Error]</td></tr>
+
+</table>
